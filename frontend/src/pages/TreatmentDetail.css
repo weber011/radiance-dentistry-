@@ -1,0 +1,567 @@
+.treatment-detail-page {
+  background-color: var(--bg-color);
+  color: var(--dark-text);
+  overflow-x: hidden;
+}
+
+/* Base Sections */
+.td-section {
+  padding: 80px 0;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-light {
+  background-color: #FAF8F5; /* Brand Ivory */
+}
+
+.bg-navy {
+  background-color: var(--primary-navy); /* Navy Blue */
+}
+
+/* Hero Section */
+.td-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* offset for navbar */
+  overflow: hidden;
+}
+
+.td-hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transform: scale(1.05); /* Slight zoom for premium feel */
+}
+
+.td-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(14,35,76,0.95) 0%, rgba(14,35,76,0.7) 50%, rgba(14,35,76,0.3) 100%);
+  z-index: 1;
+}
+
+.td-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-w-700: 700px;
+}
+
+.td-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: rgba(255,255,255,0.7);
+}
+
+.td-breadcrumbs a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.td-breadcrumbs a:hover {
+  color: var(--luxury-gold);
+}
+
+.td-breadcrumbs .active {
+  color: var(--luxury-gold);
+}
+
+.td-hero h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.td-hero-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.td-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.td-btn-primary, .td-btn-outline, .td-btn-primary-large, .td-btn-outline-large, .td-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.td-btn-primary {
+  background-color: var(--luxury-gold);
+  color: var(--primary-navy);
+  border: 1px solid var(--luxury-gold);
+}
+
+.td-btn-primary:hover {
+  background-color: #CCA35E;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212,175,55,0.2);
+}
+
+.td-btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.td-btn-outline:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: white;
+}
+
+/* What is it */
+.td-what-is {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.td-what-content h2 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--primary-navy);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.td-what-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--secondary-text);
+}
+
+.td-what-img-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.td-main-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Grids */
+.td-cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.td-cards-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Who Needs Card */
+.td-who-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(14,35,76,0.05);
+}
+
+.td-who-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--luxury-gold);
+}
+
+.td-who-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-navy);
+  margin-bottom: 24px;
+}
+
+.td-who-card h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.td-who-card p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+/* Symptoms Layout */
+.td-symptoms-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.td-symptoms-content h2 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+}
+
+.td-symptoms-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.td-symptoms-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--dark-text);
+  padding: 16px;
+  background: var(--bg-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.td-symptoms-list li:hover {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transform: translateX(5px);
+}
+
+.td-symptoms-placeholder {
+  background: var(--primary-navy);
+  border-radius: 24px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+/* Benefits Card */
+.td-benefit-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.td-benefit-card:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--luxury-gold);
+}
+
+.td-benefit-card h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.td-benefit-card p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+/* Timeline */
+.td-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.td-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 24px; bottom: 0;
+  width: 2px;
+  background: var(--luxury-gold);
+  opacity: 0.3;
+}
+
+.td-timeline-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 40px;
+}
+
+.td-timeline-marker {
+  position: absolute;
+  left: 0; top: 0;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--luxury-gold);
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.td-timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.td-timeline-content h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.td-timeline-content p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+/* Tech Grid */
+.td-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.td-tech-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Before After Gallery */
+.td-ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.td-ba-img-wrapper {
+  display: flex;
+  gap: 4px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+  height: 300px;
+}
+
+.td-ba-placeholder {
+  flex: 1;
+  background: #E5E0D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  color: var(--secondary-text);
+  font-size: 20px;
+}
+
+.td-ba-placeholder.after {
+  background: #D5CFC5;
+}
+
+/* FAQ Grid */
+.td-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.td-faq-card {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(14,35,76,0.05);
+}
+
+.td-faq-card h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.td-faq-card p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Related Treatments */
+.td-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.td-related-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.td-related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.td-related-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.td-related-content {
+  padding: 20px;
+}
+
+.td-related-content h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.td-link-gold {
+  color: var(--luxury-gold);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Final CTA */
+.td-cta-section {
+  padding: 100px 0;
+  background: var(--primary-navy);
+  color: white;
+}
+
+.td-cta-section h2 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.td-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.td-btn-primary-large {
+  background: var(--luxury-gold);
+  color: var(--primary-navy);
+  padding: 18px 40px;
+  font-size: 18px;
+}
+
+.td-btn-outline-large {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 18px 40px;
+  font-size: 18px;
+}
+
+.td-btn-whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 18px 40px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .td-what-is, .td-symptoms-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .td-what-img-wrapper, .td-symptoms-placeholder {
+    height: 300px;
+  }
+
+  .td-cards-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .td-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .td-hero {
+    min-height: 50vh;
+  }
+  
+  .td-cards-grid-3, .td-cards-grid-2, .td-tech-grid, .td-ba-grid, .td-faq-grid, .td-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .td-timeline::before {
+    left: 20px;
+  }
+
+  .td-timeline-item {
+    padding-left: 60px;
+  }
+
+  .td-timeline-marker {
+    width: 40px; height: 40px;
+    font-size: 16px;
+  }
+}

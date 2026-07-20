@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-navy: #1E3A5F;
+  --medical-teal: #2CB5B4;
+  --luxury-gold: #C9A227;
+  --bg-color: #FAF8F5;
+  --white: #FFFFFF;
+  --dark-text: #2D3748;
+  --secondary-text: #6B7280;
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-stats: 'Outfit', sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px 20px;
+  --container-width: 1200px;
+
+  /* UI Elements */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 4px 6px rgba(30, 58, 95, 0.05);
+  --shadow-md: 0 10px 25px rgba(30, 58, 95, 0.08);
+  --shadow-lg: 0 20px 40px rgba(30, 58, 95, 0.12);
+  --shadow-gold: 0 10px 25px rgba(201, 162, 39, 0.2);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(3rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+
+p {
+  color: var(--secondary-text);
+  font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.glassmorphism {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--medical-teal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gold {
+  background-color: var(--luxury-gold);
+  color: var(--white);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  background-color: #b59020;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.3);
+}
+
+.stats-number {
+  font-family: var(--font-stats);
+  color: var(--luxury-gold);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
