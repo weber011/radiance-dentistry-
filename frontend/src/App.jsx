@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutClinic from './pages/AboutClinic';
 import TourClinic from './pages/TourClinic';
 import TreatmentDetail from './pages/TreatmentDetail';
+import AdvancedTechnology from './pages/AdvancedTechnology';
 import PlaceholderPage from './pages/PlaceholderPage';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Route path="/about" element={<PlaceholderPage title="About Clinic" />} />
         <Route path="/doctor" element={<PlaceholderPage title="Meet Dr Ruchi Jain" />} />
         <Route path="/services" element={<PlaceholderPage title="Our Services" />} />
-        <Route path="/technology" element={<PlaceholderPage title="Advanced Technology" />} />
+        <Route path="/advanced-technology" element={<AdvancedTechnology />} />
         <Route path="/gallery" element={<PlaceholderPage title="Smile Gallery" />} />
         <Route path="/testimonials" element={<PlaceholderPage title="Patient Testimonials" />} />
         <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />

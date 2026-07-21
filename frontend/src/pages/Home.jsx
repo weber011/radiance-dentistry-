@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
+import TechnologyAccordion from '../components/ui/TechnologyAccordion';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -323,14 +324,33 @@ const Home = () => {
       <section className="section technology-section bg-light">
         <div className="container tech-grid">
           <FadeInWhenVisible className="tech-content">
+            <h4 className="section-subtitle">ADVANCED DENTAL TECHNOLOGY</h4>
             <h2>Innovation at Your Service</h2>
-            <p>We leverage the world's most advanced dental technologies for precise diagnostics and minimally invasive treatments.</p>
-            <KnowMoreBtn to="/technology" text="Discover Technology" />
+            <p>Radiance Dentistry combines modern technology with clinical expertise to deliver safer procedures, precise diagnosis, faster recovery, and exceptional patient comfort.</p>
+            
+            <div className="tech-stats-grid">
+              <div className="tech-stat-card">
+                <CheckCircle2 className="icon-gold" size={24} />
+                <span>99% Diagnostic Accuracy</span>
+              </div>
+              <div className="tech-stat-card">
+                <CheckCircle2 className="icon-gold" size={24} />
+                <span>Low Radiation Imaging</span>
+              </div>
+              <div className="tech-stat-card">
+                <CheckCircle2 className="icon-gold" size={24} />
+                <span>Comfortable Digital Procedures</span>
+              </div>
+              <div className="tech-stat-card">
+                <CheckCircle2 className="icon-gold" size={24} />
+                <span>International Sterilization Standards</span>
+              </div>
+            </div>
+
+            <KnowMoreBtn to="/advanced-technology" text="Explore Our Technology" />
           </FadeInWhenVisible>
-          <FadeInWhenVisible className="tech-visuals">
-            <div className="tech-card glassmorphism">3D CBCT Scanning</div>
-            <div className="tech-card glassmorphism">Digital Impressions</div>
-            <div className="tech-card glassmorphism">Laser Dentistry</div>
+          <FadeInWhenVisible className="tech-visuals" delay={0.2}>
+            <TechnologyAccordion />
           </FadeInWhenVisible>
         </div>
       </section>

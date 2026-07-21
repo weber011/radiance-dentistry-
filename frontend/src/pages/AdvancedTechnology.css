@@ -1,0 +1,148 @@
+.tech-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('/assets/equipment1.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(30, 58, 95, 0.75));
+  z-index: 1;
+}
+
+.tech-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-align: center;
+}
+
+.tech-hero-content h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: 20px;
+  color: var(--white);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.tech-hero-content p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Page Layout */
+.tech-page-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.tech-detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.tech-detail-card.row-reverse {
+  direction: rtl;
+}
+
+.tech-detail-card.row-reverse > * {
+  direction: ltr;
+}
+
+.tech-detail-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tech-detail-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tech-detail-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.tech-detail-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1); /* Gold bg */
+  color: var(--luxury-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tech-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.tech-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--secondary-text);
+  margin-bottom: 30px;
+}
+
+.tech-benefits h5 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary-navy);
+  margin-bottom: 15px;
+}
+
+.tech-benefits ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tech-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+.text-teal {
+  color: var(--medical-teal);
+}
+
+@media (max-width: 992px) {
+  .tech-detail-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .tech-detail-card.row-reverse {
+    direction: ltr;
+  }
+  
+  .tech-page-grid {
+    gap: 60px;
+  }
+}
