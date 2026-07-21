@@ -94,9 +94,9 @@ const ServiceLayout = ({ treatment, heroImage }) => {
         <div className="td-hero-overlay"></div>
         <div className="container td-hero-content">
           <div className="td-top-actions">
-            <button onClick={() => navigate(-1)} className="td-back-btn">
-              <ArrowLeft size={16} /> Back
-            </button>
+            <Link to="/" className="td-back-btn">
+              <ArrowLeft size={16} /> Back to Home
+            </Link>
           </div>
           <div className="td-breadcrumbs">
             <Link to="/">Home</Link> <ChevronRight size={14} /> <span>Services</span> <ChevronRight size={14} /> <span className="active">{treatment.name}</span>

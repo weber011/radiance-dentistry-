@@ -61,21 +61,24 @@
 .td-back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
+  gap: 8px;
+  background: var(--white);
+  border: none;
+  color: var(--primary-navy);
+  padding: 8px 20px;
+  border-radius: 50px;
   font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .td-back-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+  background: var(--luxury-gold);
+  color: var(--white);
+  transform: translateY(-2px);
 }
 
 .td-breadcrumbs {
