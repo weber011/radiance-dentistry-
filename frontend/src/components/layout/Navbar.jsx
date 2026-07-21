@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link to="/testimonials" className="nav-link">Patient Stories</Link>
+          <Link to="/reviews" className="nav-link">Patient Stories</Link>
           <Link to="/faqs" className="nav-link">FAQs</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
           

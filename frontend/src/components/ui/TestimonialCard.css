@@ -1,0 +1,96 @@
+.testimonial-card {
+  padding: 35px 30px;
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.testimonial-card.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: rgba(212, 175, 55, 0.15); /* Faint gold */
+  z-index: -1;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.reviewer-info h4 {
+  margin: 0 0 4px 0;
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+  font-size: 1.1rem;
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+}
+
+.google-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #4285F4;
+  font-weight: 500;
+}
+
+.google-icon-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.star-filled {
+  color: #fbbc04; /* Google star color */
+}
+
+.star-empty {
+  color: #e0e0e0;
+}
+
+.testimonial-text {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  font-style: italic;
+}

@@ -1,0 +1,46 @@
+.testimonial-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 10px;
+  margin: -20px -10px;
+}
+
+.testimonial-carousel-track {
+  display: flex;
+  gap: 30px;
+  cursor: grab;
+  width: 100%;
+}
+
+.testimonial-carousel-track:active {
+  cursor: grabbing;
+}
+
+.testimonial-card-wrapper {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 992px) {
+  .testimonial-card-wrapper {
+    flex: 0 0 100%;
+  }
+}

@@ -7,6 +7,8 @@ import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import TechnologyAccordion from '../components/ui/TechnologyAccordion';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 import SmileGalleryCarousel from '../components/ui/SmileGalleryCarousel';
+import TestimonialCarousel from '../components/ui/TestimonialCarousel';
+import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -395,21 +397,32 @@ const Home = () => {
       </section>
 
       {/* 9. Patient Testimonials */}
-      <section className="section testimonials-section bg-navy text-white">
-        <div className="container text-center">
-          <FadeInWhenVisible>
-            <h2 className="text-white">Stories of Radiance</h2>
-            <p className="text-light mb-40">What our valued patients have to say.</p>
-          </FadeInWhenVisible>
-          <div className="testimonial-slider">
-            <FadeInWhenVisible className="testimonial-card glassmorphism-dark">
-              <Star className="text-gold mb-20" />
-              <p className="quote">"An unparalleled dental experience. The attention to detail and luxury atmosphere made me forget I was at the dentist."</p>
-              <h4>- Sarah M.</h4>
+      <section className="section testimonials-section bg-light">
+        <div className="container">
+          <div className="text-center mb-60">
+            <FadeInWhenVisible>
+              <h4 className="section-subtitle">PATIENT TESTIMONIALS</h4>
+              <h2 className="text-navy">Stories of Radiance</h2>
+              <p className="max-w-700 mx-auto mb-20 text-secondary">Real experiences shared by our valued patients.</p>
+              
+              <div className="trust-section mt-30">
+                <div className="stars mb-10">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={24} className="icon-gold" fill="currentColor" />
+                  ))}
+                </div>
+                <h4 className="text-navy m-0">Trusted by Happy Patients</h4>
+                <p className="text-sm text-secondary mt-10 font-medium">Real Reviews • Real Smiles • Real Experiences</p>
+              </div>
             </FadeInWhenVisible>
           </div>
-          <div className="mt-40">
-            <KnowMoreBtn to="/testimonials" text="Read More Reviews" />
+
+          <FadeInWhenVisible delay={0.2}>
+            <TestimonialCarousel reviews={reviewsData} />
+          </FadeInWhenVisible>
+
+          <div className="text-center mt-60">
+            <KnowMoreBtn to="/reviews" text="Read All Reviews" variant="gold" />
           </div>
         </div>
       </section>
