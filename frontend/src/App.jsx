@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import FloatingCTA from './components/layout/FloatingCTA';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import AboutClinic from './pages/AboutClinic';
 import TourClinic from './pages/TourClinic';
@@ -14,6 +15,7 @@ import PlaceholderPage from './pages/PlaceholderPage';
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
