@@ -39,10 +39,6 @@
   transition: var(--transition-smooth);
 }
 
-.navbar.scrolled .navbar-logo img {
-  height: 40px;
-}
-
 .navbar-links {
   display: flex;
   align-items: center;

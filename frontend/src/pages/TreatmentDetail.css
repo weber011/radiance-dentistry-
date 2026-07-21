@@ -27,7 +27,8 @@
   min-height: 60vh;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* offset for navbar */
+  padding-top: 140px; /* Increased offset for navbar */
+  padding-bottom: 60px;
   overflow: hidden;
 }
 
