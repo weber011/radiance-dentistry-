@@ -1,3 +1,6 @@
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
