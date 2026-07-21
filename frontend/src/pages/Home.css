@@ -37,6 +37,18 @@
   max-width: 800px;
 }
 
+.hero-brand {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
 .hero-content h1 {
   color: var(--white);
   margin-bottom: 20px;

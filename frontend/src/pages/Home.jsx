@@ -79,6 +79,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 1, delay: 0.2 }}
           >
+            <span className="hero-brand">RADIANCE DENTISTRY</span>
             <h1>Artistry in Every Smile</h1>
             <p>Experience world-class luxury dental care tailored to your unique needs.</p>
             <div className="hero-actions">
