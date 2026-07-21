@@ -77,6 +77,13 @@
   gap: 20px;
 }
 
+@media (max-width: 767px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 /* Common Helpers */
 .bg-light { background-color: #F3F4F6; }
 .bg-navy { background-color: var(--primary-navy); }
@@ -793,29 +800,35 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
   }
   
   .collage-wrapper {
-    height: 350px;
+    height: 300px;
   }
-  .hero-actions { flex-direction: column; }
+  .hero-actions { flex-direction: column; gap: 15px; }
   .treatments-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: 1fr; gap: 20px; }
   .ba-grid { grid-template-columns: 1fr; }
   .contact-actions { flex-direction: column; }
   .doctor-actions { flex-direction: column; }
   .doctor-focus-list, .qualification-cards { grid-template-columns: 1fr; }
   
   .glassmorphism-dark { padding: 30px; }
-  .quote { font-size: 1.25rem; }
+  .quote { font-size: 1.125rem; }
   
   .action-buttons-row {
     flex-direction: column;
   }
   .why-visit-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .visit-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 

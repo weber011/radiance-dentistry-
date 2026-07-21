@@ -109,15 +109,32 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    text-align: center;
+  }
+  
+  .brand-desc {
+    margin: 0 auto 25px;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
   }
   
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+  
+  .legal-links {
+    justify-content: center;
   }
 }

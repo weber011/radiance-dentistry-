@@ -16,7 +16,9 @@
   --font-stats: 'Outfit', sans-serif;
 
   /* Spacing */
-  --section-padding: 80px 20px;
+  --section-padding-mobile: 32px 20px;
+  --section-padding-tablet: 56px 40px;
+  --section-padding-desktop: 96px 0;
   --container-width: 1200px;
 
   /* UI Elements */
@@ -58,13 +60,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h1 { font-size: clamp(3rem, 5vw, 4.5rem); }
-h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
-h3 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+h1 { font-size: clamp(2rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
 
 p {
   color: var(--secondary-text);
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 a {
@@ -84,7 +86,19 @@ ul {
 }
 
 .section {
-  padding: var(--section-padding);
+  padding: var(--section-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--section-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--section-padding-desktop);
+  }
 }
 
 .glassmorphism {
@@ -109,6 +123,15 @@ ul {
   cursor: pointer;
   transition: var(--transition-smooth);
   font-size: 1rem;
+  min-height: 48px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  [class*="btn-"], [class*="td-btn-"] {
+    width: 100%;
+    margin-bottom: 10px; /* spacing if stacked */
+  }
 }
 
 .btn-primary:hover {

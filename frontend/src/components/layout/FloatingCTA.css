@@ -69,16 +69,22 @@
   background-color: #b59020;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .floating-cta {
-    bottom: 20px;
-    right: 20px;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    right: 15px;
     gap: 10px;
+    z-index: 900;
   }
   
   .cta-item {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .cta-item svg {
+    width: 20px;
+    height: 20px;
   }
   
   .cta-item::before {
