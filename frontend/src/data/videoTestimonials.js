@@ -20,10 +20,10 @@ export const videoTestimonialsData = [
   {
     id: "vt3",
     src: "/assets/vt3.mp4",
-    patientName: "Patient 3",
-    treatment: "Clear Aligners",
-    caption: "Invisalign treatment was seamless and the results are amazing.",
+    patientName: "Advanced Tech Demo",
+    treatment: "Technology Overview",
+    caption: "A deep dive into our advanced clinical equipment with Dr. Ruchi.",
     duration: "2:10",
-    category: "Clear Aligners"
+    category: "Smile Makeover"
   }
 ];

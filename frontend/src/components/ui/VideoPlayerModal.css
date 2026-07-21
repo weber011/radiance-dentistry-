@@ -68,9 +68,9 @@
 
 .video-container-wrapper {
   position: relative;
-  width: 80vw;
+  width: 90vw;
   max-width: 1200px;
-  aspect-ratio: 16/9;
+  height: 85vh;
   background: black;
   border-radius: 12px;
   overflow: hidden;
@@ -80,7 +80,7 @@
 .video-player-element {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   cursor: pointer;
 }
 
