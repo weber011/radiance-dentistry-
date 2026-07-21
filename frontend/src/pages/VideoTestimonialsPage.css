@@ -1,0 +1,129 @@
+.vt-page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background-image: url('/assets/office.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.vt-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 15, 25, 0.95), rgba(30, 58, 95, 0.8));
+  z-index: 1;
+}
+
+.vt-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-align: center;
+}
+
+.vt-hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.vt-hero-content p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Featured Section */
+.vt-featured-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.featured-page-card {
+  height: 100%;
+}
+
+.featured-page-card .vt-thumbnail-wrapper {
+  aspect-ratio: 16/9;
+}
+
+.vt-timeline {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.vt-timeline h5 {
+  color: var(--primary-navy);
+}
+
+/* Filters */
+.vt-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.vt-filter-btn {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: var(--secondary-text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.vt-filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--primary-navy);
+}
+
+.vt-filter-btn.active {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+}
+
+/* Grid */
+.vt-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .vt-featured-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .vt-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .vt-page-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vt-filters {
+    gap: 10px;
+  }
+  
+  .vt-filter-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

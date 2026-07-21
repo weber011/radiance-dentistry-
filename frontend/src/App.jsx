@@ -12,6 +12,7 @@ import SmileGallery from './pages/SmileGallery';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import VideoTestimonialsPage from './pages/VideoTestimonialsPage';
 import PlaceholderPage from './pages/PlaceholderPage';
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/advanced-technology" element={<AdvancedTechnology />} />
         <Route path="/smile-gallery" element={<SmileGallery />} />
+        <Route path="/video-testimonials" element={<VideoTestimonialsPage />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />
         <Route path="/contact" element={<Contact />} />

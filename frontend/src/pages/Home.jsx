@@ -10,6 +10,7 @@ import TransformationsSlider from '../components/ui/TransformationsSlider';
 import MasonryGallery from '../components/ui/MasonryGallery';
 import ImageLightbox from '../components/ui/ImageLightbox';
 import TestimonialCarousel from '../components/ui/TestimonialCarousel';
+import VideoTestimonialsSection from '../components/ui/VideoTestimonialsSection';
 import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
@@ -405,7 +406,10 @@ const Home = () => {
         altText={fullGalleryData[lightboxIndex]?.treatment} 
       />
 
-      {/* 9. Patient Testimonials */}
+      {/* 9. Video Testimonials */}
+      <VideoTestimonialsSection />
+
+      {/* 10. Patient Testimonials */}
       <section className="section testimonials-section bg-light">
         <div className="container">
           <div className="text-center mb-60">

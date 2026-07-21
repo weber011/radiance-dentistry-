@@ -1,0 +1,260 @@
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 15, 25, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.video-modal-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: rgba(0,0,0,0.6);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  background: rgba(0,0,0,0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-prev {
+  left: 30px;
+}
+
+.nav-next {
+  right: 30px;
+}
+
+.video-container-wrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.video-player-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.video-controls-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.9) 100%);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.video-controls-overlay.visible {
+  opacity: 1;
+}
+
+.video-controls-overlay.hidden {
+  opacity: 0;
+}
+
+.video-info-top {
+  padding: 30px;
+  color: white;
+}
+
+.video-info-top h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.video-info-top p {
+  margin: 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+}
+
+.center-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  color: white;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.center-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(212, 175, 55, 0.8);
+}
+
+.play-icon-offset {
+  margin-left: 6px;
+}
+
+.video-controls-bottom {
+  padding: 0 30px 20px;
+  pointer-events: auto;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  position: relative;
+  transition: height 0.2s ease;
+}
+
+.progress-bar-container:hover .progress-bar-bg {
+  height: 6px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--gold, #d4af37);
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.progress-bar-container:hover .progress-bar-fill::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls-left, .controls-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.controls-row button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.controls-row button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: var(--gold, #d4af37);
+}
+
+.time-display {
+  color: white;
+  font-size: 0.9rem;
+  font-family: monospace;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .video-container-wrapper {
+    width: 100vw;
+    border-radius: 0;
+  }
+  
+  .nav-btn {
+    display: none;
+  }
+  
+  .video-modal-close {
+    top: 20px;
+    right: 20px;
+  }
+}
