@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import { 
   ChevronRight, Sofa, Users, Star, Monitor, ShieldCheck, Heart, 
-  Sparkles, CheckCircle2, Phone, X, PlayCircle
+  Sparkles, CheckCircle2, Phone, X, PlayCircle, ArrowLeft
 } from 'lucide-react';
 import './TourClinic.css';
 
@@ -90,6 +90,11 @@ const TourClinic = () => {
         <div className="tour-hero-overlay"></div>
         <div className="container tour-hero-content">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <div className="td-top-actions">
+              <Link to="/" className="td-back-btn">
+                <ArrowLeft size={16} /> Back to Home
+              </Link>
+            </div>
             <div className="breadcrumbs">
               <Link to="/">Home</Link> <ChevronRight size={14} /> <span>Tour The Clinic</span>
             </div>

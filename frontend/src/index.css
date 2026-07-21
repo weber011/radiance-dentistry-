@@ -129,6 +129,33 @@ ul {
   box-shadow: 0 15px 30px rgba(201, 162, 39, 0.3);
 }
 
+.td-top-actions {
+  margin-bottom: 24px;
+}
+
+.td-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: none;
+  color: var(--primary-navy);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.td-back-btn:hover {
+  background: var(--luxury-gold);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
 .stats-number {
   font-family: var(--font-stats);
   color: var(--luxury-gold);

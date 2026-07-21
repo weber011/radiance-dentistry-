@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import { 
   ChevronRight, Heart, Eye, Target, Shield, Star, Users, CheckCircle2, 
-  MapPin, Phone, Activity, Sparkles, Stethoscope, ChevronLeft, X 
+  MapPin, Phone, Activity, Sparkles, Stethoscope, ChevronLeft, X, ArrowLeft
 } from 'lucide-react';
 import './AboutClinic.css';
 
@@ -105,6 +105,11 @@ const AboutClinic = () => {
         <div className="about-hero-overlay"></div>
         <div className="container about-hero-content">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <div className="td-top-actions">
+              <Link to="/" className="td-back-btn">
+                <ArrowLeft size={16} /> Back to Home
+              </Link>
+            </div>
             <div className="breadcrumbs">
               <Link to="/">Home</Link> <ChevronRight size={14} /> <span>About Clinic</span>
             </div>
