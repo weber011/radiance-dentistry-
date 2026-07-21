@@ -41,7 +41,7 @@ const Navbar = () => {
             </button>
             <div className="dropdown-menu">
               <Link to="/services" className="dropdown-item">All Services</Link>
-              <Link to="/technology" className="dropdown-item">Advanced Technology</Link>
+              <Link to="/advanced-technology" className="dropdown-item">Advanced Technology</Link>
               <Link to="/gallery" className="dropdown-item">Smile Gallery</Link>
             </div>
           </div>
