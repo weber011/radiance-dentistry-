@@ -39,14 +39,25 @@
 
 .hero-brand {
   display: block;
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 4px;
+  font-family: var(--font-stats); /* Outfit - very modern/trending */
+  font-size: clamp(60px, 12vw, 150px);
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 0.9;
   text-transform: uppercase;
-  color: var(--luxury-gold);
-  margin-bottom: 16px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #FFFFFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  filter: drop-shadow(0px 8px 16px rgba(0,0,0,0.4));
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .hero-content h1 {
