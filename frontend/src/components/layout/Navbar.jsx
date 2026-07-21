@@ -55,7 +55,7 @@ const Navbar = () => {
 
         <div className="navbar-actions">
           <Link to="/contact" className="btn-primary desktop-btn">Book Appointment</Link>
-          <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className={`mobile-menu-btn ${isMobileMenuOpen ? 'menu-open' : ''}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>

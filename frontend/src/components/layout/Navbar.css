@@ -169,6 +169,10 @@
     z-index: 1001;
   }
 
+  .mobile-menu-btn.menu-open {
+    color: var(--primary-navy) !important;
+  }
+
   .nav-dropdown {
     width: 100%;
   }

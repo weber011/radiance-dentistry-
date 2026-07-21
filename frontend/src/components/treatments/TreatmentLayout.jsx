@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Shield, Sparkles, Activity, MessageCircle, Calendar, Phone, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Shield, Sparkles, Activity, MessageCircle, Calendar, Phone, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import { treatmentsData } from '../../data/treatments';
 
 const imageMapping = {
@@ -41,6 +41,8 @@ const FadeInWhenVisible = ({ children, className = "", delay = 0 }) => {
 };
 
 const TreatmentLayout = ({ treatment, heroImage }) => {
+  const navigate = useNavigate();
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -91,6 +93,11 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
         <div className="td-hero-bg" style={{ backgroundImage: `url('/assets/${heroImage}')` }}></div>
         <div className="td-hero-overlay"></div>
         <div className="container td-hero-content">
+          <div className="td-top-actions">
+            <button onClick={() => navigate(-1)} className="td-back-btn">
+              <ArrowLeft size={16} /> Back
+            </button>
+          </div>
           <div className="td-breadcrumbs">
             <Link to="/">Home</Link> <ChevronRight size={14} /> <span>Treatments</span> <ChevronRight size={14} /> <span className="active">{treatment.name}</span>
           </div>
