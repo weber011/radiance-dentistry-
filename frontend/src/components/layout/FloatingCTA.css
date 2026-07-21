@@ -71,15 +71,26 @@
 
 @media (max-width: 767px) {
   .floating-cta {
-    bottom: max(20px, env(safe-area-inset-bottom));
-    right: 15px;
-    gap: 10px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px calc(10px + env(safe-area-inset-bottom));
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.08);
+    gap: 0;
     z-index: 900;
   }
   
   .cta-item {
     width: 45px;
     height: 45px;
+    box-shadow: none;
   }
   
   .cta-item svg {
