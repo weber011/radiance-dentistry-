@@ -162,7 +162,7 @@ const AdvancedTechnology = () => {
             <p className="max-w-700 mx-auto mb-40">Book an appointment today and discover the difference that advanced technology and expert care can make for your smile.</p>
             <div className="flex-center gap-20">
               <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
-              <a href="https://wa.me/1234567890" className="btn btn-outline-white">WhatsApp Us</a>
+              <a href="https://wa.me/918696781255" className="btn btn-outline-white">WhatsApp Us</a>
             </div>
           </FadeInWhenVisible>
         </div>

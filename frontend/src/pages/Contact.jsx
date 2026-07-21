@@ -153,6 +153,16 @@ const Contact = () => {
                   </div>
                 </div>
 
+                <div className="info-card glassmorphism mb-30">
+                  <div className="info-item">
+                    <div className="info-icon"><Mail size={24} /></div>
+                    <div>
+                      <h4 className="text-navy mb-10">Email Address</h4>
+                      <p className="text-secondary m-0 mb-10"><a href="mailto:drruchijain30@gmail.com" className="text-secondary hover-gold">drruchijain30@gmail.com</a></p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="info-card glassmorphism">
                   <div className="info-item">
                     <div className="info-icon"><Clock size={24} /></div>

@@ -64,13 +64,13 @@ const AboutClinic = () => {
     "image": "https://www.radiancedentistry.com/assets/logo.png",
     "@id": "",
     "url": "https://www.radiancedentistry.com",
-    "telephone": "+1234567890",
+    "telephone": "8696781255",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Radiance Blvd",
-      "addressLocality": "CityName",
-      "postalCode": "12345",
-      "addressCountry": "US"
+      "streetAddress": "Shop No. 518, 5th Floor, Western Business Park, Vesu",
+      "addressLocality": "Surat",
+      "postalCode": "395007",
+      "addressCountry": "IN"
     }
   };
 
@@ -333,8 +333,8 @@ const AboutClinic = () => {
             <p className="mb-40">Schedule your consultation today and take the first step toward a healthier, more radiant smile.</p>
             <div className="cta-buttons">
               <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
-              <a href="tel:+1234567890" className="btn btn-outline-white"><Phone size={18} /> Call Now</a>
-              <a href="https://wa.me/1234567890" className="btn btn-outline-white text-green"><CheckCircle2 size={18} /> WhatsApp</a>
+              <a href="tel:8696781255" className="btn btn-outline-white"><Phone size={18} /> Call Now</a>
+              <a href="https://wa.me/918696781255" className="btn btn-outline-white text-green"><CheckCircle2 size={18} /> WhatsApp</a>
             </div>
           </FadeInWhenVisible>
         </div>

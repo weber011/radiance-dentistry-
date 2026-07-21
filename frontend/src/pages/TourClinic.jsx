@@ -65,13 +65,13 @@ const TourClinic = () => {
     "image": "https://www.radiancedentistry.com/assets/office.jpeg",
     "@id": "",
     "url": "https://www.radiancedentistry.com",
-    "telephone": "+1234567890",
+    "telephone": "8696781255",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Radiance Blvd",
-      "addressLocality": "CityName",
-      "postalCode": "12345",
-      "addressCountry": "US"
+      "streetAddress": "Shop No. 518, 5th Floor, Western Business Park, Vesu",
+      "addressLocality": "Surat",
+      "postalCode": "395007",
+      "addressCountry": "IN"
     }
   };
 
@@ -282,8 +282,8 @@ const TourClinic = () => {
             <p className="mb-40">Ready to transform your smile in a comfortable, premium environment?</p>
             <div className="cta-buttons">
               <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
-              <a href="tel:+1234567890" className="btn btn-outline-white"><Phone size={18} /> Call Now</a>
-              <a href="https://wa.me/1234567890" className="btn btn-outline-white text-green"><CheckCircle2 size={18} /> WhatsApp</a>
+              <a href="tel:8696781255" className="btn btn-outline-white"><Phone size={18} /> Call Now</a>
+              <a href="https://wa.me/918696781255" className="btn btn-outline-white text-green"><CheckCircle2 size={18} /> WhatsApp</a>
             </div>
           </FadeInWhenVisible>
         </div>

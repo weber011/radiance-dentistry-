@@ -54,15 +54,15 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <div className="contact-item">
               <MapPin size={20} />
-              <p>123 Luxury Avenue, Premium Medical Hub, City, State 12345</p>
+              <p>Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat – 395007</p>
             </div>
             <div className="contact-item">
               <Phone size={20} />
-              <p>+1 (234) 567-8900</p>
+              <p>8696781255</p>
             </div>
             <div className="contact-item">
               <Mail size={20} />
-              <p>hello@radiancedentistry.com</p>
+              <p>drruchijain30@gmail.com</p>
             </div>
           </div>
         </div>
