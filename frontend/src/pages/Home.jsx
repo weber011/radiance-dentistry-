@@ -214,8 +214,11 @@ const Home = () => {
             </FadeInWhenVisible>
             
             <FadeInWhenVisible className="doctor-info-col" delay={0.2}>
-              <h4 className="section-subtitle text-gold">Meet Dr. Ruchi Jain</h4>
-              <h2>Creating Healthy Smiles Through Compassion &amp; Clinical Excellence</h2>
+              <h2 className="doctor-name-heading">
+                Meet Your Dentist, <br />
+                <span className="text-gold">Dr. Ruchi Jain</span>
+              </h2>
+              <h3 className="doctor-subheading">Creating Healthy Smiles Through Compassion &amp; Clinical Excellence</h3>
               
               <div className="doctor-education glassmorphism-subtle mb-30">
                 <p><strong>Bachelor of Dental Surgery (BDS)</strong></p>
