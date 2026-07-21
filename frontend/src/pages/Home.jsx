@@ -173,7 +173,7 @@ const Home = () => {
       <section className="section about-section">
         <div className="container about-grid">
           <FadeInWhenVisible className="about-image-wrapper">
-            <div className="image-placeholder luxury-radius">Clinic Image Placeholder</div>
+            <img src="/assets/office.jpeg" alt="Radiance Dentistry Clinic" className="about-clinic-img luxury-radius" />
           </FadeInWhenVisible>
           <FadeInWhenVisible className="about-content">
             <h2>A Sanctuary for Your Smile</h2>
