@@ -8,8 +8,9 @@ import TechnologyAccordion from '../components/ui/TechnologyAccordion';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 import SmileGalleryCarousel from '../components/ui/SmileGalleryCarousel';
 import TestimonialCarousel from '../components/ui/TestimonialCarousel';
+import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
-import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity } from 'lucide-react';
+import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -451,8 +452,91 @@ const Home = () => {
           </FadeInWhenVisible>
         </div>
       </section>
+      {/* 11. Visit Us */}
+      <section className="section visit-us-section bg-navy text-white">
+        <div className="container">
+          <div className="text-center mb-60">
+            <FadeInWhenVisible>
+              <h4 className="section-subtitle text-gold">VISIT US</h4>
+              <h2 className="text-white">Find Radiance Dentistry</h2>
+              <p className="max-w-700 mx-auto text-light">Conveniently located in the heart of Vesu, Surat. Visit our modern dental clinic for world-class dental care in a comfortable and welcoming environment.</p>
+            </FadeInWhenVisible>
+          </div>
 
-      {/* 11. Contact */}
+          <div className="visit-grid">
+            <FadeInWhenVisible className="visit-info-card glassmorphism-dark">
+              <h3 className="text-white mb-30">Clinic Information</h3>
+              
+              <div className="contact-details mb-40">
+                <div className="contact-item">
+                  <div className="contact-icon"><MapPin size={24} /></div>
+                  <div>
+                    <h5 className="text-gold mb-5">Address</h5>
+                    <p className="text-light m-0">Shop No. 518, 5th Floor,<br />Western Business Park,<br />Vesu, Surat – 395007</p>
+                  </div>
+                </div>
+                
+                <div className="contact-item">
+                  <div className="contact-icon"><Phone size={24} /></div>
+                  <div>
+                    <h5 className="text-gold mb-5">Phone</h5>
+                    <p className="text-light m-0"><a href="tel:8696781255" className="text-light">8696781255</a></p>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <div className="contact-icon"><Mail size={24} /></div>
+                  <div>
+                    <h5 className="text-gold mb-5">Email</h5>
+                    <p className="text-light m-0"><a href="mailto:drruchijain30@gmail.com" className="text-light">drruchijain30@gmail.com</a></p>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <div className="contact-icon"><Calendar size={24} /></div>
+                  <div>
+                    <h5 className="text-gold mb-5">Working Hours</h5>
+                    <p className="text-light m-0">Mon – Sat: 10:00 AM – 7:00 PM<br />Sunday: By Appointment Only</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="visit-actions">
+                <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
+                <div className="action-buttons-row">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Western+Business+Park,+Vesu,+Surat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                    <Navigation size={16} /> Get Directions
+                  </a>
+                  <a href="tel:8696781255" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                    <Phone size={16} /> Call Now
+                  </a>
+                  <a href="https://wa.me/918696781255" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                    <MessageCircle size={16} /> WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <div className="why-visit-us mt-40">
+                <h4 className="text-white mb-20 text-sm border-b border-light pb-10">Why Visit Us</h4>
+                <div className="why-visit-grid">
+                  <div className="why-visit-item"><MapPin size={16} className="text-gold"/> Easy to Reach</div>
+                  <div className="why-visit-item"><Car size={16} className="text-gold"/> Ample Parking</div>
+                  <div className="why-visit-item"><Building2 size={16} className="text-gold"/> Modern Facility</div>
+                  <div className="why-visit-item"><Accessibility size={16} className="text-gold"/> Wheelchair Access</div>
+                  <div className="why-visit-item"><Armchair size={16} className="text-gold"/> Comfortable Lounge</div>
+                  <div className="why-visit-item"><Microscope size={16} className="text-gold"/> Advanced Tech</div>
+                </div>
+              </div>
+            </FadeInWhenVisible>
+
+            <FadeInWhenVisible delay={0.2} className="visit-map-container">
+              <MapEmbed />
+            </FadeInWhenVisible>
+          </div>
+        </div>
+      </section>
+
+      {/* 12. Contact */}
       <section className="section contact-section">
         <div className="container contact-box">
           <FadeInWhenVisible className="text-center">

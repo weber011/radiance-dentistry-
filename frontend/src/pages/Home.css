@@ -773,4 +773,87 @@
   
   .glassmorphism-dark { padding: 30px; }
   .quote { font-size: 1.25rem; }
+  
+  .action-buttons-row {
+    flex-direction: column;
+  }
+  .why-visit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 11. Visit Us */
+.visit-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.visit-info-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  background: rgba(255, 255, 255, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.visit-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.action-buttons-row {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.why-visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.why-visit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+@media (max-width: 992px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+  .visit-map-container {
+    height: 400px;
+  }
 }
