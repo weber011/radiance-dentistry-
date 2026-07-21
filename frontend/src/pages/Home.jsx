@@ -199,18 +199,7 @@ const Home = () => {
           
           <div className="doctor-grid-premium">
             <FadeInWhenVisible className="doctor-image-col">
-              <div className="premium-portrait-placeholder">
-                <div className="placeholder-content">
-                  <span className="placeholder-emoji">👩‍⚕️</span>
-                  <span className="placeholder-title">Doctor Photo</span>
-                  <span className="placeholder-subtitle">(Will be automatically replaced when image is uploaded)</span>
-                </div>
-                {/* Real image will be placed here eventually */}
-              </div>
-              <div className="photo-coming-soon-badge glassmorphism">
-                <Sparkles size={16} className="text-gold" />
-                <span>Photo Coming Soon</span>
-              </div>
+              <img src="/assets/doctor pic.jpeg" alt="Dr. Ruchi Jain" className="doctor-real-img" />
             </FadeInWhenVisible>
             
             <FadeInWhenVisible className="doctor-info-col" delay={0.2}>
