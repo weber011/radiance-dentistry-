@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Clock, Navigation, CheckCircle2, Car, Store, Coffee, ChevronRight, MessageCircle } from 'lucide-react';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
@@ -40,6 +40,49 @@ const Contact = () => {
         "description": "By Appointment Only"
       }
     ]
+  };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    treatment: 'General Consultation',
+    date: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Construct WhatsApp Message
+    const text = `*New Appointment Request* 🦷\n\n`
+      + `*Name:* ${formData.name}\n`
+      + `*Phone:* ${formData.phone}\n`
+      + (formData.email ? `*Email:* ${formData.email}\n` : '')
+      + `*Treatment:* ${formData.treatment}\n`
+      + (formData.date ? `*Preferred Date:* ${formData.date}\n` : '')
+      + (formData.message ? `\n*Message:*\n${formData.message}` : '');
+      
+    const encodedText = encodeURIComponent(text);
+    // Radiance Dentistry Phone Number
+    const whatsappNumber = "918696781255"; 
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
+    
+    // Optional: Reset form after successful submission
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      treatment: 'General Consultation',
+      date: '',
+      message: ''
+    });
   };
 
   return (
@@ -135,26 +178,26 @@ const Contact = () => {
                   <h3 className="text-navy mb-10">Request an Appointment</h3>
                   <p className="text-secondary mb-30">Fill out the form below and our team will contact you to confirm your schedule.</p>
                   
-                  <form className="appointment-form" onSubmit={(e) => e.preventDefault()}>
+                  <form className="appointment-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                       <label>Full Name</label>
-                      <input type="text" className="form-control" placeholder="Enter your name" required />
+                      <input type="text" name="name" value={formData.name} onChange={handleInputChange} className="form-control" placeholder="Enter your name" required />
                     </div>
                     
                     <div className="form-row">
                       <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="tel" className="form-control" placeholder="Your phone number" required />
+                        <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="form-control" placeholder="Your phone number" required />
                       </div>
                       <div className="form-group">
                         <label>Email Address (Optional)</label>
-                        <input type="email" className="form-control" placeholder="Your email" />
+                        <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="form-control" placeholder="Your email" />
                       </div>
                     </div>
 
                     <div className="form-group">
                       <label>Treatment Interested In</label>
-                      <select className="form-control">
+                      <select name="treatment" value={formData.treatment} onChange={handleInputChange} className="form-control">
                         <option>General Consultation</option>
                         <option>Root Canal Treatment</option>
                         <option>Dental Implants</option>
@@ -166,12 +209,12 @@ const Contact = () => {
 
                     <div className="form-group">
                       <label>Preferred Date</label>
-                      <input type="date" className="form-control" />
+                      <input type="date" name="date" value={formData.date} onChange={handleInputChange} className="form-control" />
                     </div>
 
                     <div className="form-group">
                       <label>Message / Specific Concerns</label>
-                      <textarea className="form-control" rows="4" placeholder="Tell us how we can help you..."></textarea>
+                      <textarea name="message" value={formData.message} onChange={handleInputChange} className="form-control" rows="4" placeholder="Tell us how we can help you..."></textarea>
                     </div>
 
                     <button type="submit" className="btn btn-primary w-100 justify-center">Submit Request</button>

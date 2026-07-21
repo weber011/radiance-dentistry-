@@ -6,10 +6,10 @@ import './FloatingCTA.css';
 const FloatingCTA = () => {
   return (
     <div className="floating-cta">
-      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="cta-item whatsapp" aria-label="WhatsApp">
+      <a href="https://wa.me/918696781255" target="_blank" rel="noopener noreferrer" className="cta-item whatsapp" aria-label="WhatsApp">
         <MessageCircle size={24} />
       </a>
-      <a href="tel:+1234567890" className="cta-item phone" aria-label="Call Now">
+      <a href="tel:8696781255" className="cta-item phone" aria-label="Call Now">
         <Phone size={24} />
       </a>
       <Link to="/contact" className="cta-item appointment" aria-label="Book Appointment">

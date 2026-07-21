@@ -544,7 +544,7 @@ const Home = () => {
             <p className="max-w-700 mx-auto mb-40">Schedule your exclusive consultation today and take the first step towards your dream smile.</p>
             <div className="contact-actions">
               <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
-              <a href="tel:+1234567890" className="btn btn-primary"><Phone size={18} /> Call Us Directly</a>
+              <a href="tel:8696781255" className="btn btn-primary"><Phone size={18} /> Call Us Directly</a>
             </div>
           </FadeInWhenVisible>
         </div>
