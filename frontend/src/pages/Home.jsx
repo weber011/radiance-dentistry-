@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
+import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import TechnologyAccordion from '../components/ui/TechnologyAccordion';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -30,33 +28,6 @@ const treatmentsList = [
   { name: "Oral Surgery", desc: "Expert surgical procedures for complex dental and maxillofacial conditions.", slug: "oral-surgery", image: "oral surgery.png" }
 ];
 
-// Reusable Section Reveal Component
-const FadeInWhenVisible = ({ children, className = "" }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial="hidden"
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 40 }
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 const Home = () => {
   return (

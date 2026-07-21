@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { Shield, Target, Clock, Zap, CheckCircle2, ChevronRight, Activity, Smile, Sun } from 'lucide-react';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
