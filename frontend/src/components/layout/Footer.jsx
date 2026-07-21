@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col brand-col">
             <Link to="/" className="footer-logo">
-              <img src="/assets/logo.png" alt="Radiance Dentistry Logo" />
+              <img src="/assets/logo.png" alt="Radiaance Dentistry Logo" />
             </Link>
             <p className="brand-desc">
               Experience the pinnacle of luxury dental care. Where advanced technology meets elegant comfort.
@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Radiance Dentistry. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Radiaance Dentistry. All rights reserved.</p>
           <div className="legal-links">
             <Link to="/placeholder">Privacy Policy</Link>
             <Link to="/placeholder">Terms of Service</Link>

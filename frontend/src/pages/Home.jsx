@@ -49,7 +49,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="hero-brand">RADIANCE DENTISTRY</span>
+            <span className="hero-brand">RADIAANCE DENTISTRY</span>
             <h1>Artistry in Every Smile</h1>
             <p>Experience world-class luxury dental care tailored to your unique needs.</p>
             <div className="hero-actions">
@@ -78,10 +78,10 @@ const Home = () => {
           </FadeInWhenVisible>
           
           <FadeInWhenVisible className="welcome-content">
-            <h4 className="section-subtitle">WELCOME TO RADIANCE DENTISTRY</h4>
+            <h4 className="section-subtitle">WELCOME TO RADIAANCE DENTISTRY</h4>
             <h2>Crafting Healthy Smiles with Precision &amp; Care</h2>
             <p className="intro-text">Experience premium dental care where advanced technology, personalized treatment, and compassionate professionals come together to create healthy, confident smiles.</p>
-            <p className="body-text">Welcome to Radiance Dentistry, a modern dental clinic committed to delivering exceptional oral healthcare in a calm, comfortable, and hygienic environment. Every patient receives personalized attention, transparent treatment planning, and the highest standard of clinical care. From preventive dentistry to complete smile transformations, our goal is to help every patient smile with confidence.</p>
+            <p className="body-text">Welcome to Radiaance Dentistry, a modern dental clinic committed to delivering exceptional oral healthcare in a calm, comfortable, and hygienic environment. Every patient receives personalized attention, transparent treatment planning, and the highest standard of clinical care. From preventive dentistry to complete smile transformations, our goal is to help every patient smile with confidence.</p>
             
             <div className="features-list-luxury">
                <div className="luxury-feature-card glassmorphism">
@@ -143,7 +143,7 @@ const Home = () => {
       <section className="section about-section">
         <div className="container about-grid">
           <FadeInWhenVisible className="about-image-wrapper">
-            <img src="/assets/office.jpeg" alt="Radiance Dentistry Clinic" className="about-clinic-img luxury-radius" />
+            <img src="/assets/office.jpeg" alt="Radiaance Dentistry Clinic" className="about-clinic-img luxury-radius" />
           </FadeInWhenVisible>
           <FadeInWhenVisible className="about-content">
             <h2>A Sanctuary for Your Smile</h2>
@@ -164,7 +164,7 @@ const Home = () => {
           <div className="text-center mb-40">
             <h4 className="section-subtitle">MEET YOUR DENTIST</h4>
             <h2>Expert Care. Gentle Hands. Beautiful Smiles.</h2>
-            <p className="max-w-700 mx-auto intro-text">Meet the experienced professional behind Radiance Dentistry, dedicated to providing ethical, personalized, and modern dental care.</p>
+            <p className="max-w-700 mx-auto intro-text">Meet the experienced professional behind Radiaance Dentistry, dedicated to providing ethical, personalized, and modern dental care.</p>
           </div>
           
           <div className="doctor-grid-premium">
@@ -235,7 +235,7 @@ const Home = () => {
       <section className="section why-us-section bg-light">
         <div className="container text-center">
           <FadeInWhenVisible>
-            <h2>The Radiance Difference</h2>
+            <h2>The Radiaance Difference</h2>
             <p className="max-w-700 mx-auto mb-40">Setting a new standard in dental excellence.</p>
           </FadeInWhenVisible>
           <div className="features-grid">
@@ -262,7 +262,7 @@ const Home = () => {
             <h4 className="section-subtitle">OUR TREATMENTS</h4>
             <h2>Complete Dental Care for Every Smile</h2>
             <p className="max-w-800 mx-auto intro-text">
-              From preventive care to advanced smile transformations, Radiance Dentistry offers comprehensive dental solutions using modern technology, personalized treatment plans, and ethical dentistry.
+              From preventive care to advanced smile transformations, Radiaance Dentistry offers comprehensive dental solutions using modern technology, personalized treatment plans, and ethical dentistry.
             </p>
           </FadeInWhenVisible>
           
@@ -295,7 +295,7 @@ const Home = () => {
           <FadeInWhenVisible className="tech-content">
             <h4 className="section-subtitle">ADVANCED DENTAL TECHNOLOGY</h4>
             <h2>Innovation at Your Service</h2>
-            <p>Radiance Dentistry combines modern technology with clinical expertise to deliver safer procedures, precise diagnosis, faster recovery, and exceptional patient comfort.</p>
+            <p>Radiaance Dentistry combines modern technology with clinical expertise to deliver safer procedures, precise diagnosis, faster recovery, and exceptional patient comfort.</p>
             
             <div className="tech-stats-grid">
               <div className="tech-stat-card">
@@ -411,7 +411,7 @@ const Home = () => {
           <div className="text-center mb-60">
             <FadeInWhenVisible>
               <h4 className="section-subtitle">PATIENT TESTIMONIALS</h4>
-              <h2 className="text-navy">Stories of Radiance</h2>
+              <h2 className="text-navy">Stories of Radiaance</h2>
               <p className="max-w-700 mx-auto mb-20 text-secondary">Real experiences shared by our valued patients.</p>
               
               <div className="trust-section mt-30">
@@ -466,7 +466,7 @@ const Home = () => {
           <div className="text-center mb-60">
             <FadeInWhenVisible>
               <h4 className="section-subtitle text-gold">VISIT US</h4>
-              <h2 className="text-white">Find Radiance Dentistry</h2>
+              <h2 className="text-white">Find Radiaance Dentistry</h2>
               <p className="max-w-700 mx-auto text-light">Conveniently located in the heart of Vesu, Surat. Visit our modern dental clinic for world-class dental care in a comfortable and welcoming environment.</p>
             </FadeInWhenVisible>
           </div>

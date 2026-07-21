@@ -100,9 +100,9 @@ const AdvancedTechnology = () => {
   return (
     <>
       <Helmet>
-        <title>Advanced Dental Technology | Radiance Dentistry</title>
-        <meta name="description" content="Explore the state-of-the-art dental technology at Radiance Dentistry. From 3D CBCT scans to Laser Dentistry, experience modern, painless, and precise care." />
-        <link rel="canonical" href="https://radiancedentistry.com/advanced-technology" />
+        <title>Advanced Dental Technology | Radiaance Dentistry</title>
+        <meta name="description" content="Explore the state-of-the-art dental technology at Radiaance Dentistry. From 3D CBCT scans to Laser Dentistry, experience modern, painless, and precise care." />
+        <link rel="canonical" href="https://radiaancedentistry.com/advanced-technology" />
       </Helmet>
 
       {/* Hero Section */}

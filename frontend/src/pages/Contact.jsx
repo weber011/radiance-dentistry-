@@ -10,10 +10,10 @@ const Contact = () => {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Radiance Dentistry",
-    "image": "https://radiancedentistry.com/assets/logo.png",
+    "name": "Radiaance Dentistry",
+    "image": "https://radiaancedentistry.com/assets/logo.png",
     "@id": "",
-    "url": "https://radiancedentistry.com",
+    "url": "https://radiaancedentistry.com",
     "telephone": "+918696781255",
     "address": {
       "@type": "PostalAddress",
@@ -69,7 +69,7 @@ const Contact = () => {
       + (formData.message ? `\n*Message:*\n${formData.message}` : '');
       
     const encodedText = encodeURIComponent(text);
-    // Radiance Dentistry Phone Number
+    // Radiaance Dentistry Phone Number
     const whatsappNumber = "918696781255"; 
     
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
@@ -88,9 +88,9 @@ const Contact = () => {
   return (
     <div className="page-container contact-page">
       <Helmet>
-        <title>Contact Radiance Dentistry | Top Dentist in Vesu, Surat</title>
-        <meta name="description" content="Book your appointment at Radiance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment." />
-        <link rel="canonical" href="https://radiancedentistry.com/contact" />
+        <title>Contact Radiaance Dentistry | Top Dentist in Vesu, Surat</title>
+        <meta name="description" content="Book your appointment at Radiaance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment." />
+        <link rel="canonical" href="https://radiaancedentistry.com/contact" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>

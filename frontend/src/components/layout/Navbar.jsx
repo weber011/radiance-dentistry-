@@ -27,7 +27,7 @@ const Navbar = () => {
     <header className={`navbar ${isScrolled ? 'scrolled glassmorphism' : ''} ${!isHome ? 'solid-bg' : ''}`}>
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo">
-          <img src="/assets/logo.png" alt="Radiance Dentistry Logo" />
+          <img src="/assets/logo.png" alt="Radiaance Dentistry Logo" />
         </Link>
 
         <nav className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>

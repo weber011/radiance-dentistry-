@@ -59,10 +59,10 @@ const ServiceLayout = ({ treatment, heroImage }) => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Radiance Dentistry",
-    "image": "https://www.radiancedentistry.com/assets/logo.png",
-    "@id": "https://www.radiancedentistry.com",
-    "url": "https://www.radiancedentistry.com",
+    "name": "Radiaance Dentistry",
+    "image": "https://www.radiaancedentistry.com/assets/logo.png",
+    "@id": "https://www.radiaancedentistry.com",
+    "url": "https://www.radiaancedentistry.com",
     "telephone": "+918800201089",
     "address": {
       "@type": "PostalAddress",
@@ -80,9 +80,9 @@ const ServiceLayout = ({ treatment, heroImage }) => {
   return (
     <div className="treatment-detail-page">
       <Helmet>
-        <title>{treatment.name} | Comprehensive Dental Services | Radiance Dentistry</title>
+        <title>{treatment.name} | Comprehensive Dental Services | Radiaance Dentistry</title>
         <meta name="description" content={treatment.shortIntro} />
-        <link rel="canonical" href={`https://www.radiancedentistry.com/treatments/${treatment.slug}`} />
+        <link rel="canonical" href={`https://www.radiaancedentistry.com/treatments/${treatment.slug}`} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(medicalSpecialtySchema)}</script>
@@ -185,7 +185,7 @@ const ServiceLayout = ({ treatment, heroImage }) => {
         <section className="td-section bg-navy text-white">
           <div className="container">
             <FadeInWhenVisible className="text-center mb-40">
-              <h2 className="text-white">Why Choose Radiance Dentistry?</h2>
+              <h2 className="text-white">Why Choose Radiaance Dentistry?</h2>
               <p className="max-w-700 mx-auto text-light">Experience life-changing results with our premium dental care.</p>
             </FadeInWhenVisible>
             <div className="td-cards-grid-2">

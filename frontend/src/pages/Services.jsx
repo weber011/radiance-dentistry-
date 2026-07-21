@@ -11,8 +11,8 @@ const Services = () => {
   return (
     <div className="page-container services-page">
       <Helmet>
-        <title>Our Services | Radiance Dentistry</title>
-        <meta name="description" content="Explore our comprehensive range of premium dental treatments at Radiance Dentistry." />
+        <title>Our Services | Radiaance Dentistry</title>
+        <meta name="description" content="Explore our comprehensive range of premium dental treatments at Radiaance Dentistry." />
       </Helmet>
 
       {/* Hero Section */}

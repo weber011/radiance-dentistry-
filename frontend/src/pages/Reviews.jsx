@@ -19,9 +19,9 @@ const Reviews = () => {
   return (
     <div className="page-container reviews-page">
       <Helmet>
-        <title>Patient Reviews | Radiance Dentistry</title>
-        <meta name="description" content="Read real patient reviews and experiences at Radiance Dentistry. See why our patients trust Dr. Ruchi Jain with their smile makeovers, root canals, and implants." />
-        <link rel="canonical" href="https://radiancedentistry.com/reviews" />
+        <title>Patient Reviews | Radiaance Dentistry</title>
+        <meta name="description" content="Read real patient reviews and experiences at Radiaance Dentistry. See why our patients trust Dr. Ruchi Jain with their smile makeovers, root canals, and implants." />
+        <link rel="canonical" href="https://radiaancedentistry.com/reviews" />
       </Helmet>
 
       {/* Hero Banner */}
@@ -35,7 +35,7 @@ const Reviews = () => {
               <Star className="icon-gold" fill="currentColor" size={20} />
               <Star className="icon-gold" fill="currentColor" size={20} />
             </div>
-            <h1 className="hero-title">Stories of Radiance</h1>
+            <h1 className="hero-title">Stories of Radiaance</h1>
             <p className="hero-subtitle">Real experiences shared by our valued patients. Discover what it means to experience truly premium dental care.</p>
           </FadeInWhenVisible>
         </div>
@@ -109,7 +109,7 @@ const Reviews = () => {
       <section className="section bg-navy text-white text-center experience-timeline-section">
         <div className="container">
           <FadeInWhenVisible>
-            <h2 className="text-white mb-60">The Radiance Experience</h2>
+            <h2 className="text-white mb-60">The Radiaance Experience</h2>
           </FadeInWhenVisible>
           <div className="timeline-grid">
             <FadeInWhenVisible className="timeline-item">
@@ -146,7 +146,7 @@ const Reviews = () => {
           <div className="max-w-800 mx-auto text-left">
             <FadeInWhenVisible className="glassmorphism p-30 mb-20 rounded-xl bg-white shadow-sm">
               <h4 className="text-navy mb-10">Are these reviews real?</h4>
-              <p className="text-secondary m-0">Absolutely. Every review displayed here is a genuine testimonial left by actual patients of Radiance Dentistry on our Google Business Profile.</p>
+              <p className="text-secondary m-0">Absolutely. Every review displayed here is a genuine testimonial left by actual patients of Radiaance Dentistry on our Google Business Profile.</p>
             </FadeInWhenVisible>
             <FadeInWhenVisible delay={0.2} className="glassmorphism p-30 mb-20 rounded-xl bg-white shadow-sm">
               <h4 className="text-navy mb-10">Can I leave a review?</h4>
@@ -161,7 +161,7 @@ const Reviews = () => {
         <div className="container">
           <FadeInWhenVisible>
             <h2 className="mb-20 text-white">Experience It For Yourself</h2>
-            <p className="mb-40 max-w-700 mx-auto text-light">Join hundreds of happy patients who have trusted Radiance Dentistry with their smiles. Schedule your premium consultation today.</p>
+            <p className="mb-40 max-w-700 mx-auto text-light">Join hundreds of happy patients who have trusted Radiaance Dentistry with their smiles. Schedule your premium consultation today.</p>
             <KnowMoreBtn to="/contact" text="Book Your Appointment" variant="gold" />
           </FadeInWhenVisible>
         </div>

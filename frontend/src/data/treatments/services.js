@@ -4,7 +4,7 @@ export const servicesData = {
     name: "Family Dentistry",
     slug: "family-dentistry",
     shortIntro: "Comprehensive, compassionate dental care for every member of your family, from toddlers to grandparents, under one roof.",
-    whatIsIt: "Family dentistry at Radiance Dentistry focuses on addressing the unique oral health needs of patients at every stage of life. Rather than visiting multiple specialists, our clinic provides a centralized, comfortable environment where your entire family can receive preventive, restorative, and cosmetic care from a team that knows your family's dental history.",
+    whatIsIt: "Family dentistry at Radiaance Dentistry focuses on addressing the unique oral health needs of patients at every stage of life. Rather than visiting multiple specialists, our clinic provides a centralized, comfortable environment where your entire family can receive preventive, restorative, and cosmetic care from a team that knows your family's dental history.",
     serviceSections: [
       {
         title: "Dental Care Across Generations",
@@ -49,7 +49,7 @@ export const servicesData = {
     name: "Emergency Dental Care",
     slug: "emergency-dental-care",
     shortIntro: "Immediate, priority treatment for unexpected dental pain, injuries, and critical oral health emergencies.",
-    whatIsIt: "Emergency dental care provides immediate clinical intervention for conditions involving severe pain, bleeding, or trauma to the mouth. At Radiance Dentistry, we reserve priority scheduling to ensure that urgent cases are seen as quickly as possible, preventing further damage and relieving pain instantly.",
+    whatIsIt: "Emergency dental care provides immediate clinical intervention for conditions involving severe pain, bleeding, or trauma to the mouth. At Radiaance Dentistry, we reserve priority scheduling to ensure that urgent cases are seen as quickly as possible, preventing further damage and relieving pain instantly.",
     serviceSections: [
       {
         title: "Dental Emergencies We Treat",
@@ -103,7 +103,7 @@ export const servicesData = {
     name: "Oral Surgery",
     slug: "oral-surgery",
     shortIntro: "Expert, minimally invasive surgical procedures for complex dental and maxillofacial conditions.",
-    whatIsIt: "Oral surgery encompasses a range of specialized clinical procedures designed to address complex issues in the mouth, jaw, and face. From the removal of impacted teeth to advanced bone reconstruction, Radiance Dentistry utilizes state-of-the-art technology to ensure surgical precision, rapid recovery, and maximum patient comfort.",
+    whatIsIt: "Oral surgery encompasses a range of specialized clinical procedures designed to address complex issues in the mouth, jaw, and face. From the removal of impacted teeth to advanced bone reconstruction, Radiaance Dentistry utilizes state-of-the-art technology to ensure surgical precision, rapid recovery, and maximum patient comfort.",
     serviceSections: [
       {
         title: "Surgical Services Offered",

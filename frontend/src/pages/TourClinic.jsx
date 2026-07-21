@@ -61,10 +61,10 @@ const TourClinic = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Radiance Dentistry",
-    "image": "https://www.radiancedentistry.com/assets/office.jpeg",
+    "name": "Radiaance Dentistry",
+    "image": "https://www.radiaancedentistry.com/assets/office.jpeg",
     "@id": "",
-    "url": "https://www.radiancedentistry.com",
+    "url": "https://www.radiaancedentistry.com",
     "telephone": "8696781255",
     "address": {
       "@type": "PostalAddress",
@@ -78,9 +78,9 @@ const TourClinic = () => {
   return (
     <div className="page-tour page-transition">
       <Helmet>
-        <title>Tour Our Clinic | Radiance Dentistry</title>
-        <meta name="description" content="Take a virtual tour of Radiance Dentistry. Explore our modern reception, advanced treatment rooms, and state-of-the-art dental technology designed for your comfort." />
-        <link rel="canonical" href="https://www.radiancedentistry.com/tour-the-clinic" />
+        <title>Tour Our Clinic | Radiaance Dentistry</title>
+        <meta name="description" content="Take a virtual tour of Radiaance Dentistry. Explore our modern reception, advanced treatment rooms, and state-of-the-art dental technology designed for your comfort." />
+        <link rel="canonical" href="https://www.radiaancedentistry.com/tour-the-clinic" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -98,7 +98,7 @@ const TourClinic = () => {
             <div className="breadcrumbs">
               <Link to="/">Home</Link> <ChevronRight size={14} /> <span>Tour The Clinic</span>
             </div>
-            <h1>Tour Radiance Dentistry</h1>
+            <h1>Tour Radiaance Dentistry</h1>
             <p>Step inside our modern dental clinic and experience a space designed for comfort, safety, and exceptional patient care.</p>
           </motion.div>
         </div>
@@ -110,7 +110,7 @@ const TourClinic = () => {
           <FadeInWhenVisible>
             <h4 className="section-subtitle">WELCOME</h4>
             <h2>A Space Designed For You</h2>
-            <p className="body-text mt-20">At Radiance Dentistry, we believe that exceptional dental care begins the moment you walk through our doors. We have combined modern infrastructure, cutting-edge technology, and a calming atmosphere to ensure every patient feels relaxed, safe, and comfortable throughout their entire visit.</p>
+            <p className="body-text mt-20">At Radiaance Dentistry, we believe that exceptional dental care begins the moment you walk through our doors. We have combined modern infrastructure, cutting-edge technology, and a calming atmosphere to ensure every patient feels relaxed, safe, and comfortable throughout their entire visit.</p>
           </FadeInWhenVisible>
         </div>
       </section>
@@ -278,7 +278,7 @@ const TourClinic = () => {
       <section className="section pt-0">
         <div className="container">
           <FadeInWhenVisible className="cta-card glassmorphism-dark text-center">
-            <h2>Experience Radiance Dentistry in Person</h2>
+            <h2>Experience Radiaance Dentistry in Person</h2>
             <p className="mb-40">Ready to transform your smile in a comfortable, premium environment?</p>
             <div className="cta-buttons">
               <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />

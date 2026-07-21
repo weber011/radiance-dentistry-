@@ -35,9 +35,9 @@ const SmileGallery = () => {
   return (
     <div className="page-container smile-gallery-page">
       <Helmet>
-        <title>Smile Gallery | Radiance Dentistry Transformations</title>
-        <meta name="description" content="View real patient transformations at Radiance Dentistry. Explore our before & after gallery for dental implants, veneers, teeth whitening, and smile makeovers." />
-        <link rel="canonical" href="https://radiancedentistry.com/smile-gallery" />
+        <title>Smile Gallery | Radiaance Dentistry Transformations</title>
+        <meta name="description" content="View real patient transformations at Radiaance Dentistry. Explore our before & after gallery for dental implants, veneers, teeth whitening, and smile makeovers." />
+        <link rel="canonical" href="https://radiaancedentistry.com/smile-gallery" />
       </Helmet>
 
       {/* Hero Banner */}
@@ -135,7 +135,7 @@ const SmileGallery = () => {
           <div className="testimonial-grid">
             <FadeInWhenVisible className="testimonial-card glassmorphism-dark">
               <Star className="text-gold mb-20" size={24} />
-              <p className="quote">"Getting veneers at Radiance was the best decision I've ever made. My confidence is through the roof."</p>
+              <p className="quote">"Getting veneers at Radiaance was the best decision I've ever made. My confidence is through the roof."</p>
               <h4>- Michael T.</h4>
             </FadeInWhenVisible>
             <FadeInWhenVisible delay={0.2} className="testimonial-card glassmorphism-dark">

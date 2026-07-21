@@ -60,10 +60,10 @@ const AboutClinic = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Radiance Dentistry",
-    "image": "https://www.radiancedentistry.com/assets/logo.png",
+    "name": "Radiaance Dentistry",
+    "image": "https://www.radiaancedentistry.com/assets/logo.png",
     "@id": "",
-    "url": "https://www.radiancedentistry.com",
+    "url": "https://www.radiaancedentistry.com",
     "telephone": "8696781255",
     "address": {
       "@type": "PostalAddress",
@@ -81,7 +81,7 @@ const AboutClinic = () => {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.radiancedentistry.com/"
+      "item": "https://www.radiaancedentistry.com/"
     },{
       "@type": "ListItem",
       "position": 2,
@@ -92,9 +92,9 @@ const AboutClinic = () => {
   return (
     <div className="page-about page-transition">
       <Helmet>
-        <title>About Radiance Dentistry | Premium Dental Clinic</title>
-        <meta name="description" content="Discover Radiance Dentistry, a place where modern dentistry meets compassionate care in a luxurious environment." />
-        <link rel="canonical" href="https://www.radiancedentistry.com/about-clinic" />
+        <title>About Radiaance Dentistry | Premium Dental Clinic</title>
+        <meta name="description" content="Discover Radiaance Dentistry, a place where modern dentistry meets compassionate care in a luxurious environment." />
+        <link rel="canonical" href="https://www.radiaancedentistry.com/about-clinic" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Helmet>
@@ -113,7 +113,7 @@ const AboutClinic = () => {
             <div className="breadcrumbs">
               <Link to="/">Home</Link> <ChevronRight size={14} /> <span>About Clinic</span>
             </div>
-            <h1>About Radiance Dentistry</h1>
+            <h1>About Radiaance Dentistry</h1>
             <p>A place where modern dentistry meets compassionate care.</p>
           </motion.div>
         </div>
@@ -123,7 +123,7 @@ const AboutClinic = () => {
       <section className="section bg-light">
         <div className="container split-layout">
           <FadeInWhenVisible className="split-image-container">
-            <img src="/assets/office.jpeg" alt="Radiance Dentistry Office" className="luxury-radius shadow-lg" />
+            <img src="/assets/office.jpeg" alt="Radiaance Dentistry Office" className="luxury-radius shadow-lg" />
             <div className="floating-badge glassmorphism">
               <span className="badge-year">15+</span>
               <span className="badge-text">Years of<br/>Excellence</span>
@@ -132,7 +132,7 @@ const AboutClinic = () => {
           <FadeInWhenVisible className="split-content" delay={0.2}>
             <h4 className="section-subtitle">OUR STORY</h4>
             <h2>Committed to Your Best Smile</h2>
-            <p className="intro-text">Radiance Dentistry was founded with a singular vision: to redefine the dental experience.</p>
+            <p className="intro-text">Radiaance Dentistry was founded with a singular vision: to redefine the dental experience.</p>
             <p className="body-text">We focus on personalized care, ensuring every patient is heard and understood. By integrating advanced technology with ethical dentistry, we provide treatments that are not only effective but designed for long-term oral health. Our beautiful clinic environment is carefully crafted to ease anxiety, offering a calming sanctuary for your dental journey.</p>
           </FadeInWhenVisible>
         </div>
@@ -163,7 +163,7 @@ const AboutClinic = () => {
         <div className="container">
           <div className="text-center mb-40">
             <h4 className="section-subtitle">OUR PHILOSOPHY</h4>
-            <h2>The Radiance Difference</h2>
+            <h2>The Radiaance Difference</h2>
           </div>
           <div className="philosophy-grid">
             <FadeInWhenVisible className="philosophy-card glassmorphism hover-lift">
@@ -265,7 +265,7 @@ const AboutClinic = () => {
         <div className="container">
           <div className="text-center mb-40">
             <h4 className="section-subtitle">DIFFERENCE</h4>
-            <h2>Why Choose Radiance Dentistry</h2>
+            <h2>Why Choose Radiaance Dentistry</h2>
           </div>
           <div className="timeline-container">
             <div className="timeline-line"></div>

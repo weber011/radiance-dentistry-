@@ -8,7 +8,7 @@ const MapEmbed = () => {
   return (
     <div className="map-embed-container premium-hover">
       <iframe
-        title="Radiance Dentistry Location"
+        title="Radiaance Dentistry Location"
         src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
         width="100%"
         height="100%"
