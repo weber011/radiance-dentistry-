@@ -1,3 +1,17 @@
+import { servicesData } from './treatments/services';
+import { coreTreatmentsData } from './treatments/core';
+import { restorativeData } from './treatments/restorative';
+import { orthoData } from './treatments/ortho';
+import { perioData } from './treatments/perio';
+
+export const treatmentsData = {
+  ...servicesData,
+  ...coreTreatmentsData,
+  ...restorativeData,
+  ...orthoData,
+  ...perioData
+};
+
 export const treatmentsList = [
   { name: "Dental Implants", desc: "Permanent, natural-looking tooth replacements for a complete smile.", slug: "dental-implants", image: "dental_implants.png" },
   { name: "Root Canal Treatment", desc: "Pain-free procedures to save infected teeth and restore oral health.", slug: "root-canal-treatment", image: "root_canal.png" },
