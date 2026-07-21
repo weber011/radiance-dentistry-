@@ -518,21 +518,29 @@
 }
 
 /* 8. Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.transformation-stats {
+  margin-top: 30px;
+  justify-content: center;
+  gap: 30px;
 }
 
-.before-after-placeholder {
-  height: 300px;
-  background: #E5E7EB;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  color: var(--secondary-text);
+.transformation-stats .tech-stat-card {
+  padding: 15px 30px;
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 992px) {
+  .ba-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 9. Testimonials */
@@ -767,7 +775,7 @@
   }
   .hero-actions { flex-direction: column; }
   .treatments-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .ba-grid { grid-template-columns: 1fr; }
   .contact-actions { flex-direction: column; }
   .doctor-actions { flex-direction: column; }
   .doctor-focus-list, .qualification-cards { grid-template-columns: 1fr; }

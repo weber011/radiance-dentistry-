@@ -5,6 +5,8 @@ import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import TechnologyAccordion from '../components/ui/TechnologyAccordion';
+import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
+import SmileGalleryCarousel from '../components/ui/SmileGalleryCarousel';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -331,20 +333,63 @@ const Home = () => {
 
       {/* 8. Smile Gallery */}
       <section className="section gallery-section">
-        <div className="container text-center">
-          <FadeInWhenVisible>
-            <h2>Transformations</h2>
-            <p className="max-w-700 mx-auto mb-40">Real results. Life-changing smiles.</p>
-          </FadeInWhenVisible>
-          <div className="gallery-grid">
-            {[1, 2, 3].map((item) => (
-              <FadeInWhenVisible key={item} className="gallery-item">
-                <div className="before-after-placeholder">Before & After</div>
-              </FadeInWhenVisible>
-            ))}
+        <div className="container">
+          <div className="text-center">
+            <FadeInWhenVisible>
+              <h4 className="section-subtitle">SMILE TRANSFORMATIONS</h4>
+              <h2>Transformations</h2>
+              <p className="max-w-700 mx-auto mb-40">Real Patients. Real Results. Life-Changing Smiles.</p>
+              
+              <div className="tech-stats-grid transformation-stats">
+                <div className="tech-stat-card justify-center">
+                  <CheckCircle2 className="icon-gold" size={24} />
+                  <span>500+ Smiles Transformed</span>
+                </div>
+                <div className="tech-stat-card justify-center">
+                  <CheckCircle2 className="icon-gold" size={24} />
+                  <span>Personalized Smile Design</span>
+                </div>
+                <div className="tech-stat-card justify-center">
+                  <CheckCircle2 className="icon-gold" size={24} />
+                  <span>Natural Looking Results</span>
+                </div>
+              </div>
+            </FadeInWhenVisible>
           </div>
-          <div className="mt-40">
-            <KnowMoreBtn to="/gallery" text="View Full Gallery" variant="gold" />
+
+          <div className="transformations-container mt-60">
+            <h3 className="text-center mb-40 text-navy">Before & After Transformations</h3>
+            <div className="ba-grid">
+              <FadeInWhenVisible>
+                <BeforeAfterSlider 
+                  afterImage="/assets/smile makover.png"
+                  treatmentName="Smile Makeover"
+                  description="Complete smile makeover using custom porcelain veneers and professional whitening."
+                  treatmentSlug="smile-makeover"
+                  fallbackToFilter={true}
+                />
+              </FadeInWhenVisible>
+              <FadeInWhenVisible delay={0.2}>
+                <BeforeAfterSlider 
+                  afterImage="/assets/clear_aligners.png"
+                  treatmentName="Clear Aligners"
+                  description="Orthodontic correction of crowding and misalignment using invisible aligners."
+                  treatmentSlug="clear-aligners"
+                  fallbackToFilter={true}
+                />
+              </FadeInWhenVisible>
+            </div>
+          </div>
+
+          <div className="smile-gallery-container mt-60">
+            <h3 className="text-center mb-40 text-navy">Smile Gallery</h3>
+            <FadeInWhenVisible>
+              <SmileGalleryCarousel />
+            </FadeInWhenVisible>
+          </div>
+
+          <div className="text-center mt-60">
+            <KnowMoreBtn to="/smile-gallery" text="View Full Smile Gallery" variant="gold" />
           </div>
         </div>
       </section>

@@ -7,8 +7,8 @@ import AboutClinic from './pages/AboutClinic';
 import TourClinic from './pages/TourClinic';
 import TreatmentDetail from './pages/TreatmentDetail';
 import AdvancedTechnology from './pages/AdvancedTechnology';
+import SmileGallery from './pages/SmileGallery';
 import PlaceholderPage from './pages/PlaceholderPage';
-
 function App() {
   return (
     <>
@@ -22,7 +22,7 @@ function App() {
         <Route path="/doctor" element={<PlaceholderPage title="Meet Dr Ruchi Jain" />} />
         <Route path="/services" element={<PlaceholderPage title="Our Services" />} />
         <Route path="/advanced-technology" element={<AdvancedTechnology />} />
-        <Route path="/gallery" element={<PlaceholderPage title="Smile Gallery" />} />
+        <Route path="/smile-gallery" element={<SmileGallery />} />
         <Route path="/testimonials" element={<PlaceholderPage title="Patient Testimonials" />} />
         <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />
         <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
