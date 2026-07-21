@@ -1,9 +1,9 @@
 .ba-card {
-  border-radius: 28px;
+  border-radius: 20px;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
 }
@@ -11,7 +11,7 @@
 .ba-image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/10;
   overflow: hidden;
   cursor: ew-resize;
   user-select: none;
@@ -95,27 +95,31 @@
 }
 
 .ba-content {
-  padding: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .ba-content h3 {
   font-family: var(--font-heading);
-  color: var(--primary-navy);
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
 }
 
 .ba-content p {
-  color: var(--secondary-text);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  flex-grow: 1;
 }
 
 .ba-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-top: auto;
 }
 
 .btn-link {

@@ -5,19 +5,10 @@ import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import ImageLightbox from '../components/ui/ImageLightbox';
+import MasonryGallery from '../components/ui/MasonryGallery';
+import { fullGalleryData } from '../data/gallery';
 import './SmileGallery.css';
 
-const fullGalleryData = [
-  { id: 1, src: '/assets/smile gallery 1.jpeg', treatment: 'Smile Makeover', category: 'veneers' },
-  { id: 2, src: '/assets/smile gallery2.jpeg', treatment: 'Dental Implants', category: 'implants' },
-  { id: 3, src: '/assets/smile galler3.jpeg', treatment: 'Teeth Whitening', category: 'whitening' },
-  { id: 4, src: '/assets/smile gallery4.jpeg', treatment: 'Orthodontics', category: 'ortho' },
-  { id: 5, src: '/assets/smile gallery5.jpeg', treatment: 'Dental Crowns', category: 'crowns' },
-  { id: 6, src: '/assets/smile gallery6.jpeg', treatment: 'Smile Makeover', category: 'veneers' },
-  { id: 7, src: '/assets/smile galeery7.jpeg', treatment: 'Dental Veneers', category: 'veneers' },
-  { id: 8, src: '/assets/smilegallery8.jpeg', treatment: 'Full Mouth Rehab', category: 'implants' },
-  { id: 9, src: '/assets/smilegallery.jpeg', treatment: 'Smile Design', category: 'veneers' }
-];
 
 const filters = [
   { label: 'All', value: 'all' },
@@ -93,16 +84,18 @@ const SmileGallery = () => {
       </section>
 
       {/* Full Smile Gallery Grid */}
-      <section className="section full-gallery-section">
+      <section className="section full-gallery-section bg-light">
         <div className="container">
           <div className="text-center mb-40">
             <h2 className="text-navy">Comprehensive Gallery</h2>
             <p>Filter by treatment to see specific results.</p>
-            
-            <div className="gallery-filters mt-30">
+          </div>
+
+          <FadeInWhenVisible>
+            <div className="gallery-filters">
               {filters.map(filter => (
                 <button 
-                  key={filter.value}
+                  key={filter.value} 
                   className={`filter-btn ${activeFilter === filter.value ? 'active' : ''}`}
                   onClick={() => setActiveFilter(filter.value)}
                 >
@@ -110,25 +103,24 @@ const SmileGallery = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </FadeInWhenVisible>
 
-          <div className="gallery-masonry">
-            {filteredGallery.map((item, index) => (
-              <FadeInWhenVisible key={item.id} className="gallery-masonry-item">
-                <div className="gallery-card glassmorphism premium-hover">
-                  <div className="gallery-card-image-wrapper" onClick={() => openLightbox(index)}>
-                    <img src={item.src} alt={item.treatment} loading="lazy" />
-                    <div className="gallery-card-overlay">
-                      <Maximize2 size={32} className="text-white" />
-                    </div>
-                  </div>
-                  <div className="gallery-card-content p-15 text-center">
-                    <h4 className="text-navy text-sm font-semibold">{item.treatment}</h4>
-                  </div>
-                </div>
-              </FadeInWhenVisible>
-            ))}
-          </div>
+          {filteredGallery.length > 0 ? (
+            <MasonryGallery 
+              images={filteredGallery} 
+              onImageClick={(idx) => {
+                // We need to map the filtered index back to the full array to show correct image in lightbox,
+                // or just pass the image object. Let's find the absolute index.
+                const img = filteredGallery[idx];
+                const absoluteIndex = fullGalleryData.findIndex(item => item.id === img.id);
+                openLightbox(absoluteIndex >= 0 ? absoluteIndex : 0);
+              }}
+            />
+          ) : (
+            <div className="empty-gallery">
+              <p>More cases coming soon for this category.</p>
+            </div>
+          )}
         </div>
       </section>
 

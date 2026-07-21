@@ -96,9 +96,8 @@ const BeforeAfterSlider = ({
         <p>{description}</p>
         
         <div className="ba-actions">
-          <Link to="/contact" className="btn btn-primary btn-sm">Book Appointment</Link>
-          <Link to={`/treatments/${treatmentSlug}`} className="btn-link">
-            Know More <ArrowRight size={16} />
+          <Link to={`/treatments/${treatmentSlug}`} className="btn-link text-navy text-sm font-medium">
+            Know More <ArrowRight size={14} />
           </Link>
         </div>
       </div>
