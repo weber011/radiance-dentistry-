@@ -588,11 +588,11 @@
 }
 
 .service-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  border-radius: 14px;
-  background: rgba(44, 181, 180, 0.1);
-  color: var(--medical-teal);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary-navy), #112B47);
+  color: var(--luxury-gold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -600,12 +600,14 @@
   transition: all 0.4s ease;
   z-index: 1;
   position: relative;
+  box-shadow: 0 8px 16px rgba(30, 58, 95, 0.15);
 }
 
 .premium-service-card:hover .service-icon-wrapper {
-  background: var(--medical-teal);
+  background: linear-gradient(135deg, var(--luxury-gold), #B58C16);
   color: var(--white);
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 12px 24px rgba(201, 162, 39, 0.25);
 }
 
 .service-card-content {
