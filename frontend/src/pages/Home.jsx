@@ -61,9 +61,32 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. Welcome Section */}
-      {/* 2. Welcome Section */}
-      <section className="section welcome-section bg-light">
+      {/* 2. Why Choose Us (Trust) */}
+      <section className="section why-us-section bg-light">
+        <div className="container text-center">
+          <FadeInWhenVisible>
+            <h2>The Radiaance Difference</h2>
+            <p className="max-w-700 mx-auto mb-40">Setting a new standard in dental excellence.</p>
+          </FadeInWhenVisible>
+          <div className="features-grid">
+            {[
+              { icon: <Shield />, title: "Uncompromising Safety", desc: "Highest standards of sterilization." },
+              { icon: <Star />, title: "Luxury Experience", desc: "Comfort at every touchpoint." },
+              { icon: <Clock />, title: "Respect for Time", desc: "Prompt, unhurried appointments." },
+              { icon: <Award />, title: "Master Craftsmanship", desc: "Flawless aesthetic results." }
+            ].map((item, idx) => (
+              <FadeInWhenVisible key={idx} className="feature-card">
+                <div className="icon-wrapper">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </FadeInWhenVisible>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Welcome Section */}
+      <section className="section welcome-section">
         <div className="container welcome-grid">
           <FadeInWhenVisible className="welcome-images">
              <div className="collage-wrapper">
@@ -140,8 +163,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. About Clinic */}
-      <section className="section about-section">
+      {/* 4. About Clinic */}
+      <section className="section about-section bg-light">
         <div className="container about-grid">
           <FadeInWhenVisible className="about-image-wrapper">
             <img src="/assets/office.jpeg" alt="Radiaance Dentistry Clinic" className="about-clinic-img luxury-radius" />
@@ -159,8 +182,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. Meet Dr Ruchi Jain */}
-      <section className="section doctor-section bg-light">
+      {/* 5. Meet Dr Ruchi Jain */}
+      <section className="section doctor-section">
         <div className="container">
           <div className="text-center mb-40">
             <h4 className="section-subtitle">MEET YOUR DENTIST</h4>
@@ -232,32 +255,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. Why Choose Us */}
-      <section className="section why-us-section bg-light">
-        <div className="container text-center">
-          <FadeInWhenVisible>
-            <h2>The Radiaance Difference</h2>
-            <p className="max-w-700 mx-auto mb-40">Setting a new standard in dental excellence.</p>
-          </FadeInWhenVisible>
-          <div className="features-grid">
-            {[
-              { icon: <Shield />, title: "Uncompromising Safety", desc: "Highest standards of sterilization." },
-              { icon: <Star />, title: "Luxury Experience", desc: "Comfort at every touchpoint." },
-              { icon: <Clock />, title: "Respect for Time", desc: "Prompt, unhurried appointments." },
-              { icon: <Award />, title: "Master Craftsmanship", desc: "Flawless aesthetic results." }
-            ].map((item, idx) => (
-              <FadeInWhenVisible key={idx} className="feature-card">
-                <div className="icon-wrapper">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </FadeInWhenVisible>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 6. Our Treatments */}
-      <section className="section treatments-section">
+      <section className="section treatments-section bg-light">
         <div className="container">
           <FadeInWhenVisible className="text-center mb-40">
             <h4 className="section-subtitle">OUR TREATMENTS</h4>
@@ -291,7 +290,7 @@ const Home = () => {
       </section>
 
       {/* 7. Advanced Technology */}
-      <section className="section technology-section bg-light">
+      <section className="section technology-section">
         <div className="container tech-grid">
           <FadeInWhenVisible className="tech-content">
             <h4 className="section-subtitle">ADVANCED DENTAL TECHNOLOGY</h4>
@@ -326,7 +325,7 @@ const Home = () => {
       </section>
 
       {/* 8. Smile Gallery */}
-      <section className="section gallery-section">
+      <section className="section gallery-section bg-light">
         <div className="container">
           <div className="text-center">
             <FadeInWhenVisible>
@@ -351,7 +350,7 @@ const Home = () => {
             </FadeInWhenVisible>
           </div>
 
-          <div className="transformations-container mt-60">
+          <div className="transformations-container mt-40">
             <FadeInWhenVisible>
               <TransformationsSlider cases={[
                 {
@@ -382,7 +381,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="smile-gallery-container mt-80">
+          <div className="smile-gallery-container mt-40">
             <h3 className="text-center mb-40 text-navy">Smile Gallery</h3>
             <FadeInWhenVisible>
               <MasonryGallery 
@@ -412,7 +411,7 @@ const Home = () => {
       {/* 10. Patient Testimonials */}
       <section className="section testimonials-section bg-light">
         <div className="container">
-          <div className="text-center mb-60">
+          <div className="text-center mb-40">
             <FadeInWhenVisible>
               <h4 className="section-subtitle">PATIENT TESTIMONIALS</h4>
               <h2 className="text-navy">Stories of Radiaance</h2>
@@ -434,14 +433,14 @@ const Home = () => {
             <TestimonialCarousel reviews={reviewsData} />
           </FadeInWhenVisible>
 
-          <div className="text-center mt-60">
+          <div className="text-center mt-40">
             <KnowMoreBtn to="/reviews" text="Read All Reviews" variant="gold" />
           </div>
         </div>
       </section>
 
-      {/* 10. FAQs */}
-      <section className="section faq-section bg-light">
+      {/* 11. FAQs */}
+      <section className="section faq-section">
         <div className="container faq-grid">
           <FadeInWhenVisible>
             <h2>Common Questions</h2>
@@ -467,7 +466,7 @@ const Home = () => {
       {/* 11. Visit Us */}
       <section className="section visit-us-section bg-navy text-white">
         <div className="container">
-          <div className="text-center mb-60">
+          <div className="text-center mb-40">
             <FadeInWhenVisible>
               <h4 className="section-subtitle text-gold">VISIT US</h4>
               <h2 className="text-white">Find Radiaance Dentistry</h2>

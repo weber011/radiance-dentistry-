@@ -16,9 +16,9 @@
   --font-stats: 'Outfit', sans-serif;
 
   /* Spacing */
-  --section-padding-mobile: 32px 20px;
-  --section-padding-tablet: 56px 40px;
-  --section-padding-desktop: 96px 0;
+  --section-padding-mobile: 50px 0;
+  --section-padding-tablet: 60px 0;
+  --section-padding-desktop: 80px 0;
   --container-width: 1200px;
 
   /* UI Elements */
