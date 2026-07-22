@@ -223,70 +223,43 @@ const Home = () => {
       {/* 5. Meet Dr Ruchi Jain */}
       <section className="section doctor-section">
         <div className="container">
-          <div className="text-center mb-40">
-            <h4 className="section-subtitle">MEET YOUR DENTIST</h4>
-            <h2>Expert Care. Gentle Hands. Beautiful Smiles.</h2>
-            <p className="max-w-700 mx-auto intro-text">Meet the experienced professional behind Radiaance Dentistry, dedicated to providing ethical, personalized, and modern dental care.</p>
-          </div>
-          
-          <div className="doctor-grid-premium">
-            <FadeInWhenVisible className="doctor-image-col">
-              <img src="/assets/doctor pic.jpeg" alt="Dr. Ruchi Jain" className="doctor-real-img" />
+          <div className="doctor-editorial-grid">
+            {/* Left Column: Portrait */}
+            <FadeInWhenVisible className="doctor-portrait-wrapper">
+              <img src="/assets/doctor pic.jpeg" alt="Dr. Ruchi Jain" className="doctor-portrait-img" />
+              <div className="doctor-name-badge glassmorphism">
+                <h3>Dr. Ruchi Jain</h3>
+                <p className="text-gold">Chief Dental Surgeon</p>
+                <p className="badge-degree">BDS (2005) - KLE Society</p>
+              </div>
             </FadeInWhenVisible>
             
-            <FadeInWhenVisible className="doctor-info-col" delay={0.2}>
-              <h2 className="doctor-name-heading">
-                Meet Your Dentist, <br />
-                <span className="text-gold">Dr. Ruchi Jain</span>
-              </h2>
-              <h3 className="doctor-subheading">Creating Healthy Smiles Through Compassion &amp; Clinical Excellence</h3>
+            {/* Right Column: Content */}
+            <FadeInWhenVisible className="doctor-editorial-content" delay={0.2}>
+              <h4 className="section-subtitle">MEET YOUR DENTIST</h4>
+              <h2 className="mb-20">Artistry &amp; Precision in Every Treatment</h2>
+              <p className="doctor-bio mb-30">
+                With nearly two decades of clinical experience, Dr. Ruchi Jain is the visionary behind Radiaance Dentistry. She combines advanced dental technology with a gentle, compassionate touch to deliver flawless aesthetic and functional results.
+              </p>
               
-              <div className="doctor-education glassmorphism-subtle mb-30">
-                <p><strong>Bachelor of Dental Surgery (BDS)</strong></p>
-                <p>KLE Society's Institute of Dental Sciences, Belgaum</p>
-                <p>Rajiv Gandhi University of Health Sciences, Karnataka</p>
-                <p className="text-gold mt-10"><em>Awarded in 2005</em></p>
-              </div>
-
-              <div className="doctor-focus-list mb-30">
-                <p><CheckCircle2 size={18} className="text-gold"/> Patient-centered care</p>
-                <p><CheckCircle2 size={18} className="text-gold"/> Ethical dentistry</p>
-                <p><CheckCircle2 size={18} className="text-gold"/> Modern technology</p>
-                <p><CheckCircle2 size={18} className="text-gold"/> Comfortable treatment</p>
-                <p><CheckCircle2 size={18} className="text-gold"/> Personalized care</p>
-              </div>
-
-              <div className="qualification-cards mb-30">
-                <div className="qual-card glassmorphism hover-lift">
-                  <Award size={20} className="text-gold" />
-                  <span>Bachelor of Dental Surgery</span>
-                </div>
-                <div className="qual-card glassmorphism hover-lift">
-                  <Heart size={20} className="text-gold" />
-                  <span>Patient First Care</span>
-                </div>
-                <div className="qual-card glassmorphism hover-lift">
-                  <Activity size={20} className="text-gold" />
-                  <span>Modern Dental Technology</span>
-                </div>
-                <div className="qual-card glassmorphism hover-lift">
-                  <Shield size={20} className="text-gold" />
-                  <span>Ethical Dentistry</span>
-                </div>
+              <div className="doctor-philosophy glassmorphism-subtle mb-40">
+                <p className="philosophy-text">
+                  "My philosophy is simple: Treat every patient like family. We focus on ethical, pain-free dentistry tailored to your unique needs, ensuring you leave our sanctuary with a confident, radiant smile."
+                </p>
               </div>
 
               <div className="expertise-section mb-40">
-                <h5 className="mb-15">Areas of Expertise</h5>
-                <div className="expertise-chips">
-                  {['Smile Designing', 'Dental Implants', 'Root Canal', 'Cosmetic Dentistry', 'Family Dentistry', 'Preventive Dentistry', 'Teeth Whitening', 'Dental Veneers'].map((chip, idx) => (
-                    <span key={idx} className="expertise-chip">{chip}</span>
+                <h5 className="mb-20 text-navy">Clinical Expertise</h5>
+                <div className="expertise-tags">
+                  {['Smile Designing', 'Dental Implants', 'Root Canal Therapy', 'Cosmetic Dentistry', 'Preventive Care', 'Teeth Whitening', 'Porcelain Veneers'].map((chip, idx) => (
+                    <span key={idx} className="premium-chip">{chip}</span>
                   ))}
                 </div>
               </div>
 
               <div className="doctor-actions">
                 <KnowMoreBtn to="/contact" text="Book Appointment" variant="primary" />
-                <KnowMoreBtn to="/doctor/dr-ruchi-jain" text="Know More" variant="gold" />
+                <KnowMoreBtn to="/doctor/dr-ruchi-jain" text="Read Full Profile" variant="outline" className="btn-outline-navy" />
               </div>
             </FadeInWhenVisible>
           </div>
