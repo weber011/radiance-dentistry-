@@ -13,9 +13,25 @@
 }
 
 .vt-layout-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
+}
+
+.featured-card {
+  flex: 1.2;
+  max-width: 450px;
+}
+
+.vt-list-container {
+  flex: 2;
+  display: flex;
+  gap: 30px;
+}
+
+.list-card {
+  flex: 1;
 }
 
 .vt-card {
@@ -37,8 +53,9 @@
 .vt-thumbnail-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
   overflow: hidden;
+  background-color: #000;
 }
 
 .vt-thumbnail-video {
@@ -181,21 +198,26 @@
 
 .vt-list-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
 }
 
 .list-card .vt-thumbnail-wrapper {
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
 }
 
 @media (max-width: 1024px) {
   .vt-layout-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   
+  .featured-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .vt-list-container {
-    flex-direction: row;
+    width: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
