@@ -1,0 +1,169 @@
+.intl-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.intl-journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intl-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.intl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.intl-image-wrapper:hover .intl-img {
+  transform: scale(1.05);
+}
+
+.intl-image-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(10, 25, 47, 0.85); /* Deep navy base */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.intl-timeline-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--luxury-gold);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  z-index: 2;
+}
+
+.timeline-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: var(--navy-dark);
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 30px; /* center of the 60px icon */
+  top: 60px; /* start at bottom of icon */
+  bottom: -30px; /* go down to the next icon */
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.1));
+  z-index: 1;
+}
+
+.intl-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.intl-feature-card {
+  padding: 25px 20px;
+  border-radius: 16px;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-icon {
+  background: rgba(212, 175, 55, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .intl-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .intl-image-wrapper {
+    height: 400px;
+  }
+  
+  .intl-timeline-col {
+    padding-left: 10px;
+  }
+  
+  .intl-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .intl-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .intl-image-wrapper {
+    height: 300px;
+  }
+  
+  .intl-image-overlay {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 20px;
+  }
+  
+  .intl-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .intl-actions a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,129 @@
+.intl-hero {
+  padding: 120px 0 80px;
+  position: relative;
+}
+
+.journey-vertical-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.journey-vertical-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0.1));
+}
+
+.journey-vertical-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.journey-vertical-step:last-child {
+  margin-bottom: 0;
+}
+
+.journey-step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--luxury-gold);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.journey-step-content {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  flex-grow: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-step-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travel-planning-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.travel-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.travel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.travel-image-wrapper:hover .travel-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .travel-planning-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .travel-image-wrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intl-hero {
+    padding: 100px 0 60px;
+  }
+  
+  .journey-vertical-step {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .journey-vertical-timeline::before {
+    display: none;
+  }
+  
+  .travel-image-wrapper {
+    height: 300px;
+  }
+}

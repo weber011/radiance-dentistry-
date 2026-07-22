@@ -10,6 +10,7 @@ import TreatmentDetail from './pages/TreatmentDetail';
 import AdvancedTechnology from './pages/AdvancedTechnology';
 import SmileGallery from './pages/SmileGallery';
 import Reviews from './pages/Reviews';
+import InternationalPatients from './pages/InternationalPatients';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import VideoTestimonialsPage from './pages/VideoTestimonialsPage';
@@ -31,6 +32,7 @@ function App() {
         <Route path="/smile-gallery" element={<SmileGallery />} />
         <Route path="/video-testimonials" element={<VideoTestimonialsPage />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/international-patients" element={<InternationalPatients />} />
         <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />

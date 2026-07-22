@@ -10,6 +10,7 @@ import MasonryGallery from '../components/ui/MasonryGallery';
 import ImageLightbox from '../components/ui/ImageLightbox';
 import TestimonialCarousel from '../components/ui/TestimonialCarousel';
 import VideoTestimonialsSection from '../components/ui/VideoTestimonialsSection';
+import InternationalPatientsSection from '../components/ui/InternationalPatientsSection';
 import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
@@ -426,8 +427,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* 11. International Patients */}
+      <InternationalPatientsSection />
 
-      {/* 11. FAQs */}
+      {/* 12. FAQs */}
       <section className="section faq-section">
         <div className="container faq-grid">
           <FadeInWhenVisible>
