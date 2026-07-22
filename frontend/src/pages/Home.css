@@ -10,6 +10,7 @@
   justify-content: center;
   overflow: hidden;
   background-color: #000;
+  padding-bottom: 80px; /* Account for trust strip */
 }
 
 .hero-video-wrapper {
@@ -41,7 +42,6 @@
   color: var(--white);
   max-width: 900px;
   text-align: center;
-  margin-top: -60px; /* Offset for trust strip */
 }
 
 .hero-brand {
@@ -159,6 +159,10 @@
 }
 
 @media (max-width: 767px) {
+  .hero-section {
+    padding-bottom: 150px; /* More space for the 2x2 mobile trust strip */
+    min-height: 850px; /* Ensure enough height for stacked content */
+  }
   .hero-actions {
     flex-direction: column;
     gap: 15px;
