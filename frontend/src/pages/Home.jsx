@@ -96,18 +96,40 @@ const Home = () => {
       <section className="section why-us-section bg-light">
         <div className="container text-center">
           <FadeInWhenVisible>
-            <h2>The Radiaance Difference</h2>
-            <p className="max-w-700 mx-auto mb-40">Setting a new standard in dental excellence.</p>
+            <h4 className="section-subtitle">WHY CHOOSE US</h4>
+            <h2>Why Patients Trust Radiaance Dentistry</h2>
+            <p className="max-w-700 mx-auto mb-40 text-secondary">We combine clinical excellence with a luxurious, patient-first approach to redefine your dental experience.</p>
           </FadeInWhenVisible>
-          <div className="features-grid">
+
+          <FadeInWhenVisible className="trust-stats-banner mb-60">
+             <div className="stat-item">
+                <AnimatedCounter end={5000} suffix="+" />
+                <p>Happy Smiles</p>
+             </div>
+             <div className="stat-item">
+                <AnimatedCounter end={100} suffix="%" />
+                <p>Patient Satisfaction</p>
+             </div>
+             <div className="stat-item text-only">
+                <p>Advanced<br/>Dental Technology</p>
+             </div>
+             <div className="stat-item text-only">
+                <p>Patient<br/>First Care</p>
+             </div>
+          </FadeInWhenVisible>
+
+          <div className="premium-trust-grid">
             {[
-              { icon: <Shield />, title: "Uncompromising Safety", desc: "Highest standards of sterilization." },
-              { icon: <Star />, title: "Luxury Experience", desc: "Comfort at every touchpoint." },
-              { icon: <Clock />, title: "Respect for Time", desc: "Prompt, unhurried appointments." },
-              { icon: <Award />, title: "Master Craftsmanship", desc: "Flawless aesthetic results." }
+              { icon: <Monitor />, title: "Modern Equipment", desc: "State-of-the-art diagnostic and treatment technology." },
+              { icon: <Award />, title: "Experienced Dentist", desc: "Expertise you can rely on for flawless results." },
+              { icon: <Armchair />, title: "Comfortable Environment", desc: "A serene sanctuary designed to relax you." },
+              { icon: <Heart />, title: "Pain-Free Dentistry", desc: "Gentle techniques for a stress-free visit." },
+              { icon: <Shield />, title: "Strict Sterilization", desc: "Uncompromising international safety protocols." },
+              { icon: <UserCheck />, title: "Personalized Care", desc: "Treatment plans tailored uniquely for you." },
+              { icon: <Star />, title: "Premium Patient Experience", desc: "Luxury service from the moment you step in." }
             ].map((item, idx) => (
-              <FadeInWhenVisible key={idx} className="feature-card">
-                <div className="icon-wrapper">{item.icon}</div>
+              <FadeInWhenVisible key={idx} className={`premium-trust-card glassmorphism ${idx === 6 ? 'card-wide' : ''}`}>
+                <div className="trust-icon-wrapper">{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </FadeInWhenVisible>
@@ -169,22 +191,7 @@ const Home = () => {
                </div>
             </div>
 
-            <div className="stats-row">
-               <div className="stat-item">
-                  <AnimatedCounter end={5000} suffix="+" />
-                  <p>Happy Smiles</p>
-               </div>
-               <div className="stat-item">
-                  <AnimatedCounter end={100} suffix="%" />
-                  <p>Patient Satisfaction</p>
-               </div>
-               <div className="stat-item text-only">
-                  <p>Advanced<br/>Dental Technology</p>
-               </div>
-               <div className="stat-item text-only">
-                  <p>Patient<br/>First Care</p>
-               </div>
-            </div>
+
 
             <div className="welcome-actions mt-40">
                <KnowMoreBtn to="/contact" text="Book Appointment" variant="primary" />
