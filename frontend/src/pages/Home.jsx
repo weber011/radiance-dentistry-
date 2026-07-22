@@ -397,18 +397,17 @@ const Home = () => {
         <div className="container">
           <div className="text-center mb-40">
             <FadeInWhenVisible>
-              <h4 className="section-subtitle">PATIENT TESTIMONIALS</h4>
-              <h2 className="text-navy">Stories of Radiaance</h2>
-              <p className="max-w-700 mx-auto mb-20 text-secondary">Real experiences shared by our valued patients.</p>
+              <div className="badge-gold mb-15 mx-auto">PATIENT REVIEWS</div>
+              <h2 className="text-navy">Trusted by Patients, Recommended by Smiles</h2>
+              <p className="max-w-700 mx-auto mb-20 text-secondary">Every review reflects our commitment to compassionate care, precision, and exceptional patient experiences.</p>
               
-              <div className="trust-section mt-30">
-                <div className="stars mb-10">
+              <div className="trust-strip mt-30">
+                <div className="stars mb-10 flex-center">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={24} className="icon-gold" fill="currentColor" />
                   ))}
                 </div>
-                <h4 className="text-navy m-0">Trusted by Happy Patients</h4>
-                <p className="text-sm text-secondary mt-10 font-medium">Real Reviews • Real Smiles • Real Experiences</p>
+                <p className="text-md text-navy font-medium max-w-600 mx-auto">"Patients continue to recommend Radiance Dentistry for compassionate care and quality treatment."</p>
               </div>
             </FadeInWhenVisible>
           </div>
@@ -417,8 +416,13 @@ const Home = () => {
             <TestimonialCarousel reviews={reviewsData} />
           </FadeInWhenVisible>
 
-          <div className="text-center mt-40">
-            <KnowMoreBtn to="/reviews" text="Read All Reviews" variant="gold" />
+          <div className="text-center mt-50 flex-center gap-20">
+            <Link to="/contact" className="btn-primary">
+              Book Appointment
+            </Link>
+            <Link to="/reviews" className="btn-outline">
+              Read All Reviews &rarr;
+            </Link>
           </div>
         </div>
       </section>

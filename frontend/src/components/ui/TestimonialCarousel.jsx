@@ -8,14 +8,21 @@ const TestimonialCarousel = ({ reviews }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [cardsToShow, setCardsToShow] = useState(3);
 
-  const cardsToShow = isMobile ? 1 : 3;
   const totalCards = reviews.length;
   const maxIndex = Math.max(0, totalCards - cardsToShow);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 992);
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCardsToShow(1);
+      } else if (window.innerWidth <= 1024) {
+        setCardsToShow(2);
+      } else {
+        setCardsToShow(3);
+      }
+    };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

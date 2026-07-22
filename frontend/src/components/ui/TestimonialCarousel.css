@@ -39,8 +39,4 @@
   min-width: 0;
 }
 
-@media (max-width: 992px) {
-  .testimonial-card-wrapper {
-    flex: 0 0 100%;
-  }
-}
+
