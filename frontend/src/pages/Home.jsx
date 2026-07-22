@@ -14,6 +14,7 @@ import VideoTestimonialsSection from '../components/ui/VideoTestimonialsSection'
 import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -278,24 +279,23 @@ const Home = () => {
           </FadeInWhenVisible>
           
           <div className="treatments-grid">
-            {treatmentsList.map((treatment, idx) => (
-              <FadeInWhenVisible key={idx} className="treatment-card premium-hover">
-                <div className="treatment-img-wrapper">
-                  <img src={`/assets/${treatment.image}`} alt={treatment.name} loading="lazy" />
-                  <div className="treatment-overlay-gradient"></div>
-                </div>
-                <div className="treatment-content">
-                  <h3>{treatment.name}</h3>
-                  <p>{treatment.desc}</p>
-                  <div className="treatment-actions">
-                    <Link to={`/treatments/${treatment.slug}`} className="btn-know-more text-gold">
+            {treatmentsList.map((treatment, idx) => {
+              const IconComponent = LucideIcons[treatment.icon] || LucideIcons.Activity;
+              return (
+                <FadeInWhenVisible key={idx} className="premium-service-card hover-lift">
+                  <div className="service-icon-wrapper">
+                    <IconComponent size={28} />
+                  </div>
+                  <div className="service-card-content">
+                    <h3>{treatment.name}</h3>
+                    <p>{treatment.desc}</p>
+                    <Link to={`/treatments/${treatment.slug}`} className="service-know-more">
                       Know More <ChevronRight size={16} />
                     </Link>
-                    <KnowMoreBtn to="/contact" text="Book Appointment" variant="outline" className="btn-sm" />
                   </div>
-                </div>
-              </FadeInWhenVisible>
-            ))}
+                </FadeInWhenVisible>
+              );
+            })}
           </div>
         </div>
       </section>

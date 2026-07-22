@@ -294,6 +294,37 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
         </div>
       </section>
 
+      {/* 8.5 Related Videos (if available) */}
+      <section className="td-section bg-white">
+        <div className="container text-center">
+          <FadeInWhenVisible>
+            <h2>Patient Testimonials & Videos</h2>
+            <p className="max-w-700 mx-auto mb-40">Watch real patient experiences and educational videos about {treatment.name.toLowerCase()}.</p>
+          </FadeInWhenVisible>
+          <div className="td-videos-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+            {/* Video Placeholders */}
+            <FadeInWhenVisible className="td-video-card" style={{ background: '#f8f9fa', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '100%', aspectRatio: '16/9', background: '#e9ecef', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Play size={40} color="#2CB5B4" />
+              </div>
+              <div style={{ padding: '20px', textAlign: 'left' }}>
+                <h4 style={{ margin: '0 0 10px 0' }}>Treatment Explainer</h4>
+                <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b' }}>Learn exactly how we perform this procedure.</p>
+              </div>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible delay={0.1} className="td-video-card" style={{ background: '#f8f9fa', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+              <div style={{ width: '100%', aspectRatio: '16/9', background: '#e9ecef', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Play size={40} color="#2CB5B4" />
+              </div>
+              <div style={{ padding: '20px', textAlign: 'left' }}>
+                <h4 style={{ margin: '0 0 10px 0' }}>Patient Experience</h4>
+                <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b' }}>Hear from our happy patients.</p>
+              </div>
+            </FadeInWhenVisible>
+          </div>
+        </div>
+      </section>
+
       {/* 9. FAQs */}
       {treatment.faqs && treatment.faqs.length > 0 && (
         <section className="td-section bg-white">
