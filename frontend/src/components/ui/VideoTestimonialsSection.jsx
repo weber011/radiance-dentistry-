@@ -61,7 +61,7 @@ const VideoTestimonialsSection = () => {
               onClick={() => openVideo(featuredVideo)}
             >
               <div className="vt-thumbnail-wrapper">
-                <video src={featuredVideo.src} className="vt-thumbnail-video" preload="metadata" muted playsInline />
+                <video src={`${featuredVideo.src}#t=0.5`} className="vt-thumbnail-video" preload="metadata" muted playsInline />
                 <div className="vt-overlay"></div>
                 <button className="vt-play-btn pulse">
                   <Play size={40} className="play-icon-offset text-navy" fill="currentColor" />
@@ -92,7 +92,7 @@ const VideoTestimonialsSection = () => {
                   onClick={() => openVideo(video)}
                 >
                   <div className="vt-thumbnail-wrapper">
-                    <video src={video.src} className="vt-thumbnail-video" preload="metadata" muted playsInline />
+                    <video src={`${video.src}#t=0.5`} className="vt-thumbnail-video" preload="metadata" muted playsInline />
                     <div className="vt-overlay"></div>
                     <button className="vt-play-btn small">
                       <Play size={20} className="play-icon-offset text-navy" fill="currentColor" />
