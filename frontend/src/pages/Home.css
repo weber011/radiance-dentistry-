@@ -650,46 +650,98 @@
   transform: translateX(5px);
 }
 
-/* 7. Technology */
-.tech-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+/* 7. Advanced Technology Showcase */
+.technology-showcase-section {
+  padding: var(--section-padding-desktop);
 }
 
-.tech-content h2 { margin-bottom: 15px; }
-.tech-content p { margin-bottom: 30px; font-size: 1.05rem; }
-
-.tech-stats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  margin-bottom: 35px;
-}
-
-.tech-stat-card {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: var(--white);
-  padding: 15px 20px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--luxury-gold);
-  font-weight: 600;
-  color: var(--primary-navy);
-  transition: transform 0.3s ease;
-}
-
-.tech-stat-card:hover {
-  transform: translateX(10px);
-}
-
-.tech-visuals {
+.tech-showcase-list {
   display: flex;
   flex-direction: column;
+  gap: 80px;
+}
+
+.tech-showcase-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.tech-showcase-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.tech-showcase-img-col {
+  flex: 1;
+}
+
+.tech-showcase-img-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+}
+
+.tech-showcase-img-wrapper img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tech-showcase-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tech-showcase-content-col h3 {
+  font-size: 2rem;
+  color: var(--primary-navy);
+  margin-bottom: 15px;
+}
+
+.tech-desc {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.tech-benefits-box {
+  background: var(--bg-color);
+  padding: 20px 25px;
+  border-radius: var(--radius-md);
+  width: 100%;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--luxury-gold);
+}
+
+.benefit-label {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--dark-text);
 }
 
 .transformations-section {
@@ -962,6 +1014,17 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+
+  .tech-showcase-list {
+    gap: 60px;
+  }
+  .tech-showcase-row, .tech-showcase-row.reverse {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tech-showcase-img-col {
+    width: 100%;
   }
 
   .collage-wrapper {

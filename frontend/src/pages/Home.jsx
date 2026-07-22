@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
-import TechnologyAccordion from '../components/ui/TechnologyAccordion';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 import TransformationsSlider from '../components/ui/TransformationsSlider';
 import MasonryGallery from '../components/ui/MasonryGallery';
@@ -300,38 +299,60 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 7. Advanced Technology */}
-      <section className="section technology-section">
-        <div className="container tech-grid">
-          <FadeInWhenVisible className="tech-content">
-            <h4 className="section-subtitle">ADVANCED DENTAL TECHNOLOGY</h4>
-            <h2>Innovation at Your Service</h2>
-            <p>Radiaance Dentistry combines modern technology with clinical expertise to deliver safer procedures, precise diagnosis, faster recovery, and exceptional patient comfort.</p>
-            
-            <div className="tech-stats-grid">
-              <div className="tech-stat-card">
-                <CheckCircle2 className="icon-gold" size={24} />
-                <span>99% Diagnostic Accuracy</span>
-              </div>
-              <div className="tech-stat-card">
-                <CheckCircle2 className="icon-gold" size={24} />
-                <span>Low Radiation Imaging</span>
-              </div>
-              <div className="tech-stat-card">
-                <CheckCircle2 className="icon-gold" size={24} />
-                <span>Comfortable Digital Procedures</span>
-              </div>
-              <div className="tech-stat-card">
-                <CheckCircle2 className="icon-gold" size={24} />
-                <span>International Sterilization Standards</span>
-              </div>
-            </div>
+      {/* 7. Advanced Technology Showcase */}
+      <section className="section technology-showcase-section bg-white">
+        <div className="container">
+          <FadeInWhenVisible className="text-center mb-50">
+            <div className="badge-gold mb-15">ADVANCED TECHNOLOGY</div>
+            <h2>Modern Technology for Exceptional Dental Care</h2>
+            <p className="max-w-800 mx-auto intro-text">
+              We combine clinical expertise with advanced dental technology to deliver precise diagnoses, comfortable treatments, and predictable results.
+            </p>
+          </FadeInWhenVisible>
 
-            <KnowMoreBtn to="/advanced-technology" text="Explore Our Technology" />
-          </FadeInWhenVisible>
-          <FadeInWhenVisible className="tech-visuals" delay={0.2}>
-            <TechnologyAccordion />
-          </FadeInWhenVisible>
+          <div className="tech-showcase-list">
+            {[
+              { id: "xray", name: "Digital X-Ray", image: "tech_xray.png", desc: "Provides highly detailed images while exposing patients to significantly less radiation compared to traditional X-rays.", benefits: ["Faster diagnosis", "Better treatment planning", "Greater safety"] },
+              { id: "cbct", name: "CBCT Scanner", image: "tech_cbct.png", desc: "Captures a 3D view of your entire dental anatomy, ensuring absolute precision for complex procedures like implants.", benefits: ["3D comprehensive view", "Surgical precision", "Minimally invasive planning"] },
+              { id: "scanner", name: "Intraoral Scanner", image: "tech_scanner.png", desc: "Eliminates the need for messy, gag-inducing dental impressions by capturing a precise digital 3D model of your teeth.", benefits: ["No messy impressions", "Highly accurate fit", "Immediate digital model"] },
+              { id: "camera", name: "Intraoral Camera", image: "tech_camera.png", desc: "Allows you to see exactly what the dentist sees, fostering transparency and better understanding of your oral health.", benefits: ["See what we see", "Early detection", "Enhanced transparency"] },
+              { id: "laser", name: "Laser Dentistry", image: "tech_laser.png", desc: "Provides minimally invasive treatments for gums and soft tissues with less bleeding, swelling, and faster healing.", benefits: ["Minimally invasive", "Faster healing", "Often pain-free"] },
+              { id: "dsd", name: "Digital Smile Design", image: "smile_designing.png", desc: "A digital preview of your new smile, allowing you to co-design the final result before any treatment begins.", benefits: ["Predictable results", "Test-drive your smile", "Customized to your face"] },
+              { id: "sterilization", name: "Advanced Sterilization System", image: "tech_sterilization.png", desc: "Ensures 100% safety with Class-B autoclaves and strict international infection control protocols.", benefits: ["Zero infection risk", "Hospital-grade safety", "Strict protocols"] },
+              { id: "chairs", name: "Modern Dental Chairs", image: "equipment1.jpeg", desc: "Ergonomically designed chairs featuring plush memory foam to keep you relaxed during longer procedures.", benefits: ["Maximum relaxation", "Ergonomic support", "Reduced anxiety"] }
+            ].map((tech, idx) => (
+              <div key={tech.id} className={`tech-showcase-row ${idx % 2 !== 0 ? 'reverse' : ''}`}>
+                <FadeInWhenVisible className="tech-showcase-img-col">
+                  <div className="tech-showcase-img-wrapper glassmorphism">
+                    <img src={`/assets/${tech.image}`} alt={tech.name} loading="lazy" />
+                  </div>
+                </FadeInWhenVisible>
+                <FadeInWhenVisible className="tech-showcase-content-col" delay={0.2}>
+                  <h3>{tech.name}</h3>
+                  <p className="tech-desc">{tech.desc}</p>
+                  
+                  <div className="tech-benefits-box">
+                    <div className="benefit-label">Patient Benefit</div>
+                    <ul className="benefit-list">
+                      {tech.benefits.map((b, i) => (
+                        <li key={i}><CheckCircle2 size={16} className="text-medical" /> <span>{b}</span></li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link to={`/advanced-technology#${tech.id}`} className="service-know-more mt-20">
+                    Learn More <ChevronRight size={16} />
+                  </Link>
+                </FadeInWhenVisible>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-50">
+            <Link to="/advanced-technology" className="btn-primary">
+              View Full Technology Gallery <ChevronRight size={18} />
+            </Link>
+          </div>
         </div>
       </section>
 
