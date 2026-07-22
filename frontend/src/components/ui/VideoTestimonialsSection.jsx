@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import VideoPlayerModal from './VideoPlayerModal';
-import KnowMoreBtn from './KnowMoreBtn';
 import { videoTestimonialsData } from '../../data/videoTestimonials';
 import './VideoTestimonialsSection.css';
 
@@ -18,22 +18,43 @@ const VideoTestimonialsSection = () => {
     setSelectedVideo(video);
   };
 
+  const videoSchema = featuredVideo ? {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": `Patient Testimonial - ${featuredVideo.patientName}`,
+    "description": featuredVideo.caption,
+    "thumbnailUrl": "https://radiaancedentistry.com/assets/logo.png",
+    "uploadDate": "2024-01-01T08:00:00+08:00",
+    "duration": `PT${featuredVideo.duration.split(':')[0]}M${featuredVideo.duration.split(':')[1]}S`,
+    "contentUrl": `https://radiaancedentistry.com${featuredVideo.src}`
+  } : null;
+
   return (
     <section className="section vt-section bg-dark">
+      {videoSchema && (
+        <Helmet>
+          <script type="application/ld+json">{JSON.stringify(videoSchema)}</script>
+        </Helmet>
+      )}
+      
       <div className="container">
-        <div className="vt-header">
-          <div>
-            <h4 className="section-subtitle text-gold">PATIENT VIDEO TESTIMONIALS</h4>
-            <h2 className="text-white">Real Stories. Real Smiles.</h2>
-            <p className="vt-subtitle">Watch our patients share their treatment journey and experience at Radiaance Dentistry.</p>
-          </div>
+        <div className="vt-header text-center mb-50">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="badge-gold mb-15 mx-auto">PATIENT STORIES</div>
+            <h2 className="text-white">Real Patients. Real Experiences. Real Smiles.</h2>
+            <p className="vt-subtitle max-w-700 mx-auto">Watch genuine stories from our patients and discover how personalized dental care transformed their smiles and confidence.</p>
+          </motion.div>
         </div>
 
-        <div className="vt-layout">
-          {/* Featured Video (Left on Desktop, Top on Mobile) */}
+        <div className="vt-layout-grid">
+          {/* Featured Video (Left Side Desktop) */}
           {featuredVideo && (
             <motion.div 
-              className="vt-card featured-card"
+              className="vt-card featured-card premium-hover"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -42,28 +63,28 @@ const VideoTestimonialsSection = () => {
               <div className="vt-thumbnail-wrapper">
                 <video src={featuredVideo.src} className="vt-thumbnail-video" preload="metadata" muted playsInline />
                 <div className="vt-overlay"></div>
-                <button className="vt-play-btn">
-                  <Play size={40} className="play-icon-offset" />
+                <button className="vt-play-btn pulse">
+                  <Play size={40} className="play-icon-offset text-navy" fill="currentColor" />
                 </button>
                 <div className="vt-duration">{featuredVideo.duration}</div>
               </div>
-              <div className="vt-info glassmorphism">
+              <div className="vt-info glassmorphism-dark">
                 <div className="vt-meta">
                   <span className="vt-name">{featuredVideo.patientName}</span>
                   <span className="vt-treatment text-gold">{featuredVideo.treatment}</span>
                 </div>
-                <p className="vt-caption">{featuredVideo.caption}</p>
+                <p className="vt-caption">"{featuredVideo.caption}"</p>
               </div>
             </motion.div>
           )}
 
-          {/* Remaining Videos (Right on Desktop, Horizontal Swipe on Mobile) */}
+          {/* Remaining Videos (Right Side Desktop / Horizontal Scroll Mobile) */}
           {remainingVideos.length > 0 && (
-            <div className="vt-scroll-container" ref={scrollContainerRef}>
+            <div className="vt-list-container" ref={scrollContainerRef}>
               {remainingVideos.map((video, index) => (
                 <motion.div 
                   key={video.id}
-                  className="vt-card list-card"
+                  className="vt-card list-card premium-hover"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -74,15 +95,16 @@ const VideoTestimonialsSection = () => {
                     <video src={video.src} className="vt-thumbnail-video" preload="metadata" muted playsInline />
                     <div className="vt-overlay"></div>
                     <button className="vt-play-btn small">
-                      <Play size={24} className="play-icon-offset" />
+                      <Play size={20} className="play-icon-offset text-navy" fill="currentColor" />
                     </button>
                     <div className="vt-duration">{video.duration}</div>
                   </div>
-                  <div className="vt-info compact">
+                  <div className="vt-info compact glassmorphism-dark">
                     <div className="vt-meta">
                       <span className="vt-name">{video.patientName}</span>
                       <span className="vt-treatment text-gold">{video.treatment}</span>
                     </div>
+                    <p className="vt-caption text-sm text-gray-300 line-clamp-1">"{video.caption}"</p>
                   </div>
                 </motion.div>
               ))}
@@ -90,9 +112,13 @@ const VideoTestimonialsSection = () => {
           )}
         </div>
 
-        <div className="vt-actions">
-          <Link to="/video-testimonials" className="btn btn-primary">Watch All Patient Stories</Link>
-          <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
+        <div className="vt-actions mt-50 text-center flex-center gap-20">
+          <Link to="/contact" className="btn-primary">
+            Book Appointment
+          </Link>
+          <Link to="/video-testimonials" className="btn-outline">
+            View All Patient Stories &rarr;
+          </Link>
         </div>
       </div>
 
@@ -101,7 +127,7 @@ const VideoTestimonialsSection = () => {
         videos={videoTestimonialsData}
         isOpen={!!selectedVideo} 
         onClose={() => setSelectedVideo(null)} 
-        onNavigate={(video) => setSelectedVideo(video)}
+        onNavigate={setSelectedVideo}
       />
     </section>
   );
