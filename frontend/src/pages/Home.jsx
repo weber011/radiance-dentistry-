@@ -361,70 +361,22 @@ const Home = () => {
         <div className="container">
           <div className="text-center">
             <FadeInWhenVisible>
-              <h4 className="section-subtitle">TRANSFORMATIONS</h4>
-              <h2>Real Patients. Real Results.</h2>
-              <p className="max-w-700 mx-auto mb-40 text-secondary text-md">Life-changing smiles crafted with precision and care.</p>
-              
-              <div className="compact-stats-strip">
-                <div className="compact-stat">
-                  <Star className="icon-gold" size={18} />
-                  <span>500+ Smiles</span>
-                </div>
-                <div className="compact-stat">
-                  <Sparkles className="icon-gold" size={18} />
-                  <span>Personalized Design</span>
-                </div>
-                <div className="compact-stat">
-                  <CheckCircle2 className="icon-gold" size={18} />
-                  <span>Natural Results</span>
-                </div>
-              </div>
+              <div className="badge-gold mb-15">SMILE TRANSFORMATIONS</div>
+              <h2>Real Smiles. Real Transformations.</h2>
+              <p className="max-w-700 mx-auto mb-40 text-secondary text-md">Explore real patient journeys and discover how personalized dental care transformed their smiles with confidence.</p>
             </FadeInWhenVisible>
           </div>
 
           <div className="transformations-container mt-40">
             <FadeInWhenVisible>
-              <TransformationsSlider cases={[
-                {
-                  afterImage: "/assets/smile makover.png",
-                  beforeImage: "/assets/smile makover.png",
-                  treatmentName: "Smile Makeover",
-                  description: "Complete transformation using custom porcelain veneers.",
-                  treatmentSlug: "smile-makeover"
-                },
-                {
-                  afterImage: "/assets/clear_aligners.png",
-                  beforeImage: "/assets/clear_aligners.png",
-                  treatmentName: "Clear Aligners",
-                  description: "Orthodontic correction of crowding.",
-                  treatmentSlug: "clear-aligners"
-                },
-                {
-                  afterImage: "/assets/dental_implants.png",
-                  beforeImage: "/assets/dental_implants.png",
-                  treatmentName: "Dental Implants",
-                  description: "Restoring form and function seamlessly.",
-                  treatmentSlug: "dental-implants"
-                }
-              ]} />
-            </FadeInWhenVisible>
-            <div className="text-center mt-40">
-              <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
-            </div>
-          </div>
-
-          <div className="smile-gallery-container mt-40">
-            <h3 className="text-center mb-40 text-navy">Smile Gallery</h3>
-            <FadeInWhenVisible>
-              <MasonryGallery 
-                images={fullGalleryData.slice(0, 8)} 
-                onImageClick={openLightbox} 
-              />
+              <TransformationsSlider cases={fullGalleryData.slice(0, 6)} />
             </FadeInWhenVisible>
           </div>
 
-          <div className="text-center mt-40">
-            <KnowMoreBtn to="/smile-gallery" text="View Full Smile Gallery" variant="outline" />
+          <div className="text-center mt-50">
+            <Link to="/smile-gallery" className="btn-outline-navy">
+              View Complete Smile Gallery <ChevronRight size={18} />
+            </Link>
           </div>
         </div>
       </section>

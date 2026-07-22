@@ -1,17 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import BeforeAfterSlider from './BeforeAfterSlider';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import CaseStudyCard from './CaseStudyCard';
 import './TransformationsSlider.css';
 
 const TransformationsSlider = ({ cases }) => {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Handle scroll events to update active dot
   const handleScroll = () => {
     if (scrollRef.current) {
       const scrollPosition = scrollRef.current.scrollLeft;
-      const cardWidth = scrollRef.current.offsetWidth;
-      // Calculate which card is mostly in view
+      const cardWidth = scrollRef.current.offsetWidth / getCardsPerView();
       const index = Math.round(scrollPosition / cardWidth);
       if (index !== activeIndex) {
         setActiveIndex(index);
@@ -19,10 +18,27 @@ const TransformationsSlider = ({ cases }) => {
     }
   };
 
-  // Scroll to specific index on dot click
+  const getCardsPerView = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1024) return 2;
+      if (window.innerWidth >= 768) return 1.5;
+    }
+    return 1;
+  };
+
+  const scrollByAmount = (direction) => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.offsetWidth / getCardsPerView();
+      scrollRef.current.scrollBy({
+        left: direction === 'next' ? cardWidth : -cardWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const scrollTo = (index) => {
     if (scrollRef.current) {
-      const cardWidth = scrollRef.current.offsetWidth;
+      const cardWidth = scrollRef.current.offsetWidth / getCardsPerView();
       scrollRef.current.scrollTo({
         left: cardWidth * index,
         behavior: 'smooth'
@@ -33,6 +49,15 @@ const TransformationsSlider = ({ cases }) => {
 
   return (
     <div className="transformations-slider-container">
+      <div className="slider-navigation">
+        <button className="nav-btn prev-btn" onClick={() => scrollByAmount('prev')} aria-label="Previous cases">
+          <ChevronLeft size={24} />
+        </button>
+        <button className="nav-btn next-btn" onClick={() => scrollByAmount('next')} aria-label="Next cases">
+          <ChevronRight size={24} />
+        </button>
+      </div>
+      
       <div 
         className="transformations-scroll-track" 
         ref={scrollRef}
@@ -40,19 +65,11 @@ const TransformationsSlider = ({ cases }) => {
       >
         {cases.map((item, idx) => (
           <div key={idx} className="transformations-slide">
-            <BeforeAfterSlider 
-              afterImage={item.afterImage}
-              beforeImage={item.beforeImage}
-              treatmentName={item.treatmentName}
-              description={item.description}
-              treatmentSlug={item.treatmentSlug}
-              fallbackToFilter={true}
-            />
+            <CaseStudyCard data={item} />
           </div>
         ))}
       </div>
 
-      {/* Pagination Dots */}
       <div className="slider-dots mt-30">
         {cases.map((_, idx) => (
           <button
