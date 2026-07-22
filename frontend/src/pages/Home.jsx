@@ -31,33 +31,64 @@ const Home = () => {
 
   return (
     <main className="home-page">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section (Enhanced Cinematic) */}
       <section className="hero-section">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="hero-video"
-          poster="/assets/hero_image_fallback.jpg"
-        >
-          <source src="/assets/hero_video.mp4" type="video/mp4" />
-        </video>
-        <div className="hero-overlay"></div>
+        <div className="hero-video-wrapper">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="hero-video"
+            poster="/assets/hero_image_fallback.jpg"
+          >
+            <source src="/assets/hero_video.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-overlay-cinematic"></div>
+        </div>
+        
         <div className="container hero-content">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
+            initial={{ opacity: 0, y: 40 }} 
             animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+            className="hero-text-container"
           >
             <span className="hero-brand">RADIAANCE DENTISTRY</span>
-            <h1>Artistry in Every Smile</h1>
-            <p>Experience world-class luxury dental care tailored to your unique needs.</p>
+            <h1 className="hero-title">
+              <span className="hero-title-main">Artistry in Every</span>
+              <span className="hero-title-highlight">Smile</span>
+            </h1>
+            <p className="hero-subtitle">Experience world-class luxury dental care tailored to your unique needs.</p>
             <div className="hero-actions">
-              <KnowMoreBtn to="/contact" text="Book Consultation" variant="gold" />
-              <KnowMoreBtn to="/services" text="Explore Treatments" variant="primary" />
+              <KnowMoreBtn to="/contact" text="Book Consultation" variant="gold" className="hero-btn-primary" />
+              <KnowMoreBtn to="/services" text="Explore Treatments" variant="outline" className="hero-btn-secondary" />
             </div>
           </motion.div>
+        </div>
+
+        {/* Premium Trust Strip */}
+        <div className="hero-trust-strip glassmorphism-dark">
+          <div className="container">
+            <div className="trust-strip-grid">
+              <div className="trust-strip-item">
+                <Monitor className="icon-gold" size={20} />
+                <span>Advanced Technology</span>
+              </div>
+              <div className="trust-strip-item">
+                <Heart className="icon-gold" size={20} />
+                <span>Personalized Dental Care</span>
+              </div>
+              <div className="trust-strip-item">
+                <Navigation className="icon-gold" size={20} />
+                <span>International Patients Welcome</span>
+              </div>
+              <div className="trust-strip-item">
+                <Shield className="icon-gold" size={20} />
+                <span>Strict Sterilization</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
