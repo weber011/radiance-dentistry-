@@ -19,7 +19,7 @@ const Reviews = () => {
   const aggregateRatingSchema = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Radiance Dentistry",
+    "name": "Radiaance Dentistry",
     "image": "https://radiaancedentistry.com/assets/logo.png",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -44,8 +44,8 @@ const Reviews = () => {
   return (
     <div className="reviews-page">
       <Helmet>
-        <title>Patient Reviews | Radiance Dentistry</title>
-        <meta name="description" content="Read real reviews from our patients. Discover why Radiance Dentistry is highly recommended for compassionate, expert dental care." />
+        <title>Patient Reviews | Radiaance Dentistry</title>
+        <meta name="description" content="Read real reviews from our patients. Discover why Radiaance Dentistry is highly recommended for compassionate, expert dental care." />
         <script type="application/ld+json">{JSON.stringify(aggregateRatingSchema)}</script>
       </Helmet>
 
@@ -55,7 +55,7 @@ const Reviews = () => {
           <div className="badge-gold mb-20 mx-auto">PATIENT EXPERIENCES</div>
           <h1 className="text-white">Smiles That Speak for Themselves</h1>
           <p className="hero-subtitle max-w-700 mx-auto text-gray-300">
-            We are incredibly proud to have earned the trust of so many patients. Read their stories and discover the Radiance difference.
+            We are incredibly proud to have earned the trust of so many patients. Read their stories and discover the Radiaance difference.
           </p>
           
           <div className="overall-rating glassmorphism-dark mt-40 mx-auto">

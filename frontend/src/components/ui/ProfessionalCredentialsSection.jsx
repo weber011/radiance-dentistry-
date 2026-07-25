@@ -50,7 +50,7 @@ const ProfessionalCredentialsSection = () => {
     "image": "https://radiaancedentistry.com/assets/doctor%20pic.jpeg",
     "worksFor": {
       "@type": "MedicalOrganization",
-      "name": "Radiance Dentistry"
+      "name": "Radiaance Dentistry"
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",

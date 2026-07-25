@@ -32,7 +32,7 @@ const InternationalPatients = () => {
   const medicalSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    "name": "Radiance Dentistry",
+    "name": "Radiaance Dentistry",
     "description": "World-class luxury dental care tailored for international patients.",
     "url": "https://radiaancedentistry.com",
     "image": "https://radiaancedentistry.com/assets/logo.png"
@@ -41,8 +41,8 @@ const InternationalPatients = () => {
   return (
     <div className="intl-page">
       <Helmet>
-        <title>International Patients | Radiance Dentistry</title>
-        <meta name="description" content="Experience world-class dental care at Radiance Dentistry. We provide personalized treatment plans and a smooth journey for patients travelling from abroad." />
+        <title>International Patients | Radiaance Dentistry</title>
+        <meta name="description" content="Experience world-class dental care at Radiaance Dentistry. We provide personalized treatment plans and a smooth journey for patients travelling from abroad." />
         <link rel="canonical" href="https://radiaancedentistry.com/international-patients" />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(medicalSchema)}</script>
@@ -55,7 +55,7 @@ const InternationalPatients = () => {
             <div className="badge-gold mb-20 mx-auto">INTERNATIONAL DESK</div>
             <h1 className="text-white">World-Class Dental Care,<br/>Anywhere You Call Home</h1>
             <p className="hero-subtitle max-w-800 mx-auto text-gray-300">
-              Welcome to Radiance Dentistry. We combine clinical excellence, advanced technology, and a luxurious patient experience to provide seamless dental care for our international visitors.
+              Welcome to Radiaance Dentistry. We combine clinical excellence, advanced technology, and a luxurious patient experience to provide seamless dental care for our international visitors.
             </p>
             <div className="mt-40">
               <KnowMoreBtn to="/contact" text="Schedule Online Consultation" variant="gold" />
@@ -64,12 +64,12 @@ const InternationalPatients = () => {
         </div>
       </section>
 
-      {/* Why Choose Radiance */}
+      {/* Why Choose Radiaance */}
       <section className="section bg-light">
         <div className="container">
           <div className="text-center mb-50">
             <FadeInWhenVisible>
-              <h2 className="text-navy">Why Choose Radiance Dentistry?</h2>
+              <h2 className="text-navy">Why Choose Radiaance Dentistry?</h2>
               <p className="max-w-700 mx-auto text-secondary">A destination for precision, comfort, and exceptional results.</p>
             </FadeInWhenVisible>
           </div>

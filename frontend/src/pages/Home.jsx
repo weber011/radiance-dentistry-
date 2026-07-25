@@ -413,7 +413,7 @@ const Home = () => {
                     <Star key={i} size={24} className="icon-gold" fill="currentColor" />
                   ))}
                 </div>
-                <p className="text-md text-navy font-medium max-w-600 mx-auto">"Patients continue to recommend Radiance Dentistry for compassionate care and quality treatment."</p>
+                <p className="text-md text-navy font-medium max-w-600 mx-auto">"Patients continue to recommend Radiaance Dentistry for compassionate care and quality treatment."</p>
               </div>
             </FadeInWhenVisible>
           </div>

@@ -106,7 +106,7 @@ const AdvancedTechnology = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
-    "name": "Radiance Dentistry",
+    "name": "Radiaance Dentistry",
     "url": "https://www.radiaancedentistry.com",
     "medicalSpecialty": "Dentistry",
     "hasOfferCatalog": {
@@ -127,8 +127,8 @@ const AdvancedTechnology = () => {
   return (
     <div className="technology-page">
       <Helmet>
-        <title>Advanced Dental Technology | Radiance Dentistry</title>
-        <meta name="description" content="Radiance Dentistry combines clinical expertise with advanced dental technology like CBCT, Digital Scanners, and Lasers to deliver precise, comfortable treatments." />
+        <title>Advanced Dental Technology | Radiaance Dentistry</title>
+        <meta name="description" content="Radiaance Dentistry combines clinical expertise with advanced dental technology like CBCT, Digital Scanners, and Lasers to deliver precise, comfortable treatments." />
         <link rel="canonical" href="https://www.radiaancedentistry.com/advanced-technology" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
@@ -272,7 +272,7 @@ const AdvancedTechnology = () => {
         <div className="container text-center">
           <FadeInWhenVisible>
             <h2>Experience the Difference</h2>
-            <p className="max-w-700 mx-auto mb-40">Don't settle for outdated dentistry. Experience precision, comfort, and safety at Radiance Dentistry.</p>
+            <p className="max-w-700 mx-auto mb-40">Don't settle for outdated dentistry. Experience precision, comfort, and safety at Radiaance Dentistry.</p>
             <div className="td-cta-buttons">
               <Link to="/contact" className="td-btn-primary-large">Book Appointment</Link>
               <a href="tel:+918800201089" className="td-btn-outline-large bg-white">Call Now</a>

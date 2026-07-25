@@ -62,7 +62,7 @@ const InternationalPatientsSection = () => {
         <div className="intl-journey-grid mb-60">
           <FadeInWhenVisible className="intl-image-col">
             <div className="intl-image-wrapper luxury-radius">
-              <img src="/assets/reception.jpeg" alt="Radiance Dentistry Clinic Reception" className="intl-img" loading="lazy" />
+              <img src="/assets/reception.jpeg" alt="Radiaance Dentistry Clinic Reception" className="intl-img" loading="lazy" />
               <div className="intl-image-overlay glassmorphism">
                 <Plane className="icon-gold mb-10" size={32} />
                 <h4 className="text-white m-0">Your Destination for Premium Dental Care</h4>
