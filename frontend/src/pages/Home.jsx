@@ -56,12 +56,12 @@ const Home = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
             className="hero-text-container"
           >
-            <span className="hero-brand">RADIAANCE DENTISTRY</span>
+            <span className="hero-brand">WORLD-CLASS PREMIUM DENTAL SANCTUARY</span>
             <h1 className="hero-title">
-              <span className="hero-title-main">Artistry in Every</span>
-              <span className="hero-title-highlight">Smile</span>
+              <span className="hero-title-radiaance">RADIAANCE</span>
+              <span className="hero-title-dentistry">DENTISTRY</span>
             </h1>
-            <p className="hero-subtitle">Experience world-class luxury dental care tailored to your unique needs.</p>
+            <p className="hero-subtitle">“Where precision dental science meets aesthetic mastery. Experience painless, personalized care designed to craft your most radiant smile.”</p>
             <div className="hero-actions">
               <KnowMoreBtn to="/contact" text="Book Consultation" variant="gold" className="hero-btn-primary" />
               <KnowMoreBtn to="/services" text="Explore Treatments" variant="outline" className="hero-btn-secondary" />
