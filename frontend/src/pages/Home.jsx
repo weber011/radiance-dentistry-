@@ -171,7 +171,7 @@ const Home = () => {
               <li><CheckCircle2 className="icon-gold" /> Zero-Wait Policy</li>
               <li><CheckCircle2 className="icon-gold" /> Personalized Care Plans</li>
             </ul>
-            <KnowMoreBtn to="/tour-the-clinic" text="Tour The Clinic" />
+            <KnowMoreBtn to="/tour-the-clinic" text="Experience 360° Virtual Tour" variant="gold" />
           </FadeInWhenVisible>
         </div>
       </section>
