@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import './ImageLightbox.css';
 
-const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }) => {
+const ImageLightbox = ({ images, currentIndex = 0, isOpen, onClose, onNext, onPrev, imageSrc, altText }) => {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight') onNext();
-      if (e.key === 'ArrowLeft') onPrev();
+      if (e.key === 'ArrowRight' && onNext) onNext();
+      if (e.key === 'ArrowLeft' && onPrev) onPrev();
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -27,9 +27,18 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
     };
   }, [isOpen]);
 
-  if (!images || images.length === 0) return null;
+  let currentImage = null;
+  let hasNav = false;
 
-  const currentImage = images[currentIndex];
+  if (images && images.length > 0) {
+    currentImage = images[currentIndex] || images[0];
+    hasNav = images.length > 1;
+  } else if (imageSrc) {
+    currentImage = { src: imageSrc, caption: altText };
+    hasNav = false;
+  }
+
+  if (!currentImage) return null;
 
   return (
     <AnimatePresence>
@@ -46,9 +55,11 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
               <X size={24} />
             </button>
             
-            <button className="lightbox-nav prev" onClick={onPrev}>
-              <ChevronLeft size={32} />
-            </button>
+            {hasNav && onPrev && (
+              <button className="lightbox-nav prev" onClick={onPrev}>
+                <ChevronLeft size={32} />
+              </button>
+            )}
 
             <motion.div 
               key={currentIndex}
@@ -66,9 +77,11 @@ const ImageLightbox = ({ images, currentIndex, isOpen, onClose, onNext, onPrev }
               )}
             </motion.div>
 
-            <button className="lightbox-nav next" onClick={onNext}>
-              <ChevronRight size={32} />
-            </button>
+            {hasNav && onNext && (
+              <button className="lightbox-nav next" onClick={onNext}>
+                <ChevronRight size={32} />
+              </button>
+            )}
           </div>
         </motion.div>
       )}

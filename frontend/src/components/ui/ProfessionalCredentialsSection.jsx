@@ -177,10 +177,12 @@ const ProfessionalCredentialsSection = () => {
 
       {/* Lightbox for Certificates */}
       <ImageLightbox 
+        images={certificates.map(cert => ({ src: cert.src, caption: `${cert.title} • ${cert.institution}` }))}
+        currentIndex={lightboxIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        imageSrc={certificates[lightboxIndex]?.src}
-        altText={certificates[lightboxIndex]?.title}
+        onNext={() => setLightboxIndex((prev) => (prev + 1) % certificates.length)}
+        onPrev={() => setLightboxIndex((prev) => (prev - 1 + certificates.length) % certificates.length)}
       />
     </section>
   );

@@ -389,10 +389,12 @@ const Home = () => {
 
       {/* Lightbox */}
       <ImageLightbox 
+        images={fullGalleryData.map(g => ({ src: g.src, caption: g.caption, treatment: g.treatment }))}
+        currentIndex={lightboxIndex}
         isOpen={lightboxOpen} 
         onClose={() => setLightboxOpen(false)} 
-        imageSrc={fullGalleryData[lightboxIndex]?.src} 
-        altText={fullGalleryData[lightboxIndex]?.treatment} 
+        onNext={() => setLightboxIndex((prev) => (prev + 1) % fullGalleryData.length)}
+        onPrev={() => setLightboxIndex((prev) => (prev - 1 + fullGalleryData.length) % fullGalleryData.length)}
       />
 
       {/* 9. Video Testimonials */}
