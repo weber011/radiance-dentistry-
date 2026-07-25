@@ -200,7 +200,7 @@
 
 
 /* Common Helpers */
-.bg-light { background-color: #F3F4F6; }
+.bg-light { background: linear-gradient(135deg, #0A1128 0%, #0F172A 50%, #131F37 100%) !important; color: #F8FAFC !important; }
 .bg-navy { background-color: var(--primary-navy); }
 .text-white { color: var(--white) !important; }
 .text-gold { color: var(--luxury-gold) !important; }

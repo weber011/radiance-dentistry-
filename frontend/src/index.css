@@ -5,10 +5,10 @@
   --primary-navy: #1E3A5F;
   --medical-teal: #2CB5B4;
   --luxury-gold: #C9A227;
-  --bg-color: #FAF8F5;
+  --bg-color: #0A1128;
   --white: #FFFFFF;
-  --dark-text: #2D3748;
-  --secondary-text: #6B7280;
+  --dark-text: #F8FAFC;
+  --secondary-text: rgba(255, 255, 255, 0.85);
 
   /* Typography */
   --font-heading: 'Cormorant Garamond', serif;
@@ -27,14 +27,14 @@
   --radius-lg: 24px;
   --radius-full: 9999px;
   
-  --shadow-sm: 0 4px 6px rgba(30, 58, 95, 0.05);
-  --shadow-md: 0 10px 25px rgba(30, 58, 95, 0.08);
-  --shadow-lg: 0 20px 40px rgba(30, 58, 95, 0.12);
-  --shadow-gold: 0 10px 25px rgba(201, 162, 39, 0.2);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-gold: 0 10px 25px rgba(201, 162, 39, 0.25);
 
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
 }
 
 * {
@@ -61,7 +61,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--primary-navy);
+  color: #FFFFFF;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -71,7 +71,7 @@ h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
 
 p {
-  color: var(--secondary-text);
+  color: rgba(255, 255, 255, 0.85);
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
@@ -204,4 +204,87 @@ ul {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+/* GLOBAL DARK LUXURY CONVERSION (Make light sections dark & visible) */
+.bg-light,
+.bg-white,
+.credentials-section,
+.about-section,
+.why-us-section,
+.treatments-section,
+.gallery-section,
+.testimonials-section,
+.faq-section,
+.contact-section,
+.full-gallery-section,
+.tech-timeline-section,
+.td-section {
+  background: linear-gradient(135deg, #0A1128 0%, #0F172A 50%, #131F37 100%) !important;
+  color: #F8FAFC !important;
+}
+
+.bg-light h1, .bg-light h2, .bg-light h3, .bg-light h4, .bg-light h5, .bg-light h6,
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.credentials-section h1, .credentials-section h2, .credentials-section h3, .credentials-section h4, .credentials-section h5, .credentials-section h6,
+.about-section h1, .about-section h2, .about-section h3, .about-section h4, .about-section h5, .about-section h6,
+.why-us-section h1, .why-us-section h2, .why-us-section h3, .why-us-section h4, .why-us-section h5, .why-us-section h6,
+.treatments-section h1, .treatments-section h2, .treatments-section h3, .treatments-section h4, .treatments-section h5, .treatments-section h6,
+.gallery-section h1, .gallery-section h2, .gallery-section h3, .gallery-section h4, .gallery-section h5, .gallery-section h6,
+.testimonials-section h1, .testimonials-section h2, .testimonials-section h3, .testimonials-section h4, .testimonials-section h5, .testimonials-section h6,
+.faq-section h1, .faq-section h2, .faq-section h3, .faq-section h4, .faq-section h5, .faq-section h6,
+.contact-section h1, .contact-section h2, .contact-section h3, .contact-section h4, .contact-section h5, .contact-section h6 {
+  color: #FFFFFF !important;
+}
+
+.bg-light p, .bg-light span, .bg-light li, .bg-light .text-secondary,
+.bg-white p, .bg-white span, .bg-white li, .bg-white .text-secondary,
+.credentials-section p, .credentials-section span, .credentials-section li, .credentials-section .text-secondary,
+.about-section p, .about-section span, .about-section li, .about-section .text-secondary,
+.why-us-section p, .why-us-section span, .why-us-section li, .why-us-section .text-secondary,
+.treatments-section p, .treatments-section span, .treatments-section li, .treatments-section .text-secondary,
+.gallery-section p, .gallery-section span, .gallery-section li, .gallery-section .text-secondary,
+.testimonials-section p, .testimonials-section span, .testimonials-section li, .testimonials-section .text-secondary,
+.faq-section p, .faq-section span, .faq-section li, .faq-section .text-secondary,
+.contact-section p, .contact-section span, .contact-section li, .contact-section .text-secondary {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.bg-light .text-navy, .bg-white .text-navy, .credentials-section .text-navy, .about-section .text-navy, .why-us-section .text-navy, .treatments-section .text-navy, .gallery-section .text-navy, .testimonials-section .text-navy {
+  color: #FFFFFF !important;
+}
+
+.bg-light .text-gold, .bg-white .text-gold, .credentials-section .text-gold, .about-section .text-gold, .why-us-section .text-gold, .treatments-section .text-gold, .gallery-section .text-gold, .testimonials-section .text-gold {
+  color: var(--luxury-gold) !important;
+}
+
+/* Transform formerly white/light cards inside these sections into dark glassmorphism cards */
+.premium-trust-card,
+.premium-service-card,
+.featured-cert-wrapper,
+.timeline-card,
+.professional-value-card,
+.gallery-card,
+.td-card,
+.faq-item,
+.contact-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+.premium-trust-card:hover,
+.premium-service-card:hover,
+.featured-cert-wrapper:hover,
+.timeline-card:hover,
+.professional-value-card:hover,
+.gallery-card:hover,
+.td-card:hover,
+.faq-item:hover,
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--luxury-gold) !important;
+  transform: translateY(-6px);
 }
