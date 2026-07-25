@@ -8,6 +8,7 @@ import {
   ChevronRight, Sofa, Users, Star, Monitor, ShieldCheck, Heart, 
   Sparkles, CheckCircle2, Phone, X, PlayCircle, ArrowLeft
 } from 'lucide-react';
+import VirtualTour360 from '../components/ui/VirtualTour360';
 import './TourClinic.css';
 
 const FadeInWhenVisible = ({ children, className = "", delay = 0 }) => {
@@ -112,6 +113,18 @@ const TourClinic = () => {
             <h2>A Space Designed For You</h2>
             <p className="body-text mt-20">At Radiaance Dentistry, we believe that exceptional dental care begins the moment you walk through our doors. We have combined modern infrastructure, cutting-edge technology, and a calming atmosphere to ensure every patient feels relaxed, safe, and comfortable throughout their entire visit.</p>
           </FadeInWhenVisible>
+        </div>
+      </section>
+
+      {/* Section 1.5: 360 Virtual Tour */}
+      <section className="section pt-0 pb-40">
+        <div className="container">
+          <div className="text-center mb-40">
+            <h4 className="section-subtitle text-gold">360° EXPERIENCE</h4>
+            <h2>Interactive Clinic Navigator</h2>
+            <p className="max-w-700 mx-auto text-secondary">Take an interactive walk through our luxury operatory suites, consultation rooms, and sanctuary reception.</p>
+          </div>
+          <VirtualTour360 />
         </div>
       </section>
 
@@ -261,18 +274,6 @@ const TourClinic = () => {
         </div>
       </section>
 
-      {/* Section 7: Virtual Experience */}
-      <section className="section">
-        <div className="container">
-          <FadeInWhenVisible className="virtual-tour-placeholder glassmorphism-subtle">
-            <div className="virtual-content">
-              <PlayCircle size={64} className="text-gold mb-20" />
-              <h2>360° Virtual Clinic Tour Coming Soon</h2>
-              <p>Experience our entire clinic interactively from the comfort of your home.</p>
-            </div>
-          </FadeInWhenVisible>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="section pt-0">
