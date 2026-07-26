@@ -120,7 +120,7 @@ const Home = () => {
       </section>
 
       {/* 5. Meet Dr Ruchi Jain */}
-      <section className="section doctor-section bg-white">
+      <section className="section doctor-section" style={{ backgroundColor: '#FFFFFF', color: '#183153' }}>
         <div className="container">
           <div className="doctor-editorial-grid">
             {/* Left Column: Portrait */}

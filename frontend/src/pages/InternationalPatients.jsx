@@ -70,7 +70,7 @@ const InternationalPatients = () => {
           <div className="text-center mb-50">
             <FadeInWhenVisible>
               <h2 className="text-navy">Why Choose Radiaance Dentistry?</h2>
-              <p className="max-w-700 mx-auto text-secondary">A destination for precision, comfort, and exceptional results.</p>
+              <p className="max-w-700 mx-auto text-body">A destination for precision, comfort, and exceptional results.</p>
             </FadeInWhenVisible>
           </div>
 
@@ -101,7 +101,7 @@ const InternationalPatients = () => {
             <FadeInWhenVisible>
               <div className="badge-gold mb-15 mx-auto">YOUR JOURNEY</div>
               <h2 className="text-navy">A Seamless Patient Experience</h2>
-              <p className="max-w-700 mx-auto text-secondary">We understand that traveling for healthcare can be overwhelming. Our structured 5-step journey ensures everything is organized before you even board your flight.</p>
+              <p className="max-w-700 mx-auto text-body">We understand that traveling for healthcare can be overwhelming. Our structured 5-step journey ensures everything is organized before you even board your flight.</p>
             </FadeInWhenVisible>
           </div>
 
@@ -118,7 +118,7 @@ const InternationalPatients = () => {
                 <div className="journey-step-content glassmorphism-subtle">
                   <div className="step-icon text-gold mb-15">{step.icon}</div>
                   <h3 className="text-navy mb-10">{step.title}</h3>
-                  <p className="text-secondary m-0">{step.desc}</p>
+                  <p className="text-body m-0">{step.desc}</p>
                 </div>
               </FadeInWhenVisible>
             ))}
@@ -161,15 +161,15 @@ const InternationalPatients = () => {
           <FadeInWhenVisible className="faq-list">
             <div className="faq-item">
               <h3 className="text-navy mb-10">Do I need to travel for multiple visits?</h3>
-              <p className="text-secondary text-sm m-0">Depending on the treatment, we try to optimize your schedule to minimize travel. Our online consultation helps us plan effectively.</p>
+              <p className="text-body text-sm m-0">Depending on the treatment, we try to optimize your schedule to minimize travel. Our online consultation helps us plan effectively.</p>
             </div>
             <div className="faq-item">
               <h3 className="text-navy mb-10">Can you provide a cost estimate before I travel?</h3>
-              <p className="text-secondary text-sm m-0">Yes, after a detailed online consultation and reviewing your digital records, we will provide a comprehensive treatment plan with an estimated cost and timeline.</p>
+              <p className="text-body text-sm m-0">Yes, after a detailed online consultation and reviewing your digital records, we will provide a comprehensive treatment plan with an estimated cost and timeline.</p>
             </div>
             <div className="faq-item">
               <h3 className="text-navy mb-10">How do I start the process?</h3>
-              <p className="text-secondary text-sm m-0">Simply click "Schedule Online Consultation" or contact us via email. Our team will guide you through the next steps.</p>
+              <p className="text-body text-sm m-0">Simply click "Schedule Online Consultation" or contact us via email. Our team will guide you through the next steps.</p>
             </div>
           </FadeInWhenVisible>
         </div>

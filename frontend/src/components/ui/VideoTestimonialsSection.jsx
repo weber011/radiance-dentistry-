@@ -71,7 +71,7 @@ const VideoTestimonialsSection = () => {
               <div className="vt-info glassmorphism">
                 <div className="vt-meta">
                   <span className="vt-name">{featuredVideo.patientName}</span>
-                  <span className="vt-treatment text-gold">{featuredVideo.treatment}</span>
+                  <span className="vt-treatment text-primary">{featuredVideo.treatment}</span>
                 </div>
                 <p className="vt-caption">"{featuredVideo.caption}"</p>
               </div>
@@ -102,7 +102,7 @@ const VideoTestimonialsSection = () => {
                   <div className="vt-info compact glassmorphism">
                     <div className="vt-meta">
                       <span className="vt-name">{video.patientName}</span>
-                      <span className="vt-treatment text-gold">{video.treatment}</span>
+                      <span className="vt-treatment text-primary">{video.treatment}</span>
                     </div>
                     <p className="vt-caption text-sm line-clamp-1">"{video.caption}"</p>
                   </div>

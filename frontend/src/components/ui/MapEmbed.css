@@ -40,7 +40,7 @@
 }
 
 .open-map-btn:hover {
-  background: var(--gold);
+  background: var(--luxury-gold);
   transform: translateY(-2px);
   color: var(--white);
 }

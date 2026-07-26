@@ -61,7 +61,7 @@
 .masonry-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 25, 47, 0.7) 0%, rgba(10, 25, 47, 0) 50%);
+  background: linear-gradient(180deg, rgba(8,25,55,0.15), rgba(8,25,55,0.75));
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
@@ -115,7 +115,7 @@
   /* On mobile, we might want the overlay slightly visible or tag visible */
   .masonry-overlay {
     opacity: 1;
-    background: linear-gradient(to top, rgba(10, 25, 47, 0.6) 0%, rgba(10, 25, 47, 0) 40%);
+    background: linear-gradient(180deg, rgba(8,25,55,0.15), rgba(8,25,55,0.75));
   }
   .masonry-treatment-tag {
     transform: translateY(0);

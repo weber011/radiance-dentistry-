@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ZoomIn, ChevronRight, BookOpen, Stethoscope, Microscope, Award, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, ChevronLeft, Award, BookOpen, Star, ShieldCheck, Search } from 'lucide-react';
 import FadeInWhenVisible from './FadeInWhenVisible';
 import ImageLightbox from './ImageLightbox';
 import KnowMoreBtn from './KnowMoreBtn';
 import './ProfessionalCredentialsSection.css';
 
-const certificates = [
+const rawCertificates = [
   {
     id: "c3",
     src: "/assets/c3.jpeg",
@@ -20,7 +21,7 @@ const certificates = [
     src: "/assets/c2.jpeg",
     title: "Level 1 Workshop on Endodontics",
     institution: "DENTSPLY Academy",
-    year: "",
+    year: "2008",
     desc: "Advanced Training at PDIC's Center for Endodontics."
   },
   {
@@ -30,12 +31,77 @@ const certificates = [
     institution: "SM Art & CAADS",
     year: "2023",
     desc: "For contributing to free health check-up camps."
+  },
+  // Intentional duplicate to test deduplication
+  {
+    id: "c3",
+    src: "/assets/c3.jpeg",
+    title: "Certificate of Merit - MDS (Endodontics)",
+    institution: "K.L.E.E.'s Institute of Dental Science",
+    year: "2003-04",
+    desc: "Awarded for 2nd Position in the Endo-Poster division."
   }
+];
+
+// Deduplicate based on ID
+const certificates = Array.from(new Map(rawCertificates.map(c => [c.id, c])).values());
+
+const trustBadges = [
+  { icon: <Award size={26} />, title: "Internationally Certified Dentist" },
+  { icon: <BookOpen size={26} />, title: "Continuous Professional Education" },
+  { icon: <Star size={26} />, title: "Advanced Cosmetic Dentistry" },
+  { icon: <ShieldCheck size={26} />, title: "Recognized Excellence" },
 ];
 
 const ProfessionalCredentialsSection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  
+  // Carousel State
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [itemsPerView, setItemsPerView] = useState(3);
+  const trackRef = useRef(null);
+  
+  // Responsiveness for Carousel
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else {
+        setItemsPerView(3);
+      }
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalItems = certificates.length;
+  // If fewer certificates than itemsPerView, maxIndex is 0
+  const maxIndex = Math.max(0, totalItems - itemsPerView);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
+
+  // Autoplay
+  useEffect(() => {
+    if (isHovered || totalItems <= itemsPerView) return;
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isHovered, nextSlide, totalItems, itemsPerView]);
 
   const openLightbox = (index) => {
     setLightboxIndex(index);
@@ -58,117 +124,120 @@ const ProfessionalCredentialsSection = () => {
     }
   };
 
+  // Determine transform offset
+  const offset = -(currentIndex * (100 / itemsPerView));
+
   return (
-    <section className="section credentials-section bg-white">
+    <section className="section credentials-luxury-section bg-luxury-light">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       </Helmet>
+
+      {/* Decorative Background */}
+      <div className="luxury-bg-pattern"></div>
+      <div className="floating-circle circle-1"></div>
+      <div className="floating-circle circle-2"></div>
       
-      <div className="container">
+      <div className="container relative z-10">
         
         {/* Header */}
         <div className="text-center mb-50">
           <FadeInWhenVisible>
-            <div className="badge-gold mb-15 mx-auto">PROFESSIONAL CREDENTIALS</div>
-            <h2 className="text-navy">Trusted Qualifications. Proven Expertise.</h2>
-            <p className="max-w-700 mx-auto text-secondary">
-              Every treatment is backed by professional education, recognized qualifications, and a commitment to continuous learning.
+            <div className="badge-gold mb-15 mx-auto">PROFESSIONAL EXCELLENCE</div>
+            <h2 className="text-navy">Certifications & Professional Recognition</h2>
+            <p className="max-w-700 mx-auto text-body">
+              Our commitment to advanced dental education, internationally recognized certifications, and continuous professional excellence ensures every patient receives world-class dental care.
             </p>
           </FadeInWhenVisible>
         </div>
 
-        {/* Credentials Layout */}
-        <div className="credentials-layout-grid mb-60">
-          
-          {/* Left: Featured Certificate */}
-          <FadeInWhenVisible className="featured-cert-col">
-            <div 
-              className="featured-cert-wrapper premium-hover"
-              onClick={() => openLightbox(0)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && openLightbox(0)}
-            >
-              <div className="featured-cert-image">
-                <img src={certificates[0].src} alt={certificates[0].title} loading="lazy" />
-                <div className="zoom-overlay">
-                  <ZoomIn size={40} className="text-white" />
-                </div>
-              </div>
-              <div className="featured-cert-info glassmorphism">
-                <h3 className="m-0 text-navy">{certificates[0].title}</h3>
-                <p className="text-gold font-medium mt-5 m-0">{certificates[0].institution}</p>
-                <p className="text-secondary text-sm mt-5 m-0">{certificates[0].year} • {certificates[0].desc}</p>
-                <div className="click-to-enlarge mt-10 text-xs">Click to enlarge <ArrowRight size={12}/></div>
-              </div>
-            </div>
-          </FadeInWhenVisible>
-
-          {/* Right: Credentials Timeline */}
-          <FadeInWhenVisible className="credentials-timeline-col" delay={0.2}>
-            
-            <div className="credential-timeline-item">
-              <div className="timeline-node"><Award size={20} className="text-white" /></div>
-              <div className="timeline-card glassmorphism-subtle premium-hover" onClick={() => openLightbox(0)}>
-                <div className="cert-preview"><img src={certificates[0].src} alt="MDS" /></div>
-                <div className="cert-details">
-                  <h4 className="text-navy m-0">{certificates[0].title}</h4>
-                  <p className="text-secondary text-sm m-0 mt-5">{certificates[0].institution}</p>
-                  <p className="text-gold text-xs font-medium mt-5 m-0">Year: {certificates[0].year}</p>
-                  <span className="view-cert-link mt-10 text-xs text-navy font-medium flex items-center gap-1">View Certificate <ChevronRight size={14}/></span>
-                </div>
-              </div>
-            </div>
-
-            <div className="timeline-vertical-line"></div>
-
-            <div className="credential-timeline-item">
-              <div className="timeline-node"><BookOpen size={20} className="text-white" /></div>
-              <div className="timeline-card glassmorphism-subtle premium-hover" onClick={() => openLightbox(1)}>
-                <div className="cert-preview"><img src={certificates[1].src} alt="Endodontics Workshop" /></div>
-                <div className="cert-details">
-                  <h4 className="text-navy m-0">{certificates[1].title}</h4>
-                  <p className="text-secondary text-sm m-0 mt-5">{certificates[1].institution}</p>
-                  <span className="view-cert-link mt-10 text-xs text-navy font-medium flex items-center gap-1">View Certificate <ChevronRight size={14}/></span>
-                </div>
-              </div>
-            </div>
-
-            <div className="timeline-vertical-line"></div>
-
-            <div className="credential-timeline-item">
-              <div className="timeline-node"><Stethoscope size={20} className="text-white" /></div>
-              <div className="timeline-card glassmorphism-subtle premium-hover" onClick={() => openLightbox(2)}>
-                <div className="cert-preview"><img src={certificates[2].src} alt="Appreciation" /></div>
-                <div className="cert-details">
-                  <h4 className="text-navy m-0">{certificates[2].title}</h4>
-                  <p className="text-secondary text-sm m-0 mt-5">{certificates[2].institution}</p>
-                  <p className="text-gold text-xs font-medium mt-5 m-0">Year: {certificates[2].year}</p>
-                  <span className="view-cert-link mt-10 text-xs text-navy font-medium flex items-center gap-1">View Certificate <ChevronRight size={14}/></span>
-                </div>
-              </div>
-            </div>
-
-          </FadeInWhenVisible>
-        </div>
-
-        {/* Professional Values */}
-        <div className="professional-values-grid mb-50">
-          {[
-            { icon: <Microscope />, title: "Evidence-Based Dentistry" },
-            { icon: <Stethoscope />, title: "Personalized Patient Care" },
-            { icon: <BookOpen />, title: "Modern Clinical Techniques" },
-            { icon: <Award />, title: "Continuous Learning" }
-          ].map((val, idx) => (
-            <FadeInWhenVisible key={idx} delay={idx * 0.1} className="professional-value-card glassmorphism">
-              <div className="value-icon mb-15">{val.icon}</div>
-              <h4 className="text-navy m-0 text-center">{val.title}</h4>
+        {/* Premium Trust Badges */}
+        <div className="trust-badges-row mb-60">
+          {trustBadges.map((badge, idx) => (
+            <FadeInWhenVisible key={idx} delay={idx * 0.1} className="premium-trust-badge glassmorphism">
+              <div className="badge-icon-wrapper text-gold">{badge.icon}</div>
+              <h4 className="text-navy m-0 text-center text-sm font-semibold">{badge.title}</h4>
             </FadeInWhenVisible>
           ))}
         </div>
 
+        {/* Horizontal Carousel Section */}
+        <FadeInWhenVisible delay={0.2} className="carousel-container-wrapper">
+          <div 
+            className="carousel-viewport" 
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <motion.div 
+              className="carousel-track"
+              ref={trackRef}
+              animate={{ x: `${offset}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30, duration: 0.8 }}
+              drag="x"
+              dragConstraints={trackRef}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = offset.x;
+                if (swipe < -50) {
+                  nextSlide();
+                } else if (swipe > 50) {
+                  prevSlide();
+                }
+              }}
+            >
+              {certificates.map((cert, index) => (
+                <div 
+                  key={cert.id} 
+                  className="carousel-slide" 
+                  style={{ flex: `0 0 ${100 / itemsPerView}%` }}
+                >
+                  <div 
+                    className="certificate-card glassmorphism"
+                    onClick={() => openLightbox(index)}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div className="cert-image-wrapper">
+                      <img src={cert.src} alt={cert.title} loading="lazy" />
+                      <div className="cert-hover-overlay">
+                        <Search size={32} className="text-white" />
+                      </div>
+                    </div>
+                    <div className="cert-info">
+                      <h3 className="text-navy m-0 text-base">{cert.title}</h3>
+                      <p className="text-secondary font-medium text-sm mt-5 m-0">{cert.institution}</p>
+                      {cert.year && <p className="text-muted text-xs mt-5 m-0">Year: {cert.year}</p>}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Carousel Navigation */}
+          {totalItems > itemsPerView && (
+            <div className="carousel-controls mt-40">
+              <button className="carousel-arrow prev" onClick={prevSlide} aria-label="Previous certificates">
+                <ChevronLeft size={24} />
+              </button>
+              <div className="carousel-pagination">
+                {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+                  <button 
+                    key={idx} 
+                    className={`pagination-dot ${idx === currentIndex ? 'active' : ''}`}
+                    onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+              <button className="carousel-arrow next" onClick={nextSlide} aria-label="Next certificates">
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          )}
+        </FadeInWhenVisible>
+
         {/* CTAs */}
-        <div className="text-center flex-center gap-20">
+        <div className="text-center flex-center gap-20 mt-60">
           <KnowMoreBtn to="/doctor/dr-ruchi-jain" text="Meet Dr. Ruchi Jain &rarr;" variant="outline" className="btn-outline-navy" />
           <KnowMoreBtn to="/contact" text="Book Appointment &rarr;" variant="primary" />
         </div>

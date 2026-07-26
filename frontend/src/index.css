@@ -10,7 +10,10 @@
   --bg-color: #F8FBFF;
   --bg-alt: #F2F8FF;
   --dark-text: #183153;
-  --secondary-text: #5C6B80;
+  --primary-blue: #1E5EFF;
+  --body-text: #374151;
+  --secondary-text: #4B5563;
+  --muted-text: #6B7280;
   --success-green: #22C55E;
   --border-color: #E6EEF8;
   --footer-bg: #0F2D52;
@@ -69,9 +72,16 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h5, h6 {
   font-family: var(--font-heading);
   color: var(--dark-text);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--primary-blue);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -81,7 +91,7 @@ h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
 h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
 
 p {
-  color: var(--secondary-text);
+  color: var(--body-text);
   font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
@@ -127,7 +137,11 @@ ul {
 .text-white { color: var(--white) !important; }
 .text-navy { color: var(--dark-text) !important; }
 .text-gold { color: var(--accent-gold) !important; }
-.text-light { color: rgba(255, 255, 255, 0.75) !important; }
+.text-body { color: var(--body-text) !important; }
+.text-secondary { color: var(--secondary-text) !important; }
+.text-muted { color: var(--muted-text) !important; }
+.text-primary { color: var(--primary-blue) !important; }
+.text-light { color: rgba(255, 255, 255, 0.85) !important; }
 
 /* White Glassmorphism Card Utility */
 .glassmorphism, .white-glass-card {
@@ -236,9 +250,9 @@ ul {
 
 .stats-number {
   font-family: var(--font-stats);
-  color: var(--primary-blue);
-  font-size: 3rem;
-  font-weight: 700;
+  color: var(--dark-text);
+  font-size: 3.5rem;
+  font-weight: 800;
 }
 
 .fade-in-section {

@@ -10,13 +10,13 @@
 }
 
 .bg-white {
-  background: linear-gradient(135deg, #0A1128 0%, #0F172A 100%) !important;
-  color: #F8FAFC !important;
+  background-color: var(--white) !important;
+  color: var(--dark-text) !important;
 }
 
 .bg-light {
-  background: linear-gradient(135deg, #0A1128 0%, #0F172A 50%, #131F37 100%) !important;
-  color: #F8FAFC !important;
+  background-color: var(--light-blue) !important;
+  color: var(--dark-text) !important;
 }
 
 .bg-navy {
@@ -46,7 +46,7 @@
 .td-hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, rgba(14,35,76,0.95) 0%, rgba(14,35,76,0.7) 50%, rgba(14,35,76,0.3) 100%);
+  background: linear-gradient(180deg, rgba(8,25,55,0.15), rgba(8,25,55,0.75));
   z-index: 1;
 }
 
@@ -63,7 +63,7 @@
   gap: 8px;
   font-size: 14px;
   margin-bottom: 24px;
-  color: rgba(255,255,255,0.7);
+  color: var(--body-text);
 }
 
 .td-breadcrumbs a {
@@ -303,7 +303,7 @@
 }
 
 .td-benefit-card p {
-  color: rgba(255,255,255,0.7);
+  color: var(--body-text);
   line-height: 1.6;
 }
 
@@ -427,14 +427,14 @@
 
 .td-faq-card h4 {
   font-family: var(--font-heading);
-  color: var(--primary-navy);
+  color: var(--dark-text);
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 1.4;
 }
 
 .td-faq-card p {
-  color: var(--secondary-text);
+  color: var(--body-text);
   line-height: 1.6;
   font-size: 15px;
 }

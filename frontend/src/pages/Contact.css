@@ -44,7 +44,7 @@
   height: 50px;
   border-radius: 50%;
   background: rgba(212, 175, 55, 0.1);
-  color: var(--gold);
+  color: var(--luxury-gold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,11 +60,11 @@
 }
 
 .link-action:hover {
-  color: var(--gold);
+  color: var(--luxury-gold);
 }
 
 .hover-gold:hover {
-  color: var(--gold);
+  color: var(--luxury-gold);
 }
 
 .hours-grid {
@@ -91,7 +91,7 @@
   margin-bottom: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--primary-navy);
+  color: var(--dark-text);
 }
 
 .appointment-form .form-control {
@@ -101,16 +101,20 @@
   border-radius: 12px;
   font-family: var(--font-body);
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--body-text);
   background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
 }
 
+.appointment-form .form-control::placeholder {
+  color: var(--muted-text);
+}
+
 .appointment-form .form-control:focus {
   outline: none;
-  border-color: var(--gold);
+  border-color: var(--primary-blue);
   background: var(--white);
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 0 4px rgba(30, 94, 255, 0.1);
 }
 
 .appointment-form .form-row {

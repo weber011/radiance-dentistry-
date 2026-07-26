@@ -30,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(30, 58, 95, 0.7));
+  background: linear-gradient(180deg, rgba(8,25,55,0.15), rgba(8,25,55,0.75));
   z-index: 2;
 }
 
@@ -157,7 +157,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(30, 58, 95, 0.7);
+  background: linear-gradient(180deg, rgba(8,25,55,0.15), rgba(8,25,55,0.75));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,7 +292,7 @@
 }
 
 .virtual-content p {
-  color: var(--light-text);
+  color: var(--body-text);
   max-width: 500px;
   margin: 0 auto;
 }

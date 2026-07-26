@@ -21,9 +21,23 @@
 .navbar .nav-link,
 .navbar .dropdown-toggle,
 .navbar .mobile-menu-btn {
-  color: var(--dark-text) !important;
   font-weight: 600 !important;
   letter-spacing: 0.4px;
+}
+
+.navbar.transparent .nav-link,
+.navbar.transparent .dropdown-toggle,
+.navbar.transparent .mobile-menu-btn {
+  color: var(--white) !important;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .dropdown-toggle,
+.navbar.scrolled .mobile-menu-btn,
+.navbar.solid-bg .nav-link,
+.navbar.solid-bg .dropdown-toggle,
+.navbar.solid-bg .mobile-menu-btn {
+  color: var(--dark-text) !important;
 }
 
 .navbar .nav-link:hover,
@@ -84,7 +98,6 @@
 .nav-link {
   font-family: var(--font-body);
   font-weight: 600 !important;
-  color: #FFFFFF !important;
   transition: var(--transition-smooth);
   position: relative;
   font-size: 0.98rem;
