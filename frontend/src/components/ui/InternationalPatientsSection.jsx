@@ -28,7 +28,7 @@ const InternationalPatientsSection = () => {
           <FadeInWhenVisible className="intl-hero-col">
             <div className="intl-hero-wrapper luxury-radius">
               <img 
-                src="/assets/international-patient-hero.jpg" 
+                src="/assets/international patient.png" 
                 alt="Dr. Ruchi Jain with International Patient" 
                 className="intl-hero-img"
                 onError={(e) => { e.target.src = '/assets/doctor pic.jpeg'; }}
