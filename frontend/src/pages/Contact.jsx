@@ -97,11 +97,11 @@ const Contact = () => {
       </Helmet>
 
       {/* Hero Banner */}
-      <section className="contact-hero premium-gradient text-white text-center">
+      <section className="contact-hero text-center" style={{ background: 'linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%)', color: 'var(--primary-navy)' }}>
         <div className="container">
           <FadeInWhenVisible>
-            <h1 className="hero-title">Get in Touch</h1>
-            <p className="hero-subtitle">Experience truly premium dental care. We are here to answer your questions and welcome you to our modern facility.</p>
+            <h1 className="hero-title" style={{ color: 'var(--primary-navy)' }}>Get in Touch</h1>
+            <p className="hero-subtitle" style={{ color: 'var(--body-text)', textShadow: 'none', fontWeight: 500 }}>Experience truly premium dental care. We are here to answer your questions and welcome you to our modern facility.</p>
           </FadeInWhenVisible>
         </div>
       </section>
