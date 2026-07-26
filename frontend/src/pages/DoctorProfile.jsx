@@ -114,7 +114,7 @@ const DoctorProfile = () => {
       </section>
 
       {/* Trust Badges */}
-      <ProfessionalCredentialsSection />
+      <ProfessionalCredentialsSection hideProfileBtn={true} />
       
     </main>
   );

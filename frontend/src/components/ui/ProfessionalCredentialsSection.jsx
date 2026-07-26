@@ -53,7 +53,7 @@ const trustBadges = [
   { icon: <ShieldCheck size={26} />, title: "Recognized Excellence" },
 ];
 
-const ProfessionalCredentialsSection = () => {
+const ProfessionalCredentialsSection = ({ hideProfileBtn = false }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   
@@ -238,8 +238,10 @@ const ProfessionalCredentialsSection = () => {
 
         {/* CTAs */}
         <div className="text-center flex-center gap-20 mt-60">
-          <KnowMoreBtn to="/doctor/dr-ruchi-jain" text="Meet Dr. Ruchi Jain &rarr;" variant="outline" className="btn-outline-navy" />
-          <KnowMoreBtn to="/contact" text="Book Appointment &rarr;" variant="primary" />
+          {!hideProfileBtn && (
+            <KnowMoreBtn to="/doctor/dr-ruchi-jain" text="Meet Dr. Ruchi Jain" variant="outline" className="btn-outline-navy" />
+          )}
+          <KnowMoreBtn to="/contact" text="Book Appointment" variant="primary" />
         </div>
 
       </div>
