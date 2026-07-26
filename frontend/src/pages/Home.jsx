@@ -262,7 +262,6 @@ const Home = () => {
           <div className="tech-showcase-list">
             {[
               { id: "xray", name: "Digital X-Ray", image: "tech_xray.png", desc: "Provides highly detailed images while exposing patients to significantly less radiation compared to traditional X-rays.", benefits: ["Faster diagnosis", "Better treatment planning", "Greater safety"] },
-              { id: "cbct", name: "CBCT Scanner", image: "tech_cbct.png", desc: "Captures a 3D view of your entire dental anatomy, ensuring absolute precision for complex procedures like implants.", benefits: ["3D comprehensive view", "Surgical precision", "Minimally invasive planning"] },
               { id: "scanner", name: "Intraoral Scanner", image: "tech_scanner.png", desc: "Eliminates the need for messy, gag-inducing dental impressions by capturing a precise digital 3D model of your teeth.", benefits: ["No messy impressions", "Highly accurate fit", "Immediate digital model"] },
               { id: "camera", name: "Intraoral Camera", image: "tech_camera.png", desc: "Allows you to see exactly what the dentist sees, fostering transparency and better understanding of your oral health.", benefits: ["See what we see", "Early detection", "Enhanced transparency"] },
               { id: "laser", name: "Laser Dentistry", image: "tech_laser.png", desc: "Provides minimally invasive treatments for gums and soft tissues with less bleeding, swelling, and faster healing.", benefits: ["Minimally invasive", "Faster healing", "Often pain-free"] },
