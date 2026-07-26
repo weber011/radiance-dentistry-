@@ -1004,13 +1004,28 @@
 }
 
 .btn-outline-navy {
-  border: 1px solid var(--primary-navy) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 2px solid var(--primary-navy) !important;
   color: var(--primary-navy) !important;
   background: transparent !important;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-outline-navy:hover {
   background: var(--primary-navy) !important;
   color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
 }
 
 /* Responsive */
