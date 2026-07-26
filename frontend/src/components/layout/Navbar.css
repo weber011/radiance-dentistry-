@@ -18,15 +18,23 @@
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
 }
 
-.navbar:not(.scrolled):not(.solid-bg) .nav-link,
-.navbar:not(.scrolled):not(.solid-bg) .mobile-menu-btn {
-  color: var(--white);
+.navbar .nav-link,
+.navbar .dropdown-toggle,
+.navbar .mobile-menu-btn {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.4px;
+}
+
+.navbar .nav-link:hover,
+.navbar .dropdown-toggle:hover {
+  color: #F3E5AB !important;
 }
 
 .navbar.solid-bg {
-  background: rgba(11, 23, 54, 0.95);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(10, 17, 40, 0.98) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .navbar-book-btn {
@@ -75,10 +83,11 @@
 
 .nav-link {
   font-family: var(--font-body);
-  font-weight: 500;
-  color: var(--primary-navy);
+  font-weight: 600 !important;
+  color: #FFFFFF !important;
   transition: var(--transition-smooth);
   position: relative;
+  font-size: 0.98rem;
 }
 
 .nav-link::after {
@@ -111,7 +120,9 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.98rem;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
 }
 
 .dropdown-menu {
