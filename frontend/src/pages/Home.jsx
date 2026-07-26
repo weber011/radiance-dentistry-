@@ -12,7 +12,7 @@ import TestimonialCarousel from '../components/ui/TestimonialCarousel';
 import VideoTestimonialsSection from '../components/ui/VideoTestimonialsSection';
 import InternationalPatientsSection from '../components/ui/InternationalPatientsSection';
 import ProfessionalCredentialsSection from '../components/ui/ProfessionalCredentialsSection';
-import LuxuryHeroSection from '../components/home/LuxuryHeroSection';
+import CompactHeroSlider from '../components/home/CompactHeroSlider';
 import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
@@ -34,8 +34,8 @@ const Home = () => {
 
   return (
     <main className="home-page">
-      {/* 1. Ultra-Premium Luxury Hero Section */}
-      <LuxuryHeroSection />
+      {/* 1. Compact Premium Hero Banner Slider */}
+      <CompactHeroSlider />
 
       {/* 3. Welcome Section */}
       <section className="section welcome-section">
