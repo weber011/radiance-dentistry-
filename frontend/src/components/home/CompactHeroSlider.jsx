@@ -337,7 +337,7 @@ const CompactHeroSlider = () => {
         <div className="container">
           <div className="stats-cards-grid">
             <CounterItem end={5000} suffix="+" title="Happy Smiles" delay={0.1} />
-            <CounterItem end={15} suffix="+" title="Years Experience" delay={0.2} />
+            <CounterItem end={20} suffix="+" title="Years Experience" delay={0.2} />
             <CounterItem end={12000} suffix="+" title="Treatments Completed" delay={0.3} />
             <CounterItem end={98} suffix="%" title="Patient Satisfaction" delay={0.4} />
           </div>

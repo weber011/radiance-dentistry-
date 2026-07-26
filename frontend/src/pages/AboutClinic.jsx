@@ -125,7 +125,7 @@ const AboutClinic = () => {
           <FadeInWhenVisible className="split-image-container">
             <img src="/assets/office.jpeg" alt="Radiaance Dentistry Office" className="luxury-radius shadow-lg" />
             <div className="floating-badge glassmorphism">
-              <span className="badge-year">15+</span>
+              <span className="badge-year">20+</span>
               <span className="badge-text">Years of<br/>Excellence</span>
             </div>
           </FadeInWhenVisible>

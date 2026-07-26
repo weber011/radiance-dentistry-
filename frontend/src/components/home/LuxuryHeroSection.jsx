@@ -184,7 +184,7 @@ const LuxuryHeroSection = () => {
               >
                 <div className="badge-icon-box"><Award className="icon-gold" size={20} /></div>
                 <div className="badge-text">
-                  <strong>15+ Years</strong>
+                  <strong>20+ Years</strong>
                   <span>Experience</span>
                 </div>
               </motion.div>
@@ -287,7 +287,7 @@ const LuxuryHeroSection = () => {
                   className="doc-badge badge-bottom-left glass-pill"
                 >
                   <UserCheck size={16} className="icon-gold" />
-                  <span>15+ Years Mastery</span>
+                  <span>20+ Years Mastery</span>
                 </motion.div>
 
                 <div className="doctor-card-info glass-panel">
@@ -309,7 +309,7 @@ const LuxuryHeroSection = () => {
         <div className="hero-stats-section">
           <div className="stats-grid-layout">
             <CounterItem end={5000} suffix="+" title="Happy Smiles Created" icon={Smile} delay={0.1} />
-            <CounterItem end={15} suffix="+" title="Years Clinical Experience" icon={Award} delay={0.2} />
+            <CounterItem end={20} suffix="+" title="Years Clinical Experience" icon={Award} delay={0.2} />
             <CounterItem end={98} suffix="%" title="Patient Satisfaction Rate" icon={Heart} delay={0.3} />
             <CounterItem end="Same Day" suffix="" title="Digital Smile Dentistry" icon={Zap} delay={0.4} />
           </div>
