@@ -138,7 +138,7 @@ const Home = () => {
               <h4 className="section-subtitle">MEET YOUR DENTIST</h4>
               <h2 className="mb-20">Artistry &amp; Precision in Every Treatment</h2>
               <p className="doctor-bio mb-30">
-                With nearly two decades of clinical experience, Dr. Ruchi Jain is the visionary behind Radiaance Dentistry. She combines advanced dental technology with a gentle, compassionate touch to deliver flawless aesthetic and functional results.
+                With over two decades of clinical experience, Dr. Ruchi Jain is the visionary behind Radiaance Dentistry. She combines advanced dental technology with a gentle, compassionate touch to deliver flawless aesthetic and functional results.
               </p>
               
               <div className="doctor-philosophy glassmorphism-subtle mb-40">
