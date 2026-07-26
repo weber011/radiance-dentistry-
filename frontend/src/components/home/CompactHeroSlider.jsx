@@ -27,7 +27,7 @@ const CounterItem = ({ end, suffix = "", title, delay = 0 }) => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        if (entry.isIntersecting && !hasAnimated) {
+        if (entry && entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
         }
       },
@@ -211,86 +211,81 @@ const CompactHeroSlider = () => {
           <div className="slider-card-frame">
             
             <AnimatePresence mode="wait">
-              {slides.map((slide, index) => {
-                if (index !== currentSlide) return null;
-                return (
-                  <motion.div
-                    key={slide.id}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="slide-item"
+              <motion.div
+                key={slides[currentSlide].id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="slide-item"
+              >
+                {/* Media Background with Ken Burns Soft Zoom */}
+                <div className="slide-media-wrapper">
+                  {slides[currentSlide].mediaType === "video" ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="slide-media ken-burns"
+                    >
+                      <source src={slides[currentSlide].mediaSrc} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img 
+                      src={slides[currentSlide].mediaSrc} 
+                      alt={slides[currentSlide].alt} 
+                      loading={currentSlide === 0 ? "eager" : "lazy"}
+                      className="slide-media ken-burns" 
+                    />
+                  )}
+                </div>
+
+                {/* 40-50% Dark Blue Gradient Overlay */}
+                <div className="slide-gradient-overlay"></div>
+
+                {/* Left-Aligned Premium Content */}
+                <div className="slide-content-box">
+                  <motion.span 
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="slide-badge"
                   >
-                    {/* Media Background with Ken Burns Soft Zoom */}
-                    <div className="slide-media-wrapper">
-                      {slide.mediaType === "video" ? (
-                        <video
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="slide-media ken-burns"
-                        >
-                          <source src={slide.mediaSrc} type="video/mp4" />
-                        </video>
-                      ) : (
-                        <img 
-                          src={slide.mediaSrc} 
-                          alt={slide.alt} 
-                          loading={index === 0 ? "eager" : "lazy"}
-                          className="slide-media ken-burns" 
-                        />
-                      )}
-                    </div>
+                    ✨ Surat's Premier Dental Excellence
+                  </motion.span>
 
-                    {/* 40-50% Dark Blue Gradient Overlay */}
-                    <div className="slide-gradient-overlay"></div>
+                  <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="slide-headline"
+                  >
+                    {slides[currentSlide].headline}
+                  </motion.h1>
 
-                    {/* Left-Aligned Premium Content */}
-                    <div className="slide-content-box">
-                      <motion.span 
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="slide-badge"
-                      >
-                        ✨ Surat's Premier Dental Excellence
-                      </motion.span>
+                  <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="slide-subheading"
+                  >
+                    {slides[currentSlide].subheading}
+                  </motion.p>
 
-                      <motion.h1 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="slide-headline"
-                      >
-                        {slide.headline}
-                      </motion.h1>
-
-                      <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                        className="slide-subheading"
-                      >
-                        {slide.subheading}
-                      </motion.p>
-
-                      <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.5 }}
-                        className="slide-btn-wrapper"
-                      >
-                        <Link to={slide.buttonLink} className="slide-btn-gold">
-                          <span>{slide.buttonText}</span>
-                          <Calendar size={18} />
-                        </Link>
-                      </motion.div>
-                    </div>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="slide-btn-wrapper"
+                  >
+                    <Link to={slides[currentSlide].buttonLink} className="slide-btn-gold">
+                      <span>{slides[currentSlide].buttonText}</span>
+                      <Calendar size={18} />
+                    </Link>
                   </motion.div>
-                );
-              })}
+                </div>
+              </motion.div>
             </AnimatePresence>
 
             {/* Navigation Arrows */}
