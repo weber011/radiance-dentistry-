@@ -32,7 +32,7 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li><Link to="/about">About Clinic</Link></li>
-              <li><Link to="/doctor">Meet Our Doctor</Link></li>
+              <li><Link to="/doctor/dr-ruchi-jain">Meet Our Doctor</Link></li>
               <li><Link to="/services">Treatments</Link></li>
               <li><Link to="/smile-gallery">Smile Gallery</Link></li>
               <li><Link to="/faqs">FAQs</Link></li>

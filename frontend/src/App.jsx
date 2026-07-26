@@ -12,9 +12,11 @@ import SmileGallery from './pages/SmileGallery';
 import Reviews from './pages/Reviews';
 import InternationalPatients from './pages/InternationalPatients';
 import Contact from './pages/Contact';
+import DoctorProfile from './pages/DoctorProfile';
 import Services from './pages/Services';
 import VideoTestimonialsPage from './pages/VideoTestimonialsPage';
 import PlaceholderPage from './pages/PlaceholderPage';
+
 function App() {
   return (
     <>
@@ -26,7 +28,7 @@ function App() {
         <Route path="/tour-the-clinic" element={<TourClinic />} />
         <Route path="/treatments/:slug" element={<TreatmentDetail />} />
         <Route path="/about" element={<PlaceholderPage title="About Clinic" />} />
-        <Route path="/doctor" element={<PlaceholderPage title="Meet Dr Ruchi Jain" />} />
+        <Route path="/doctor/:name" element={<DoctorProfile />} />
         <Route path="/services" element={<Services />} />
         <Route path="/advanced-technology" element={<AdvancedTechnology />} />
         <Route path="/smile-gallery" element={<SmileGallery />} />
