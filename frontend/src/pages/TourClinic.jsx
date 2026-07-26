@@ -206,27 +206,27 @@ const TourClinic = () => {
       </section>
 
       {/* Section 5: Hygiene & Sterilization */}
-      <section className="section bg-navy text-white">
+      <section className="section bg-soft-blue text-navy">
         <div className="container text-center">
           <FadeInWhenVisible>
-            <h4 className="section-subtitle text-gold">SAFETY</h4>
-            <h2 className="text-white">Hygiene &amp; Sterilization</h2>
-            <p className="text-light max-w-700 mx-auto mb-40">We strictly adhere to international infection control protocols, guaranteeing a completely clean, safe, and sterile environment for your peace of mind.</p>
+            <h4 className="section-subtitle">SAFETY</h4>
+            <h2 className="text-navy">Hygiene &amp; Sterilization</h2>
+            <p className="max-w-700 mx-auto mb-40">We strictly adhere to international infection control protocols, guaranteeing a completely clean, safe, and sterile environment for your peace of mind.</p>
           </FadeInWhenVisible>
           <div className="hygiene-grid">
-            <FadeInWhenVisible className="hygiene-card glassmorphism-dark hover-lift">
+            <FadeInWhenVisible className="hygiene-card glassmorphism hover-lift">
               <ShieldCheck size={32} className="text-gold mb-15" />
               <h4>Sterilized Instruments</h4>
             </FadeInWhenVisible>
-            <FadeInWhenVisible className="hygiene-card glassmorphism-dark hover-lift" delay={0.1}>
+            <FadeInWhenVisible className="hygiene-card glassmorphism hover-lift" delay={0.1}>
               <Sparkles size={32} className="text-gold mb-15" />
               <h4>Clean Treatment Rooms</h4>
             </FadeInWhenVisible>
-            <FadeInWhenVisible className="hygiene-card glassmorphism-dark hover-lift" delay={0.2}>
+            <FadeInWhenVisible className="hygiene-card glassmorphism hover-lift" delay={0.2}>
               <Heart size={32} className="text-gold mb-15" />
               <h4>Patient Safety Standards</h4>
             </FadeInWhenVisible>
-            <FadeInWhenVisible className="hygiene-card glassmorphism-dark hover-lift" delay={0.3}>
+            <FadeInWhenVisible className="hygiene-card glassmorphism hover-lift" delay={0.3}>
               <CheckCircle2 size={32} className="text-gold mb-15" />
               <h4>Modern Infection Control</h4>
             </FadeInWhenVisible>
@@ -278,7 +278,7 @@ const TourClinic = () => {
       {/* Final CTA */}
       <section className="section pt-0">
         <div className="container">
-          <FadeInWhenVisible className="cta-card glassmorphism-dark text-center">
+          <FadeInWhenVisible className="cta-card bg-blue-gradient text-center">
             <h2>Experience Radiaance Dentistry in Person</h2>
             <p className="mb-40">Ready to transform your smile in a comfortable, premium environment?</p>
             <div className="cta-buttons">

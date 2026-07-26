@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--primary-navy);
+  background-color: var(--footer-bg);
   color: var(--white);
   padding: 80px 0 20px;
   margin-top: auto;

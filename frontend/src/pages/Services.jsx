@@ -54,7 +54,7 @@ const Services = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="section bg-navy text-white text-center">
+      <section className="section bg-blue-gradient text-white text-center">
         <div className="container">
           <FadeInWhenVisible>
             <h2 className="text-gold mb-20">Not sure which treatment is right for you?</h2>

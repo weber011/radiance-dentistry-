@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Shield, Sparkles, Activity, MessageCircle, Calendar, Phone, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Shield, Sparkles, Activity, MessageCircle, Calendar, Phone, ChevronRight, ArrowLeft, Play } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { treatmentsData } from '../../data/treatments';
 
@@ -183,9 +183,9 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
               </ul>
             </FadeInWhenVisible>
             <FadeInWhenVisible className="td-symptoms-img-container">
-              <div className="td-symptoms-placeholder glassmorphism-dark">
+              <div className="td-symptoms-placeholder glassmorphism bg-soft-blue">
                  <Activity size={48} className="text-gold mb-10" />
-                 <p className="text-white text-center">Early Diagnosis Prevents Complex Complications</p>
+                 <p className="text-navy text-center font-semibold">Early Diagnosis Prevents Complex Complications</p>
               </div>
             </FadeInWhenVisible>
           </div>
@@ -194,11 +194,11 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
 
       {/* 5. Benefits */}
       {treatment.benefits && treatment.benefits.length > 0 && (
-        <section className="td-section bg-navy text-white">
+        <section className="td-section bg-soft-blue text-navy">
           <div className="container">
             <FadeInWhenVisible className="text-center mb-40">
-              <h2 className="text-white">Benefits of {treatment.name}</h2>
-              <p className="max-w-700 mx-auto text-light">Experience life-changing results with our premium dental care.</p>
+              <h2 className="text-navy">Benefits of {treatment.name}</h2>
+              <p className="max-w-700 mx-auto">Experience life-changing results with our premium dental care.</p>
             </FadeInWhenVisible>
             <div className="td-cards-grid-2">
               {treatment.benefits.map((benefit, idx) => (

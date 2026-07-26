@@ -141,9 +141,11 @@
 }
 
 .glassmorphism-dark {
-  background: rgba(10, 15, 25, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
 }
 
 .trust-strip-grid {
@@ -199,12 +201,17 @@
 }
 
 
-/* Common Helpers */
-.bg-light { background-color: #F8FAFC; color: var(--dark-text); }
-.bg-navy { background-color: var(--primary-navy); }
+/* Common Helpers - Light Luxury Medical Theme */
+.bg-white { background-color: #FFFFFF !important; color: var(--dark-text); }
+.bg-light { background-color: var(--bg-color) !important; color: var(--dark-text); }
+.bg-soft-blue { background-color: var(--bg-alt) !important; color: var(--dark-text); }
+.bg-light-blue { background-color: var(--light-blue) !important; color: var(--dark-text); }
+.bg-navy { background-color: var(--footer-bg) !important; color: var(--white); }
+.bg-blue-gradient { background: linear-gradient(135deg, var(--primary-blue) 0%, #0F2D52 100%) !important; color: var(--white) !important; }
 .text-white { color: var(--white) !important; }
-.text-gold { color: var(--luxury-gold) !important; }
-.text-light { color: rgba(255, 255, 255, 0.7) !important; }
+.text-navy { color: var(--dark-text) !important; }
+.text-gold { color: var(--accent-gold) !important; }
+.text-light { color: rgba(255, 255, 255, 0.75) !important; }
 .section-subtitle {
   text-transform: uppercase;
   letter-spacing: 2px;

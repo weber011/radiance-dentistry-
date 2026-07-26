@@ -65,7 +65,7 @@ const InternationalPatientsSection = () => {
               <img src="/assets/reception.jpeg" alt="Radiaance Dentistry Clinic Reception" className="intl-img" loading="lazy" />
               <div className="intl-image-overlay glassmorphism">
                 <Plane className="icon-gold mb-10" size={32} />
-                <h4 className="text-white m-0">Your Destination for Premium Dental Care</h4>
+                <h4 className="text-navy m-0">Your Destination for Premium Dental Care</h4>
               </div>
             </div>
           </FadeInWhenVisible>

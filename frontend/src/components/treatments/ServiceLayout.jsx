@@ -182,11 +182,11 @@ const ServiceLayout = ({ treatment, heroImage }) => {
 
       {/* 4. Why Choose Us / Benefits */}
       {treatment.benefits && treatment.benefits.length > 0 && (
-        <section className="td-section bg-navy text-white">
+        <section className="td-section bg-soft-blue text-navy">
           <div className="container">
             <FadeInWhenVisible className="text-center mb-40">
-              <h2 className="text-white">Why Choose Radiaance Dentistry?</h2>
-              <p className="max-w-700 mx-auto text-light">Experience life-changing results with our premium dental care.</p>
+              <h2 className="text-navy">Why Choose Radiaance Dentistry?</h2>
+              <p className="max-w-700 mx-auto">Experience life-changing results with our premium dental care.</p>
             </FadeInWhenVisible>
             <div className="td-cards-grid-2">
               {treatment.benefits.map((benefit, idx) => (

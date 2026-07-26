@@ -30,7 +30,7 @@ const VideoTestimonialsSection = () => {
   } : null;
 
   return (
-    <section className="section vt-section bg-dark">
+    <section className="section vt-section bg-white">
       {videoSchema && (
         <Helmet>
           <script type="application/ld+json">{JSON.stringify(videoSchema)}</script>
@@ -45,7 +45,7 @@ const VideoTestimonialsSection = () => {
             viewport={{ once: true }}
           >
             <div className="badge-gold mb-15 mx-auto">PATIENT STORIES</div>
-            <h2 className="text-white">Real Patients. Real Experiences. Real Smiles.</h2>
+            <h2 className="text-navy">Real Patients. Real Experiences. Real Smiles.</h2>
             <p className="vt-subtitle max-w-700 mx-auto">Watch genuine stories from our patients and discover how personalized dental care transformed their smiles and confidence.</p>
           </motion.div>
         </div>
@@ -68,7 +68,7 @@ const VideoTestimonialsSection = () => {
                 </button>
                 <div className="vt-duration">{featuredVideo.duration}</div>
               </div>
-              <div className="vt-info glassmorphism-dark">
+              <div className="vt-info glassmorphism">
                 <div className="vt-meta">
                   <span className="vt-name">{featuredVideo.patientName}</span>
                   <span className="vt-treatment text-gold">{featuredVideo.treatment}</span>
@@ -99,12 +99,12 @@ const VideoTestimonialsSection = () => {
                     </button>
                     <div className="vt-duration">{video.duration}</div>
                   </div>
-                  <div className="vt-info compact glassmorphism-dark">
+                  <div className="vt-info compact glassmorphism">
                     <div className="vt-meta">
                       <span className="vt-name">{video.patientName}</span>
                       <span className="vt-treatment text-gold">{video.treatment}</span>
                     </div>
-                    <p className="vt-caption text-sm text-gray-300 line-clamp-1">"{video.caption}"</p>
+                    <p className="vt-caption text-sm line-clamp-1">"{video.caption}"</p>
                   </div>
                 </motion.div>
               ))}

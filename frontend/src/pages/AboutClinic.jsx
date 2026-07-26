@@ -328,7 +328,7 @@ const AboutClinic = () => {
       {/* Section 10: CTA */}
       <section className="section cta-section">
         <div className="container">
-          <FadeInWhenVisible className="cta-card glassmorphism-dark text-center">
+          <FadeInWhenVisible className="cta-card bg-blue-gradient text-center">
             <h2>Ready to Experience Better Dental Care?</h2>
             <p className="mb-40">Schedule your consultation today and take the first step toward a healthier, more radiant smile.</p>
             <div className="cta-buttons">

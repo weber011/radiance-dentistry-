@@ -38,7 +38,7 @@ const Home = () => {
       <CompactHeroSlider />
 
       {/* 3. Welcome Section */}
-      <section className="section welcome-section">
+      <section className="section welcome-section bg-white">
         <div className="container welcome-grid">
           <FadeInWhenVisible className="welcome-images">
              <div className="collage-wrapper">
@@ -101,7 +101,7 @@ const Home = () => {
       </section>
 
       {/* 4. About Clinic */}
-      <section className="section about-section bg-light">
+      <section className="section about-section bg-white">
         <div className="container about-grid">
           <FadeInWhenVisible className="about-image-wrapper">
             <img src="/assets/office.jpeg" alt="Radiaance Dentistry Clinic" className="about-clinic-img luxury-radius" />
@@ -120,12 +120,12 @@ const Home = () => {
       </section>
 
       {/* 5. Meet Dr Ruchi Jain */}
-      <section className="section doctor-section">
+      <section className="section doctor-section bg-white">
         <div className="container">
           <div className="doctor-editorial-grid">
             {/* Left Column: Portrait */}
             <FadeInWhenVisible className="doctor-portrait-wrapper">
-              <img src="/assets/doctor pic.jpeg" alt="Dr. Ruchi Jain" className="doctor-portrait-img" />
+              <img src="/assets/doctor pic.jpeg?v=3" alt="Dr. Ruchi Jain" className="doctor-portrait-img" />
               <div className="doctor-name-badge glassmorphism">
                 <h3>Dr. Ruchi Jain</h3>
                 <p className="text-gold">Chief Dental Surgeon</p>
@@ -170,7 +170,7 @@ const Home = () => {
       <ProfessionalCredentialsSection />
 
 {/* 2. Why Choose Us (Trust) */}
-      <section className="section why-us-section bg-light">
+      <section className="section why-us-section bg-soft-blue">
         <div className="container text-center">
           <FadeInWhenVisible>
             <h4 className="section-subtitle">WHY CHOOSE US</h4>
@@ -216,7 +216,7 @@ const Home = () => {
       </section>
 
       {/* 6. Our Treatments */}
-      <section className="section treatments-section bg-light">
+      <section className="section treatments-section bg-light-blue">
         <div className="container">
           <FadeInWhenVisible className="text-center mb-40">
             <h4 className="section-subtitle">OUR TREATMENTS</h4>
@@ -249,7 +249,7 @@ const Home = () => {
       </section>
 
       {/* 7. Advanced Technology Showcase */}
-      <section className="section technology-showcase-section bg-white">
+      <section className="section technology-showcase-section bg-soft-blue">
         <div className="container">
           <FadeInWhenVisible className="text-center mb-50">
             <div className="badge-gold mb-15">ADVANCED TECHNOLOGY</div>
@@ -305,7 +305,7 @@ const Home = () => {
       </section>
 
       {/* 8. Smile Gallery */}
-      <section className="section gallery-section bg-light">
+      <section className="section gallery-section bg-light-blue">
         <div className="container">
           <div className="text-center">
             <FadeInWhenVisible>
@@ -343,7 +343,7 @@ const Home = () => {
       <VideoTestimonialsSection />
 
       {/* 10. Patient Testimonials */}
-      <section className="section testimonials-section bg-light">
+      <section className="section testimonials-section bg-soft-blue">
         <div className="container">
           <div className="text-center mb-40">
             <FadeInWhenVisible>
@@ -380,7 +380,7 @@ const Home = () => {
       <InternationalPatientsSection />
 
       {/* 12. FAQs */}
-      <section className="section faq-section">
+      <section className="section faq-section bg-white">
         <div className="container faq-grid">
           <FadeInWhenVisible>
             <h2>Common Questions</h2>
@@ -404,26 +404,26 @@ const Home = () => {
         </div>
       </section>
       {/* 11. Visit Us */}
-      <section className="section visit-us-section bg-navy text-white">
+      <section className="section visit-us-section bg-light-blue text-navy">
         <div className="container">
           <div className="text-center mb-40">
             <FadeInWhenVisible>
-              <h4 className="section-subtitle text-gold">VISIT US</h4>
-              <h2 className="text-white">Find Radiaance Dentistry</h2>
-              <p className="max-w-700 mx-auto text-light">Conveniently located in the heart of Vesu, Surat. Visit our modern dental clinic for world-class dental care in a comfortable and welcoming environment.</p>
+              <h4 className="section-subtitle">VISIT US</h4>
+              <h2 className="text-navy">Find Radiaance Dentistry</h2>
+              <p className="max-w-700 mx-auto">Conveniently located in the heart of Vesu, Surat. Visit our modern dental clinic for world-class dental care in a comfortable and welcoming environment.</p>
             </FadeInWhenVisible>
           </div>
 
           <div className="visit-grid">
-            <FadeInWhenVisible className="visit-info-card glassmorphism-dark">
-              <h3 className="text-white mb-30">Clinic Information</h3>
+            <FadeInWhenVisible className="visit-info-card glassmorphism">
+              <h3 className="text-navy mb-30">Clinic Information</h3>
               
               <div className="contact-details mb-40">
                 <div className="contact-item">
                   <div className="contact-icon"><MapPin size={24} /></div>
                   <div>
                     <h5 className="text-gold mb-5">Address</h5>
-                    <p className="text-light m-0">Shop No. 518, 5th Floor,<br />Western Business Park,<br />Vesu, Surat – 395007</p>
+                    <p className="m-0">Shop No. 518, 5th Floor,<br />Western Business Park,<br />Vesu, Surat – 395007</p>
                   </div>
                 </div>
                 
@@ -431,7 +431,7 @@ const Home = () => {
                   <div className="contact-icon"><Phone size={24} /></div>
                   <div>
                     <h5 className="text-gold mb-5">Phone</h5>
-                    <p className="text-light m-0"><a href="tel:8696781255" className="text-light">8696781255</a></p>
+                    <p className="m-0"><a href="tel:8696781255">8696781255</a></p>
                   </div>
                 </div>
 
@@ -439,7 +439,7 @@ const Home = () => {
                   <div className="contact-icon"><Mail size={24} /></div>
                   <div>
                     <h5 className="text-gold mb-5">Email</h5>
-                    <p className="text-light m-0"><a href="mailto:drruchijain30@gmail.com" className="text-light">drruchijain30@gmail.com</a></p>
+                    <p className="m-0"><a href="mailto:drruchijain30@gmail.com">drruchijain30@gmail.com</a></p>
                   </div>
                 </div>
 
@@ -447,7 +447,7 @@ const Home = () => {
                   <div className="contact-icon"><Calendar size={24} /></div>
                   <div>
                     <h5 className="text-gold mb-5">Working Hours</h5>
-                    <p className="text-light m-0">Mon – Sat: 10:00 AM – 7:00 PM<br />Sunday: By Appointment Only</p>
+                    <p className="m-0">Mon – Sat: 10:00 AM – 7:00 PM<br />Sunday: By Appointment Only</p>
                   </div>
                 </div>
               </div>
@@ -455,20 +455,20 @@ const Home = () => {
               <div className="visit-actions">
                 <KnowMoreBtn to="/contact" text="Book Appointment" variant="gold" />
                 <div className="action-buttons-row">
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=Western+Business+Park,+Vesu,+Surat" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Western+Business+Park,+Vesu,+Surat" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm flex-1 text-center justify-center">
                     <Navigation size={16} /> Get Directions
                   </a>
-                  <a href="tel:8696781255" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                  <a href="tel:8696781255" className="btn btn-secondary btn-sm flex-1 text-center justify-center">
                     <Phone size={16} /> Call Now
                   </a>
-                  <a href="https://wa.me/918696781255" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm flex-1 text-center justify-center">
+                  <a href="https://wa.me/918696781255" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm flex-1 text-center justify-center">
                     <MessageCircle size={16} /> WhatsApp
                   </a>
                 </div>
               </div>
 
               <div className="why-visit-us mt-40">
-                <h4 className="text-white mb-20 text-sm border-b border-light pb-10">Why Visit Us</h4>
+                <h4 className="text-navy mb-20 text-sm border-b pb-10" style={{ borderColor: 'var(--border-color)' }}>Why Visit Us</h4>
                 <div className="why-visit-grid">
                   <div className="why-visit-item"><MapPin size={16} className="text-gold"/> Easy to Reach</div>
                   <div className="why-visit-item"><Car size={16} className="text-gold"/> Ample Parking</div>
@@ -488,7 +488,7 @@ const Home = () => {
       </section>
 
       {/* 12. Contact */}
-      <section className="section contact-section">
+      <section className="section contact-section bg-blue-gradient text-white">
         <div className="container contact-box">
           <FadeInWhenVisible className="text-center">
             <h2>Ready for Your Transformation?</h2>

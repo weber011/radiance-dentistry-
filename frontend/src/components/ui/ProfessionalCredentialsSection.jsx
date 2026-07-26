@@ -59,7 +59,7 @@ const ProfessionalCredentialsSection = () => {
   };
 
   return (
-    <section className="section credentials-section bg-light">
+    <section className="section credentials-section bg-white">
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       </Helmet>

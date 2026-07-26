@@ -127,20 +127,20 @@ const InternationalPatients = () => {
       </section>
 
       {/* Travel Planning */}
-      <section className="section bg-navy text-white">
+      <section className="section bg-soft-blue text-navy">
         <div className="container">
           <div className="travel-planning-grid">
             <FadeInWhenVisible className="travel-content">
-              <h2 className="text-white mb-20">Travel Planning &amp; Assistance</h2>
-              <p className="text-light mb-30">Our dedicated International Desk is here to provide guidance and ensure your dental trip to India is as smooth as possible.</p>
+              <h2 className="text-navy mb-20">Travel Planning &amp; Assistance</h2>
+              <p className="mb-30">Our dedicated International Desk is here to provide guidance and ensure your dental trip to India is as smooth as possible.</p>
               
-              <ul className="feature-list light mb-40">
+              <ul className="feature-list mb-40">
                 <li><CheckCircle2 className="text-gold" /> Appointment scheduling optimized for your stay</li>
                 <li><CheckCircle2 className="text-gold" /> Transparent timeline estimation</li>
                 <li><CheckCircle2 className="text-gold" /> Post-treatment recovery guidelines</li>
               </ul>
               
-              <KnowMoreBtn to="/contact" text="Contact International Desk" variant="gold" />
+              <KnowMoreBtn to="/contact" text="Contact International Desk" variant="primary" />
             </FadeInWhenVisible>
             <FadeInWhenVisible className="travel-image-col">
               <div className="travel-image-wrapper luxury-radius">

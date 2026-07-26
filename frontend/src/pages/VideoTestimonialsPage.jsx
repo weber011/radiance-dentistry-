@@ -160,7 +160,7 @@ const VideoTestimonialsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section cta-section text-center bg-navy text-white">
+      <section className="section cta-section text-center bg-blue-gradient text-white">
         <div className="container">
           <FadeInWhenVisible>
             <h2>Ready to Start Your Own Journey?</h2>

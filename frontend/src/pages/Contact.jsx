@@ -267,22 +267,22 @@ const Contact = () => {
       </section>
 
       {/* FAQs */}
-      <section className="section bg-navy text-white">
+      <section className="section bg-light-blue text-navy">
         <div className="container">
           <div className="text-center mb-50">
             <FadeInWhenVisible>
-              <h2 className="text-white">Frequently Asked Questions</h2>
+              <h2 className="text-navy">Frequently Asked Questions</h2>
             </FadeInWhenVisible>
           </div>
           
           <div className="max-w-800 mx-auto">
-            <FadeInWhenVisible className="glassmorphism-dark p-30 mb-20 rounded-xl">
-              <h4 className="text-gold mb-10">Do you accept walk-in patients?</h4>
-              <p className="text-light m-0">While we strongly recommend booking an appointment to ensure zero waiting time, we do accommodate dental emergencies and walk-ins based on availability.</p>
+            <FadeInWhenVisible className="glassmorphism p-30 mb-20 rounded-xl">
+              <h4 className="text-navy mb-10">Do you accept walk-in patients?</h4>
+              <p className="m-0">While we strongly recommend booking an appointment to ensure zero waiting time, we do accommodate dental emergencies and walk-ins based on availability.</p>
             </FadeInWhenVisible>
-            <FadeInWhenVisible delay={0.2} className="glassmorphism-dark p-30 mb-20 rounded-xl">
-              <h4 className="text-gold mb-10">What payment methods do you accept?</h4>
-              <p className="text-light m-0">We accept all major Credit/Debit cards, UPI, Google Pay, Bank Transfers, and Cash.</p>
+            <FadeInWhenVisible delay={0.2} className="glassmorphism p-30 mb-20 rounded-xl">
+              <h4 className="text-navy mb-10">What payment methods do you accept?</h4>
+              <p className="m-0">We accept all major Credit/Debit cards, UPI, Google Pay, Bank Transfers, and Cash.</p>
             </FadeInWhenVisible>
           </div>
         </div>

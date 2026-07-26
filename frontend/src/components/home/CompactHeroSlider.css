@@ -4,8 +4,8 @@
 
 .compact-hero-wrapper {
   width: 100%;
-  background: #F8FAFC !important;
-  color: #0A1128 !important;
+  background: #FFFFFF !important;
+  color: #183153 !important;
   padding-top: 115px; /* Directly below sticky navigation bar with zero overlap */
   overflow: hidden;
 }
@@ -14,7 +14,7 @@
 .compact-slider-section {
   width: 100%;
   padding: 20px 0 35px 0;
-  background: #F8FAFC !important;
+  background: #FFFFFF !important;
 }
 
 .compact-slider-container {
