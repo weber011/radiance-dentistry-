@@ -24,7 +24,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <header className={`navbar ${isScrolled ? 'scrolled glassmorphism' : ''} ${!isHome ? 'solid-bg' : ''}`}>
+    <header className={`navbar solid-bg ${isScrolled ? 'scrolled glassmorphism' : ''}`}>
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo">
           <img src="/assets/logo.png" alt="Radiaance Dentistry Logo" />

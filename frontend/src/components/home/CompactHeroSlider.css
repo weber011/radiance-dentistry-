@@ -6,7 +6,7 @@
   width: 100%;
   background: #F8FAFC !important;
   color: #0A1128 !important;
-  padding-top: 95px; /* Directly below sticky navigation bar */
+  padding-top: 115px; /* Directly below sticky navigation bar with zero overlap */
   overflow: hidden;
 }
 
@@ -353,7 +353,7 @@
 
 @media (max-width: 767px) {
   .compact-hero-wrapper {
-    padding-top: 85px;
+    padding-top: 100px;
   }
   
   .slider-card-frame {

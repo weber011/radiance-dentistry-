@@ -101,8 +101,8 @@ const CompactHeroSlider = () => {
       buttonText: "Book Consultation",
       buttonLink: "/contact",
       mediaType: "image",
-      mediaSrc: "/assets/doctor pic.jpeg",
-      alt: "Smiling patient with Dr. Ruchi Jain"
+      mediaSrc: "/assets/reception.jpeg",
+      alt: "Radiaance Dentistry clinic reception and welcoming environment"
     },
     {
       id: 2,
