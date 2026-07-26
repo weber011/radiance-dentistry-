@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import FloatingCTA from './components/layout/FloatingCTA';
@@ -28,6 +28,7 @@ function App() {
         <Route path="/tour-the-clinic" element={<TourClinic />} />
         <Route path="/treatments/:slug" element={<TreatmentDetail />} />
         <Route path="/about" element={<PlaceholderPage title="About Clinic" />} />
+        <Route path="/doctor" element={<Navigate to="/doctor/dr-ruchi-jain" replace />} />
         <Route path="/doctor/:name" element={<DoctorProfile />} />
         <Route path="/services" element={<Services />} />
         <Route path="/advanced-technology" element={<AdvancedTechnology />} />

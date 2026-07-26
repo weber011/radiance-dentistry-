@@ -44,7 +44,7 @@ const InternationalPatientsSection = () => {
           <div className="intl-content-col">
             <FadeInWhenVisible>
               <div className="badge-gold mb-15 inline-flex items-center gap-2">
-                <span className="text-lg">??</span> INTERNATIONAL PATIENT CARE
+                <span className="text-lg">🌍</span> INTERNATIONAL PATIENT CARE
               </div>
               <h2 className="text-navy mb-20 font-playfair">Trusted by Patients Across the World</h2>
               <p className="text-secondary text-lg mb-40">
@@ -71,7 +71,7 @@ const InternationalPatientsSection = () => {
                 <p className="testimonial-text text-navy italic font-medium text-lg mb-15">
                   "Traveling to India for my dental treatment was the best decision. Dr. Ruchi Jain and her team made the entire experience smooth, comfortable, and stress-free. I am delighted with my new smile."
                 </p>
-                <p className="testimonial-author text-secondary font-semibold m-0">� International Patient</p>
+                <p className="testimonial-author text-secondary font-semibold m-0">— International Patient</p>
               </div>
             </FadeInWhenVisible>
 
