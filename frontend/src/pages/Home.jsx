@@ -12,6 +12,7 @@ import TestimonialCarousel from '../components/ui/TestimonialCarousel';
 import VideoTestimonialsSection from '../components/ui/VideoTestimonialsSection';
 import InternationalPatientsSection from '../components/ui/InternationalPatientsSection';
 import ProfessionalCredentialsSection from '../components/ui/ProfessionalCredentialsSection';
+import LuxuryHeroSection from '../components/home/LuxuryHeroSection';
 import MapEmbed from '../components/ui/MapEmbed';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
@@ -33,66 +34,8 @@ const Home = () => {
 
   return (
     <main className="home-page">
-      {/* 1. Hero Section (Enhanced Cinematic) */}
-      <section className="hero-section">
-        <div className="hero-video-wrapper">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="hero-video"
-            poster="/assets/hero_image_fallback.jpg"
-          >
-            <source src="/assets/hero_video.mp4" type="video/mp4" />
-          </video>
-          <div className="hero-overlay-cinematic"></div>
-        </div>
-        
-        <div className="container hero-content">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-            className="hero-text-container"
-          >
-            <span className="hero-brand">WORLD-CLASS PREMIUM DENTAL SANCTUARY</span>
-            <h1 className="hero-title">
-              <span className="hero-title-radiaance">RADIAANCE</span>
-              <span className="hero-title-dentistry">DENTISTRY</span>
-            </h1>
-            <p className="hero-subtitle">“Where precision dental science meets aesthetic mastery. Experience painless, personalized care designed to craft your most radiant smile.”</p>
-            <div className="hero-actions">
-              <KnowMoreBtn to="/contact" text="Book Consultation" variant="gold" className="hero-btn-primary" />
-              <KnowMoreBtn to="/services" text="Explore Treatments" variant="outline" className="hero-btn-secondary" />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Premium Trust Strip */}
-        <div className="hero-trust-strip glassmorphism-dark">
-          <div className="container">
-            <div className="trust-strip-grid">
-              <div className="trust-strip-item">
-                <Monitor className="icon-gold" size={20} />
-                <span>Advanced Technology</span>
-              </div>
-              <div className="trust-strip-item">
-                <Heart className="icon-gold" size={20} />
-                <span>Personalized Dental Care</span>
-              </div>
-              <div className="trust-strip-item">
-                <Navigation className="icon-gold" size={20} />
-                <span>International Patients Welcome</span>
-              </div>
-              <div className="trust-strip-item">
-                <Shield className="icon-gold" size={20} />
-                <span>Strict Sterilization</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 1. Ultra-Premium Luxury Hero Section */}
+      <LuxuryHeroSection />
 
       {/* 3. Welcome Section */}
       <section className="section welcome-section">

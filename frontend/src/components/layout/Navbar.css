@@ -10,9 +10,12 @@
 }
 
 .navbar.scrolled {
-  padding: 15px 0;
-  box-shadow: var(--shadow-sm);
-  background-color: var(--glass-bg);
+  padding: 12px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  background: rgba(11, 23, 54, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .navbar:not(.scrolled):not(.solid-bg) .nav-link,
@@ -20,11 +23,30 @@
   color: var(--white);
 }
 
-
-
 .navbar.solid-bg {
-  background-color: var(--white);
-  box-shadow: var(--shadow-sm);
+  background: rgba(11, 23, 54, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.navbar-book-btn {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #C9A227 100%);
+  color: #0A1128 !important;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+.navbar-book-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #B59020 100%);
 }
 
 .navbar-container {

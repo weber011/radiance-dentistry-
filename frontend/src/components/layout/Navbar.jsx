@@ -32,8 +32,7 @@ const Navbar = () => {
 
         <nav className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About Clinic</Link>
-          <Link to="/doctor" className="nav-link">Our Doctor</Link>
+          <Link to="/about" className="nav-link">About</Link>
           
           <div className="nav-dropdown">
             <button className="nav-link dropdown-toggle">
@@ -42,19 +41,20 @@ const Navbar = () => {
             <div className="dropdown-menu">
               <Link to="/services" className="dropdown-item">All Services</Link>
               <Link to="/advanced-technology" className="dropdown-item">Advanced Technology</Link>
-              <Link to="/smile-gallery" className="dropdown-item">Smile Gallery</Link>
+              <Link to="/doctor" className="dropdown-item">Our Doctor</Link>
             </div>
           </div>
 
-          <Link to="/reviews" className="nav-link">Patient Stories</Link>
-          <Link to="/faqs" className="nav-link">FAQs</Link>
+          <Link to="/international-patients" className="nav-link">International Patients</Link>
+          <Link to="/smile-gallery" className="nav-link">Gallery</Link>
+          <Link to="/reviews" className="nav-link">Testimonials</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
           
-          <Link to="/contact" className="btn-primary mobile-only-btn">Book Appointment</Link>
+          <Link to="/contact" className="btn-gold mobile-only-btn navbar-book-btn">Book Appointment</Link>
         </nav>
 
         <div className="navbar-actions">
-          <Link to="/contact" className="btn-primary desktop-btn">Book Appointment</Link>
+          <Link to="/contact" className="btn-gold desktop-btn navbar-book-btn">Book Appointment</Link>
           <button className={`mobile-menu-btn ${isMobileMenuOpen ? 'menu-open' : ''}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
