@@ -52,7 +52,7 @@ const DoctorProfile = () => {
             <FadeInWhenVisible className="profile-content-col" delay={0.2}>
               <div className="badge-gold mb-15 inline-flex">CHIEF DENTAL SURGEON</div>
               <h1 className="text-navy mb-10 font-playfair" style={{fontSize: '3.5rem'}}>Dr. Ruchi Jain</h1>
-              <p className="degree-text text-secondary font-medium text-lg mb-20">BDS (2005) - KLE Society</p>
+              <p className="degree-text text-secondary font-medium text-lg mb-20">BDS (2005) - K.L.E.S institute of dental science Belgaum</p>
               
               <p className="profile-intro text-body text-lg mb-30">
                 With over two decades of clinical experience, Dr. Ruchi Jain is the visionary behind Radiaance Dentistry. She combines advanced dental technology with a gentle, compassionate touch to deliver flawless aesthetic and functional results.
@@ -111,7 +111,7 @@ const DoctorProfile = () => {
               <GraduationCap className="text-gold mb-20" size={40} strokeWidth={1.5} />
               <h4 className="text-navy mb-4">Educational Background</h4>
               <p className="text-secondary mt-10">
-                Graduated with a Bachelor of Dental Surgery (BDS) in 2005 from the prestigious KLE Society, establishing a strong foundation in modern dental sciences.
+                Graduated with a Bachelor of Dental Surgery (BDS) in 2005 from the prestigious K.L.E.S institute of dental science Belgaum, establishing a strong foundation in modern dental sciences.
               </p>
             </FadeInWhenVisible>
 

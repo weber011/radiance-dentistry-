@@ -12,7 +12,7 @@ const rawCertificates = [
     id: "c3",
     src: "/assets/c3.jpeg",
     title: "Certificate of Merit - MDS (Endodontics)",
-    institution: "K.L.E.E.'s Institute of Dental Science",
+    institution: "K.L.E.S institute of dental science Belgaum",
     year: "2003-04",
     desc: "Awarded for 2nd Position in the Endo-Poster division."
   },
@@ -37,7 +37,7 @@ const rawCertificates = [
     id: "c3",
     src: "/assets/c3.jpeg",
     title: "Certificate of Merit - MDS (Endodontics)",
-    institution: "K.L.E.E.'s Institute of Dental Science",
+    institution: "K.L.E.S institute of dental science Belgaum",
     year: "2003-04",
     desc: "Awarded for 2nd Position in the Endo-Poster division."
   }
@@ -120,7 +120,7 @@ const ProfessionalCredentialsSection = ({ hideProfileBtn = false }) => {
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "K.L.E.E.'s Institute of Dental Science"
+      "name": "K.L.E.S institute of dental science Belgaum"
     }
   };
 
