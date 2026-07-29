@@ -136,7 +136,7 @@ const Home = () => {
           <div className="doctor-editorial-grid">
             {/* Left Column: Portrait */}
             <FadeInWhenVisible className="doctor-portrait-wrapper">
-              <img src="/assets/doctor pic.jpeg?v=3" alt="Dr. Ruchi Jain" className="doctor-portrait-img" />
+              <img src="/assets/doctor pic.jpeg?v=4" alt="Dr. Ruchi Jain" className="doctor-portrait-img" />
               <div className="doctor-name-badge glassmorphism">
                 <h3>Dr. Ruchi Jain</h3>
                 <p className="text-gold">Chief Dental Surgeon</p>

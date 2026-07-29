@@ -264,7 +264,7 @@ const LuxuryHeroSection = () => {
               >
                 <div className="doctor-card-glow"></div>
                 <div className="doctor-img-box">
-                  <img src="/assets/doctor pic.jpeg?v=3" alt="Dr. Ruchi Jain - Radiaance Dentistry" className="doctor-img" />
+                  <img src="/assets/doctor pic.jpeg?v=4" alt="Dr. Ruchi Jain - Radiaance Dentistry" className="doctor-img" />
                   <div className="doctor-img-gradient"></div>
                 </div>
 
