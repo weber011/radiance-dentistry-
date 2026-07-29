@@ -32,14 +32,21 @@ const rawCertificates = [
     year: "2023",
     desc: "For contributing to free health check-up camps."
   },
-  // Intentional duplicate to test deduplication
   {
-    id: "c3",
-    src: "/assets/c3.jpeg",
-    title: "Academic of Excellence",
-    institution: "K.L.E.S institute of dental science Belgaum",
-    year: "2003-04",
-    desc: "Awarded for 2nd Position in the Endo-Poster division."
+    id: "c1-new",
+    src: "/assets/certi1.jpeg",
+    title: "Professional Certification",
+    institution: "Dental Academy",
+    year: "Recent",
+    desc: "Recognized for excellence in advanced dentistry."
+  },
+  {
+    id: "c2-new",
+    src: "/assets/certi2.jpeg",
+    title: "Advanced Dental Training",
+    institution: "Dental Academy",
+    year: "Recent",
+    desc: "Completed comprehensive training in modern dental techniques."
   }
 ];
 
