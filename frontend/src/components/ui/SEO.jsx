@@ -25,6 +25,41 @@ const SEO = ({
     }
   }
 
+  const globalSchema = {
+    "@context": "https://schema.org",
+    "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
+    "name": "Radiance Dentistry",
+    "image": "https://radiaancedentistry.com/assets/logo.png",
+    "url": "https://radiaancedentistry.com",
+    "telephone": "+918696781255",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 518, 5th Floor, Western Business Park",
+      "addressLocality": "Vesu",
+      "addressRegion": "Surat, Gujarat",
+      "postalCode": "395007",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.1418,
+      "longitude": 72.7709
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/radiance.dentistry",
+      "https://www.instagram.com/radiance.dentistry"
+    ]
+  };
+
   return (
     <Helmet>
       <title>{seoTitle}</title>
@@ -39,6 +74,10 @@ const SEO = ({
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+      <script type="application/ld+json">
+        {JSON.stringify(globalSchema)}
+      </script>
 
       {/* JSON-LD Schema */}
       {schema && (

@@ -7,12 +7,32 @@ import ProfessionalCredentialsSection from '../components/ui/ProfessionalCredent
 import './DoctorProfile.css';
 
 const DoctorProfile = () => {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Ruchi Jain",
+    "jobTitle": "Chief Dental Surgeon",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Government Dental College, Mumbai"
+    },
+    "worksFor": {
+      "@type": "MedicalOrganization",
+      "name": "Radiance Dentistry"
+    },
+    "knowsAbout": ["Cosmetic Dentistry", "Smile Designing", "Dental Implants", "Root Canal Treatment", "Laser Dentistry"],
+    "sameAs": [
+      "https://www.linkedin.com/in/drruchijain"
+    ]
+  };
+
   return (
     <main className="doctor-profile-page pt-24">
       <SEO 
         title="Dr. Ruchi Jain | Best Dental Surgeon at Radiance Dentistry"
         description="Meet Dr. Ruchi Jain, the best dentist in Surat and visionary behind Radiance Dentistry. Discover her expertise in cosmetic dentistry, smile designing, and comprehensive dental care."
         keywords={["Dr Ruchi Jain", "Dr. Ruchi Jain Dentist", "Dr Ruchi Jain Dental Surgeon", "Best Dentist Dr Ruchi Jain", "Top Dentist in Surat", "Dentist in Vesu", "दांतों का डॉक्टर"]}
+        schema={personSchema}
       />
 
       {/* Hero Section */}

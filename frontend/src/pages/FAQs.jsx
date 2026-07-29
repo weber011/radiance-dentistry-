@@ -55,6 +55,19 @@ const FAQs = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqsList.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <main className="faqs-page pt-120 pb-80 bg-light-blue">
       <SEO 
@@ -66,6 +79,7 @@ const FAQs = () => {
           "Best pediatric dentist near me", "Emergency dentist near me", "Affordable dentist near me", "Best cosmetic dentist near me",
           "How to choose the best dentist in Surat", "How much does a dental implant cost in Surat", "Signs you need a root canal"
         ]}
+        schema={faqSchema}
       />
       
       <div className="container">

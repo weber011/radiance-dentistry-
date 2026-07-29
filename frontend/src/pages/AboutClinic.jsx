@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/ui/SEO';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
 import { 
   ChevronRight, Heart, Eye, Target, Shield, Star, Users, CheckCircle2, 
@@ -91,13 +91,12 @@ const AboutClinic = () => {
 
   return (
     <div className="page-about page-transition">
-      <Helmet>
-        <title>About Radiaance Dentistry | Premium Dental Clinic</title>
-        <meta name="description" content="Discover Radiaance Dentistry, a place where modern dentistry meets compassionate care in a luxurious environment." />
-        <link rel="canonical" href="https://www.radiaancedentistry.com/about-clinic" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
-      </Helmet>
+      <SEO 
+        title="About Radiance Dentistry | Top Dental Clinic in Surat"
+        description="Learn about Radiance Dentistry in Vesu, Surat. We combine advanced technology with ethical dentistry to provide world-class, personalized dental care."
+        keywords={["Radiance Dental Clinic", "Top Dental Clinic in Surat", "Best Dental Hospital Surat", "Luxury Dental Clinic Surat", "Advanced Dental Care Surat"]}
+        schema={[jsonLd, breadcrumbLd]}
+      />
 
       {/* Hero Banner */}
       <section className="about-hero">
@@ -134,6 +133,16 @@ const AboutClinic = () => {
             <h2>Committed to Your Best Smile</h2>
             <p className="intro-text">Radiaance Dentistry was founded with a singular vision: to redefine the dental experience.</p>
             <p className="body-text">We focus on personalized care, ensuring every patient is heard and understood. By integrating advanced technology with ethical dentistry, we provide treatments that are not only effective but designed for long-term oral health. Our beautiful clinic environment is carefully crafted to ease anxiety, offering a calming sanctuary for your dental journey.</p>
+            
+            <div className="key-stats-list mt-20">
+              <h5 className="text-primary mb-10">Radiance Dentistry Key Statistics</h5>
+              <ul style={{ listStyleType: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>20+ Years</strong> of Clinical Excellence</li>
+                <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>10,000+</strong> Happy Smiles Restored</li>
+                <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>98%</strong> Patient Satisfaction Rate</li>
+                <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>100%</strong> Sterilization Protocols Followed</li>
+              </ul>
+            </div>
           </FadeInWhenVisible>
         </div>
       </section>
