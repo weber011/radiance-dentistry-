@@ -42,10 +42,10 @@ const DoctorProfile = () => {
             <FadeInWhenVisible className="profile-image-col">
               <div className="profile-image-wrapper luxury-radius">
                 <img src="/assets/doctor pic.jpeg" alt="Dr Ruchi Jain treating a patient at Radiance Dentistry" className="profile-main-img" />
-                <div className="experience-badge glassmorphism">
-                  <span className="years text-gold" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>20+</span>
-                  <span className="label text-white">Years of<br />Excellence</span>
-                </div>
+              </div>
+              <div className="experience-badge glassmorphism">
+                <span className="years text-gold" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>20+</span>
+                <span className="label text-white">Years of<br />Excellence</span>
               </div>
             </FadeInWhenVisible>
 
