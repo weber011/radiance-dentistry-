@@ -74,7 +74,7 @@ export const fullGalleryData = [
   },
   { 
     id: 8, 
-    src: '/assets/smilegallery8.jpeg', 
+    src: '/assets/smile gallery 8.jpeg', 
     treatment: 'Full Mouth Rehab', 
     category: 'implants',
     slug: 'dental-implants',
@@ -86,7 +86,7 @@ export const fullGalleryData = [
   },
   { 
     id: 9, 
-    src: '/assets/smilegallery.jpeg', 
+    src: '/assets/smile gallery 9.jpeg', 
     treatment: 'Smile Design', 
     category: 'veneers',
     slug: 'smile-makeover',
@@ -95,5 +95,14 @@ export const fullGalleryData = [
     patientConcern: 'Gummy smile and small teeth making the patient hesitant to laugh.',
     treatmentPerformed: 'Laser gum contouring combined with custom porcelain veneers.',
     outcomeAchieved: 'A balanced gum-to-tooth ratio creating a stunning, confident smile.'
-  }
+  },
+  { id: 10, src: '/assets/smile gallery 10.jpeg', treatment: 'Restoration', category: 'crowns', slug: 'dental-crowns', summary: 'Restoration of damaged teeth to perfect health.', duration: '2 Weeks', patientConcern: 'Damaged teeth.', treatmentPerformed: 'Premium restorations.', outcomeAchieved: 'Beautiful restored smile.' },
+  { id: 11, src: '/assets/smile gallery 11.jpeg', treatment: 'Aesthetic Dentistry', category: 'veneers', slug: 'smile-makeover', summary: 'Enhancing the natural beauty of the smile.', duration: '3 Weeks', patientConcern: 'Aesthetic concerns.', treatmentPerformed: 'Custom veneers.', outcomeAchieved: 'Bright, flawless smile.' },
+  { id: 12, src: '/assets/smile galllery 12.jpeg', treatment: 'Smile Enhancement', category: 'whitening', slug: 'teeth-whitening', summary: 'Professional brightening of the smile.', duration: '1 Hour', patientConcern: 'Discoloration.', treatmentPerformed: 'Laser whitening.', outcomeAchieved: 'Radiant white teeth.' },
+  { id: 13, src: '/assets/smile gallery 13.jpeg', treatment: 'Dental Alignment', category: 'ortho', slug: 'clear-aligners', summary: 'Straightening teeth for optimal function.', duration: '8 Months', patientConcern: 'Misalignment.', treatmentPerformed: 'Clear aligners.', outcomeAchieved: 'Perfectly aligned bite.' },
+  { id: 14, src: '/assets/smile gallery 14.jpeg', treatment: 'Smile Makeover', category: 'veneers', slug: 'smile-makeover', summary: 'Complete smile transformation.', duration: '4 Weeks', patientConcern: 'Worn teeth.', treatmentPerformed: 'Porcelain veneers.', outcomeAchieved: 'Youthful, vibrant smile.' },
+  { id: 15, src: '/assets/smile gallery 15.jpeg', treatment: 'Advanced Restoration', category: 'crowns', slug: 'dental-crowns', summary: 'Protecting and restoring weak teeth.', duration: '2 Weeks', patientConcern: 'Cracked tooth.', treatmentPerformed: 'Zirconia crown.', outcomeAchieved: 'Strong and aesthetic tooth.' },
+  { id: 16, src: '/assets/smile gallery 16.jpeg', treatment: 'Implant Reconstruction', category: 'implants', slug: 'dental-implants', summary: 'Replacing missing teeth permanently.', duration: '4 Months', patientConcern: 'Missing teeth.', treatmentPerformed: 'Dental implants.', outcomeAchieved: 'Fully functional, natural-looking teeth.' },
+  { id: 17, src: '/assets/smile galllery 17.jpeg', treatment: 'Cosmetic Bonding', category: 'veneers', slug: 'smile-makeover', summary: 'Quick and effective aesthetic improvements.', duration: '1 Visit', patientConcern: 'Minor chips.', treatmentPerformed: 'Composite bonding.', outcomeAchieved: 'Seamless, chip-free smile.' },
+  { id: 18, src: '/assets/smile gallery 18.jpeg', treatment: 'Complete Rehabilitation', category: 'implants', slug: 'dental-implants', summary: 'Total restoration of oral health and aesthetics.', duration: '6 Months', patientConcern: 'Complex dental issues.', treatmentPerformed: 'Full mouth reconstruction.', outcomeAchieved: 'Completely renewed smile and bite.' }
 ];

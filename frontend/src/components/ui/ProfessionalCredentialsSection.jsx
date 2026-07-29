@@ -11,7 +11,7 @@ const rawCertificates = [
   {
     id: "c3",
     src: "/assets/c3.jpeg",
-    title: "Certificate of Merit - MDS (Endodontics)",
+    title: "Academic of Excellence",
     institution: "K.L.E.S institute of dental science Belgaum",
     year: "2003-04",
     desc: "Awarded for 2nd Position in the Endo-Poster division."
@@ -36,7 +36,7 @@ const rawCertificates = [
   {
     id: "c3",
     src: "/assets/c3.jpeg",
-    title: "Certificate of Merit - MDS (Endodontics)",
+    title: "Academic of Excellence",
     institution: "K.L.E.S institute of dental science Belgaum",
     year: "2003-04",
     desc: "Awarded for 2nd Position in the Endo-Poster division."
