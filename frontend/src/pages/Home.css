@@ -940,7 +940,7 @@
 }
 
 .badge-degree {
-  color: var(--body-text);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   margin-top: 8px !important;
   text-transform: uppercase;
