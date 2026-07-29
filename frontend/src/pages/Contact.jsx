@@ -31,13 +31,19 @@ const Contact = () => {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "10:00",
-        "closes": "19:00"
+        "opens": "09:30",
+        "closes": "20:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Sunday",
-        "description": "By Appointment Only"
+        "opens": "10:00",
+        "closes": "14:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "description": "Evening by Appointment Only"
       }
     ]
   };
@@ -169,9 +175,9 @@ const Contact = () => {
                       <h4 className="text-navy mb-10">Business Hours</h4>
                       <div className="hours-grid text-secondary">
                         <div>Mon - Sat:</div>
-                        <div>10:00 AM – 7:00 PM</div>
+                        <div>9:30 AM – 8:00 PM</div>
                         <div>Sunday:</div>
-                        <div>By Appointment Only</div>
+                        <div>10:00 AM – 2:00 PM<br/><span style={{fontSize: '0.85em'}}>(Evening by Appt Only)</span></div>
                       </div>
                     </div>
                   </div>

@@ -454,7 +454,7 @@ const Home = () => {
                   <div className="contact-icon"><Calendar size={24} /></div>
                   <div>
                     <h5 className="text-gold mb-5">Working Hours</h5>
-                    <p className="m-0">Mon – Sat: 10:00 AM – 7:00 PM<br />Sunday: By Appointment Only</p>
+                    <p className="m-0">Mon – Sat: 9:30 AM – 8:00 PM<br />Sunday: 10:00 AM – 2:00 PM <span style={{fontSize: '0.85em'}}>(Evening by Appt)</span></p>
                   </div>
                 </div>
               </div>
