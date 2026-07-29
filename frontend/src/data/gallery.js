@@ -11,18 +11,7 @@ export const fullGalleryData = [
     treatmentPerformed: 'Porcelain Veneers and Teeth Whitening',
     outcomeAchieved: 'A naturally radiant, perfectly aligned smile that transformed the patient\'s confidence.'
   },
-  { 
-    id: 2, 
-    src: '/assets/smile gallery2.jpeg', 
-    treatment: 'Dental Implants', 
-    category: 'implants',
-    slug: 'dental-implants',
-    summary: 'Permanent replacement of missing teeth restoring full chewing function and natural aesthetics.',
-    duration: '4 Months',
-    patientConcern: 'Missing molars making it difficult to chew solid foods.',
-    treatmentPerformed: 'Surgical placement of titanium implants with ceramic crowns.',
-    outcomeAchieved: 'Full bite force restored with teeth that look and feel completely natural.'
-  },
+
   { 
     id: 3, 
     src: '/assets/smile galler3.jpeg', 

@@ -6,7 +6,7 @@ import './SmileGalleryCarousel.css';
 
 const galleryData = [
   { id: 1, src: '/assets/smile gallery 1.jpeg', treatment: 'Smile Makeover', caption: 'Complete smile design with veneers.' },
-  { id: 2, src: '/assets/smile gallery2.jpeg', treatment: 'Dental Implants', caption: 'Full arch restoration.' },
+
   { id: 3, src: '/assets/smile galler3.jpeg', treatment: 'Teeth Whitening', caption: 'Professional laser whitening.' },
   { id: 4, src: '/assets/smile gallery4.jpeg', treatment: 'Orthodontics', caption: 'Clear aligner therapy completion.' },
   { id: 5, src: '/assets/smile gallery5.jpeg', treatment: 'Dental Crowns', caption: 'Ceramic crowns for anterior teeth.' },
