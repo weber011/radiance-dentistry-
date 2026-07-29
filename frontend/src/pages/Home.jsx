@@ -267,7 +267,7 @@ const Home = () => {
               { id: "laser", name: "Laser Dentistry", image: "tech_laser.png", desc: "Provides minimally invasive treatments for gums and soft tissues with less bleeding, swelling, and faster healing.", benefits: ["Minimally invasive", "Faster healing", "Often pain-free"] },
               { id: "dsd", name: "Digital Smile Design", image: "smile_designing.png", desc: "A digital preview of your new smile, allowing you to co-design the final result before any treatment begins.", benefits: ["Predictable results", "Test-drive your smile", "Customized to your face"] },
               { id: "sterilization", name: "Advanced Sterilization System", image: "tech_sterilization.png", desc: "Ensures 100% safety with Class-B autoclaves and strict international infection control protocols.", benefits: ["Zero infection risk", "Hospital-grade safety", "Strict protocols"] },
-              { id: "chairs", name: "Modern Dental Chairs", image: "equipment1.jpeg", desc: "Ergonomically designed chairs featuring plush memory foam to keep you relaxed during longer procedures.", benefits: ["Maximum relaxation", "Ergonomic support", "Reduced anxiety"] }
+              { id: "chairs", name: "Modern Dental Chairs", image: "treatment_placeholder.png", desc: "Ergonomically designed chairs featuring plush memory foam to keep you relaxed during longer procedures.", benefits: ["Maximum relaxation", "Ergonomic support", "Reduced anxiety"] }
             ].map((tech, idx) => (
               <div key={tech.id} className={`tech-showcase-row ${idx % 2 !== 0 ? 'reverse' : ''}`}>
                 <FadeInWhenVisible className="tech-showcase-img-col">

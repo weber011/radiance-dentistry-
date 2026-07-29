@@ -88,7 +88,7 @@ const technologies = [
   {
     id: "modern-chairs",
     name: "Modern Dental Chairs",
-    image: "equipment1.jpeg",
+    image: "treatment_placeholder.png",
     shortDesc: "Ergonomically designed chairs featuring plush memory foam to keep you relaxed during longer procedures.",
     benefits: ["Maximum relaxation", "Ergonomic support", "Reduced anxiety"],
     explanation: "We believe that comfort is a crucial part of clinical care. Our modern dental chairs are designed to support your spine and neck, making even long appointments fly by.",
