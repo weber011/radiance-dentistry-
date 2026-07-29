@@ -101,7 +101,7 @@ const CompactHeroSlider = () => {
       buttonText: "Book Consultation",
       buttonLink: "/contact",
       mediaType: "image",
-      mediaSrc: "/assets/reception.jpeg",
+      mediaSrc: "/assets/reception.jpeg?v=2",
       alt: "Radiaance Dentistry clinic reception and welcoming environment"
     },
     {
