@@ -262,7 +262,7 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
               <img src="/assets/equipment.jpeg" alt="Advanced Dental Equipment" />
             </FadeInWhenVisible>
             <FadeInWhenVisible delay={0.1} className="td-tech-img">
-              <img src="/assets/treatment_placeholder.png" alt="Modern Dental Technology" />
+              <img src="/assets/modern_dental_chair.png" alt="Modern Dental Technology" />
             </FadeInWhenVisible>
           </div>
         </div>

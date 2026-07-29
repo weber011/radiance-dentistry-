@@ -249,7 +249,7 @@ const AboutClinic = () => {
             </FadeInWhenVisible>
             <FadeInWhenVisible className="equipment-card" delay={0.2}>
               <div className="equip-img-wrapper">
-                <img src="/assets/treatment_placeholder.png" alt="Laser Dentistry" />
+                <img src="/assets/modern_dental_chair.png" alt="Laser Dentistry" />
               </div>
               <div className="equip-content glassmorphism">
                 <h4>Modern Dental Chairs</h4>
