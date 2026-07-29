@@ -141,7 +141,7 @@ const CompactHeroSlider = () => {
       buttonText: "Contact Us",
       buttonLink: "/contact",
       mediaType: "image",
-      mediaSrc: "/assets/equipment.jpeg",
+      mediaSrc: "/assets/equipment1.jpeg",
       alt: "Luxury clinic interior with advanced equipment"
     }
   ];
