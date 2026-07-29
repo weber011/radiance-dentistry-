@@ -5,14 +5,7 @@ import FadeInWhenVisible from './FadeInWhenVisible';
 import KnowMoreBtn from './KnowMoreBtn';
 import './InternationalPatientsSection.css';
 
-const trustFeatures = [
-  { icon: <Plane size={24} />, title: 'Airport Pickup Assistance' },
-  { icon: <Building2 size={24} />, title: 'Accommodation Guidance' },
-  { icon: <Monitor size={24} />, title: 'Online Consultation' },
-  { icon: <FileText size={24} />, title: 'Personalized Planning' },
-  { icon: <ShieldCheck size={24} />, title: 'International Standards' },
-  { icon: <Headphones size={24} />, title: 'Post-Treatment Support' }
-];
+const trustFeatures = [];
 
 const InternationalPatientsSection = () => {
   return (
@@ -33,10 +26,6 @@ const InternationalPatientsSection = () => {
                 className="intl-hero-img"
                 onError={(e) => { e.target.src = '/assets/doctor pic.jpeg'; }}
               />
-              <div className="intl-hero-overlay glassmorphism">
-                <p className="m-0 text-white font-medium">Your Smile. Our Expertise. No Boundaries.</p>
-                <h4 className="text-gold m-0 mt-5">Welcome to Radiaance Dentistry.</h4>
-              </div>
             </div>
           </FadeInWhenVisible>
 
@@ -51,18 +40,6 @@ const InternationalPatientsSection = () => {
                 Experience world-class dental care with advanced technology, personalized treatment, and compassionate care. From your first online consultation to your final follow-up, we ensure a seamless and comfortable journey for every international patient.
               </p>
             </FadeInWhenVisible>
-
-            {/* Trust Features Grid */}
-            <div className="intl-trust-grid mb-40">
-              {trustFeatures.map((feature, idx) => (
-                <FadeInWhenVisible key={idx} delay={idx * 0.1}>
-                  <div className="trust-card premium-hover">
-                    <div className="trust-icon text-primary">{feature.icon}</div>
-                    <h5 className="trust-title text-navy">{feature.title}</h5>
-                  </div>
-                </FadeInWhenVisible>
-              ))}
-            </div>
 
             {/* Testimonial */}
             <FadeInWhenVisible delay={0.3}>
