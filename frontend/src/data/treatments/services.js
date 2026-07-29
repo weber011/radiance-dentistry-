@@ -146,6 +146,7 @@ export const servicesData = {
   "pediatric-dentistry": {
     type: "service",
     name: "Pediatric Dentistry",
+    seoKeywords: ["Children Dentist", "Kids Dentist", "Child Dental Care", "Baby Teeth Dentist", "Best pediatric dentist in Surat", "बच्चों का डेंटिस्ट", "બાળકોના દાંતનો ડોક્ટર"],
     slug: "pediatric-dentistry",
     shortIntro: "Gentle, fun, and educational dental care specifically designed to give children a lifetime of healthy smiles.",
     whatIsIt: "Pediatric dentistry focuses on the oral health of children from infancy through the teenage years. We understand that early experiences shape a child's perception of dental care, so we have created a warm, engaging environment that eliminates fear and makes oral hygiene fun.",

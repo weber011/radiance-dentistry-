@@ -2,6 +2,7 @@ export const perioData = {
   "dental-cleaning": {
     type: "treatment",
     name: "Dental Cleaning",
+    seoKeywords: ["Dental Cleaning", "Scaling", "Polishing", "Professional Teeth Cleaning", "Teeth Cleaning Near Me", "Daant saaf karwana Surat", "दांतों की सफाई"],
     slug: "dental-cleaning",
     shortIntro: "Professional, ultrasonic scaling and polishing for a refreshingly clean, tartar-free smile.",
     whatIsIt: "A professional dental cleaning (prophylaxis) removes harmful plaque and calcified tartar that normal brushing and flossing cannot. Our hygienists use advanced ultrasonic scalers to gently blast away deposits, followed by a professional polish to remove surface stains and smooth the enamel.",
@@ -45,6 +46,7 @@ export const perioData = {
   "gum-treatment": {
     type: "treatment",
     name: "Gum Treatment",
+    seoKeywords: ["Gum Treatment", "Bleeding Gums", "Periodontal Treatment", "Healthy Gums", "How to maintain healthy gums", "मसूड़ों का इलाज"],
     slug: "gum-treatment",
     shortIntro: "Advanced periodontal therapy to halt gum disease, eliminate infection, and save your teeth.",
     whatIsIt: "Gum treatment (periodontics) addresses infections of the structures around the teeth, including the gums, periodontal ligament, and alveolar bone. Treatment ranges from deep scaling and root planing (non-surgical) to advanced laser therapy and gum grafting to reverse the effects of periodontitis.",

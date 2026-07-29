@@ -2,6 +2,7 @@ export const restorativeData = {
   "dental-veneers": {
     type: "treatment",
     name: "Dental Veneers",
+    seoKeywords: ["Dental Veneers", "Porcelain Veneers", "Composite Veneers", "Smile Enhancement", "Cosmetic Dentist Surat"],
     slug: "dental-veneers",
     shortIntro: "Ultra-thin, custom-made porcelain shells designed to cover the front surface of teeth for an immediate smile upgrade.",
     whatIsIt: "Dental veneers are wafer-thin, custom-crafted shells of tooth-colored materials, usually porcelain, designed to cover the front surface of teeth. They are bonded to the front of the teeth changing their color, shape, size, or length, creating a flawless aesthetic.",

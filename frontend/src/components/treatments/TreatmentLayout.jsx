@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '../ui/SEO';
 import { motion } from 'framer-motion';
 import { Shield, Sparkles, Activity, MessageCircle, Calendar, Phone, ChevronRight, ArrowLeft, Play } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -79,14 +79,13 @@ const TreatmentLayout = ({ treatment, heroImage }) => {
 
   return (
     <div className="treatment-detail-page">
-      <Helmet>
-        <title>{treatment.name} | Expert Dental Procedure | Radiaance Dentistry</title>
-        <meta name="description" content={treatment.shortIntro} />
-        <link rel="canonical" href={`https://www.radiaancedentistry.com/treatments/${treatment.slug}`} />
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(procedureSchema)}</script>
-      </Helmet>
+      <SEO 
+        title={`${treatment.name} | Expert Dental Procedure`}
+        description={treatment.shortIntro}
+        canonicalUrl={`https://www.radiaancedentistry.com/treatments/${treatment.slug}`}
+        keywords={treatment.seoKeywords || `${treatment.name}, Dentist Surat`}
+        schema={[faqSchema, localBusinessSchema, procedureSchema]}
+      />
 
       {/* 1. Hero Banner */}
       <section className="td-hero">

@@ -2,6 +2,7 @@ export const coreTreatmentsData = {
   "dental-implants": {
     type: "treatment",
     name: "Dental Implants",
+    seoKeywords: ["Dental Implant", "Single Tooth Implant", "Multiple Dental Implants", "Full Mouth Implant", "Missing Teeth Solution", "Best dentist in Vesu Surat for dental implants"],
     slug: "dental-implants",
     shortIntro: "Permanent, natural-looking tooth replacements designed to restore your complete smile and chewing function.",
     whatIsIt: "Dental implants are titanium posts surgically placed into the jawbone beneath your gums. Once in place, they allow your dentist to mount replacement teeth onto them. Unlike dentures, implants won't come loose and do not need to be anchored to other teeth.",
@@ -45,6 +46,7 @@ export const coreTreatmentsData = {
   "root-canal-treatment": {
     type: "treatment",
     name: "Root Canal Treatment",
+    seoKeywords: ["Root Canal Treatment", "RCT", "Root Canal Specialist", "Painless Root Canal", "Root Canal Surat", "Affordable root canal treatment in Surat", "Pain free root canal treatment in Surat"],
     slug: "root-canal-treatment",
     shortIntro: "Advanced, pain-free endodontic therapy to save severely infected teeth and eliminate dental pain.",
     whatIsIt: "A root canal is a treatment used to repair and save a tooth that is badly decayed or becomes infected. During a root canal procedure, the nerve and pulp are removed, and the inside of the tooth is cleaned, disinfected, and sealed.",
@@ -89,6 +91,7 @@ export const coreTreatmentsData = {
   "smile-designing": {
     type: "treatment",
     name: "Smile Designing",
+    seoKeywords: ["Smile Designing", "Smile Makeover", "Cosmetic Dentistry", "Perfect Smile", "Hollywood Smile", "Smile makeover specialist in Surat", "Best cosmetic dentist in Surat"],
     slug: "smile-designing",
     shortIntro: "A bespoke cosmetic transformation combining art and digital technology for your perfect smile.",
     whatIsIt: "Digital Smile Designing is a highly customized cosmetic dental protocol. We analyze your facial proportions, gum lines, and teeth structure to digitally design a smile that perfectly complements your unique facial features before any actual treatment begins.",
@@ -133,6 +136,7 @@ export const coreTreatmentsData = {
   "teeth-whitening": {
     type: "treatment",
     name: "Teeth Whitening",
+    seoKeywords: ["Teeth Whitening", "Teeth Bleaching", "Whiter Teeth", "Bright Smile", "Best teeth whitening clinic in Surat", "Best dentist for teeth whitening", "Daant safed karwana", "दांत सफेद करना"],
     slug: "teeth-whitening",
     shortIntro: "Professional, rapid, and safe bleaching treatments to unveil a brilliant, radiant smile.",
     whatIsIt: "Professional teeth whitening is a cosmetic procedure that effectively lightens the pigmentation within the enamel of your teeth. Unlike over-the-counter strips, our clinical-grade whitening agents provide dramatic, instant results safely.",

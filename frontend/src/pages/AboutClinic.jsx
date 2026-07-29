@@ -123,7 +123,7 @@ const AboutClinic = () => {
       <section className="section bg-light">
         <div className="container split-layout">
           <FadeInWhenVisible className="split-image-container">
-            <img src="/assets/office.jpeg" alt="Radiaance Dentistry Office" className="luxury-radius shadow-lg" />
+            <img src="/assets/office.jpeg" alt="Comfortable dental chair at Radiance Dentistry" className="luxury-radius shadow-lg" />
             <div className="floating-badge glassmorphism">
               <span className="badge-year">20+</span>
               <span className="badge-text">Years of<br/>Excellence</span>
@@ -225,7 +225,7 @@ const AboutClinic = () => {
             </ul>
           </FadeInWhenVisible>
           <FadeInWhenVisible className="split-image-container" delay={0.2}>
-            <img src="/assets/treatment_area.jpeg" alt="Sterilization" className="luxury-radius shadow-lg" />
+            <img src="/assets/treatment_area.jpeg" alt="Radiance Dentistry modern treatment room in Surat" className="luxury-radius shadow-lg" />
           </FadeInWhenVisible>
         </div>
       </section>
@@ -240,7 +240,7 @@ const AboutClinic = () => {
           <div className="equipment-grid">
             <FadeInWhenVisible className="equipment-card">
               <div className="equip-img-wrapper">
-                <img src="/assets/equipment.jpeg" alt="Advanced Imaging" />
+                <img src="/assets/equipment.jpeg" alt="Advanced dental equipment at Radiance Dentistry" />
               </div>
               <div className="equip-content glassmorphism">
                 <h4>3D Dental Imaging</h4>

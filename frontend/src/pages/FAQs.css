@@ -1,0 +1,30 @@
+.faqs-page {
+  min-height: 100vh;
+}
+
+.faq-item {
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(15, 41, 95, 0.1);
+}
+
+.faq-item:hover {
+  border-color: var(--primary-gold);
+}
+
+.faq-item.active {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-gold);
+}
+
+.faq-question h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.faq-answer p {
+  line-height: 1.6;
+  border-top: 1px solid rgba(15, 41, 95, 0.1);
+  padding-top: 15px;
+}

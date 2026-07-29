@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/ui/SEO';
 import { Award, BookOpen, Heart, Shield, Star, Stethoscope, ChevronRight, GraduationCap } from 'lucide-react';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import KnowMoreBtn from '../components/ui/KnowMoreBtn';
@@ -9,10 +9,11 @@ import './DoctorProfile.css';
 const DoctorProfile = () => {
   return (
     <main className="doctor-profile-page pt-24">
-      <Helmet>
-        <title>Dr. Ruchi Jain | Chief Dental Surgeon at Radiaance Dentistry</title>
-        <meta name="description" content="Meet Dr. Ruchi Jain, the visionary behind Radiaance Dentistry. Discover her expertise in cosmetic dentistry, smile designing, and comprehensive dental care." />
-      </Helmet>
+      <SEO 
+        title="Dr. Ruchi Jain | Best Dental Surgeon at Radiance Dentistry"
+        description="Meet Dr. Ruchi Jain, the best dentist in Surat and visionary behind Radiance Dentistry. Discover her expertise in cosmetic dentistry, smile designing, and comprehensive dental care."
+        keywords={["Dr Ruchi Jain", "Dr. Ruchi Jain Dentist", "Dr Ruchi Jain Dental Surgeon", "Best Dentist Dr Ruchi Jain", "Top Dentist in Surat", "Dentist in Vesu", "दांतों का डॉक्टर"]}
+      />
 
       {/* Hero Section */}
       <section className="profile-hero premium-light-section">
@@ -20,7 +21,7 @@ const DoctorProfile = () => {
           <div className="profile-hero-grid">
             <FadeInWhenVisible className="profile-image-col">
               <div className="profile-image-wrapper luxury-radius">
-                <img src="/assets/doctor pic.jpeg" alt="Dr. Ruchi Jain" className="profile-main-img" />
+                <img src="/assets/doctor pic.jpeg" alt="Dr Ruchi Jain treating a patient at Radiance Dentistry" className="profile-main-img" />
                 <div className="experience-badge glassmorphism">
                   <span className="years text-gold" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>20+</span>
                   <span className="label text-white">Years of<br />Excellence</span>

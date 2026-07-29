@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import DoctorProfile from './pages/DoctorProfile';
 import Services from './pages/Services';
 import VideoTestimonialsPage from './pages/VideoTestimonialsPage';
+import FAQs from './pages/FAQs';
 import PlaceholderPage from './pages/PlaceholderPage';
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
         <Route path="/video-testimonials" element={<VideoTestimonialsPage />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/international-patients" element={<InternationalPatients />} />
-        <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />
+        <Route path="/faqs" element={<FAQs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
       </Routes>

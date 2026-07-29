@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/ui/SEO';
 import { MapPin, Phone, Mail, Clock, Navigation, CheckCircle2, Car, Store, Coffee, ChevronRight, MessageCircle } from 'lucide-react';
 import FadeInWhenVisible from '../components/ui/FadeInWhenVisible';
 import MapEmbed from '../components/ui/MapEmbed';
@@ -87,14 +87,13 @@ const Contact = () => {
 
   return (
     <div className="page-container contact-page">
-      <Helmet>
-        <title>Contact Radiaance Dentistry | Top Dentist in Vesu, Surat</title>
-        <meta name="description" content="Book your appointment at Radiaance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment." />
-        <link rel="canonical" href="https://radiaancedentistry.com/contact" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
-      </Helmet>
+      <SEO 
+        title="Contact Radiance Dentistry | Top Dentist in Vesu, Surat"
+        description="Book your appointment at Radiance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment."
+        canonicalUrl="https://radiaancedentistry.com/contact"
+        keywords={["Dentist in Vesu", "Dentist in Surat", "Dentist near Vesu", "Dental Clinic near Vesu", "Dental Clinic near VIP Road", "Dental Clinic near Western Business Park", "Dentist near me", "Dental Hospital Surat", "Emergency Dental Clinic Surat", "Surat", "Vesu", "VIP Road", "Western Business Park", "South Gujarat", "Near VIP Road", "Near Vesu Circle"]}
+        schema={schemaData}
+      />
 
       {/* Hero Banner */}
       <section className="contact-hero text-center" style={{ background: 'linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%)', color: 'var(--primary-navy)' }}>

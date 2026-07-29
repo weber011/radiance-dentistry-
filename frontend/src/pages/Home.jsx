@@ -14,6 +14,7 @@ import InternationalPatientsSection from '../components/ui/InternationalPatients
 import ProfessionalCredentialsSection from '../components/ui/ProfessionalCredentialsSection';
 import CompactHeroSlider from '../components/home/CompactHeroSlider';
 import MapEmbed from '../components/ui/MapEmbed';
+import SEO from '../components/ui/SEO';
 import { reviewsData } from '../data/reviewsData';
 import { Shield, Star, Clock, Award, CheckCircle2, ChevronRight, Play, Phone, Monitor, UserCheck, Sparkles, Stethoscope, Heart, Activity, MapPin, Mail, Calendar, Car, Building2, Accessibility, Armchair, Microscope, Navigation, MessageCircle } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
@@ -34,6 +35,15 @@ const Home = () => {
 
   return (
     <main className="home-page">
+      <SEO 
+        title="Best Dentist & Dental Clinic in Surat"
+        description="Radiance Dentistry is the top dental clinic in Vesu, Surat. Expert care by Dr. Ruchi Jain for implants, root canals, smile designing & clear aligners."
+        keywords={[
+          "Radiance Dentistry", "Radiance Dental Clinic", "Dr Ruchi Jain", "Best Dentist in Surat", "Best Dental Clinic in Surat", 
+          "सूरत का सबसे अच्छा डेंटिस्ट", "सूरत का सबसे अच्छा डेंटल क्लिनिक", "સુરતનો શ્રેષ્ઠ ડેન્ટિસ્ટ", "વેસુનો શ્રેષ્ઠ ડેન્ટલ ક્લિનિક",
+          "Dental Clinic Vesu", "Top Dentist in Surat", "Smile Makeover Surat", "Best Dentist Near Me", "Daant ka doctor Surat"
+        ]}
+      />
       {/* 1. Compact Premium Hero Banner Slider */}
       <CompactHeroSlider />
 
@@ -42,9 +52,10 @@ const Home = () => {
         <div className="container welcome-grid">
           <FadeInWhenVisible className="welcome-images">
              <div className="collage-wrapper">
-                <img src="/assets/reception.jpeg" className="img-large parallax" alt="Clinic Reception" />
-                <img src="/assets/office.jpeg" className="img-small img-overlap-1 parallax" alt="Clinic Office" />
-                <img src="/assets/treatment_area.jpeg" className="img-small img-overlap-2 parallax" alt="Treatment Area" />
+                <img src="/assets/reception.jpeg" className="img-large parallax" alt="Reception area of Radiance Dentistry" />
+                <img src="/assets/office.jpeg" className="img-small img-overlap-1 parallax" alt="Comfortable dental chair at Radiance Dentistry" />
+                <img src="/assets/treatment_area.jpeg" className="img-small img-overlap-2 parallax" alt="Radiance Dentistry modern treatment room in Surat" />
+
                 
                 <div className="accent-card glassmorphism float-anim">
                    <p><CheckCircle2 size={16} className="text-gold"/> Modern Dental Clinic</p>
