@@ -367,12 +367,8 @@ const Home = () => {
           </FadeInWhenVisible>
 
           <div className="text-center mt-50 flex-center gap-20">
-            <Link to="/contact" className="btn-primary">
-              Book Appointment
-            </Link>
-            <Link to="/reviews" className="btn-outline">
-              Read All Reviews &rarr;
-            </Link>
+            <KnowMoreBtn to="/contact" text="Book Appointment" variant="primary" />
+            <KnowMoreBtn to="/reviews" text="Read All Reviews" variant="outline" className="btn-outline-navy" />
           </div>
         </div>
       </section>
