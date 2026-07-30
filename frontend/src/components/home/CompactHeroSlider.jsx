@@ -307,7 +307,7 @@ const CompactHeroSlider = () => {
                           <Sparkles size={20} />
                         </div>
                         <div>
-                          <h4 className="specialty-card-title">Full Mouth Rehab</h4>
+                          <h4 className="specialty-card-title">Full Mouth Rehabilitation</h4>
                           <span className="specialty-card-link">Know More &rarr;</span>
                         </div>
                       </Link>
