@@ -115,7 +115,7 @@ const Home = () => {
       <section className="section about-section bg-white">
         <div className="container about-grid">
           <FadeInWhenVisible className="about-image-wrapper">
-            <img src="/assets/office.jpeg?v=2" alt="Radiaance Dentistry Clinic" className="about-clinic-img luxury-radius" />
+            <img src="/assets/office.jpeg?v=3" alt="Radiaance Dentistry Clinic" className="about-clinic-img luxury-radius" />
           </FadeInWhenVisible>
           <FadeInWhenVisible className="about-content">
             <h2>A Sanctuary for Your Smile</h2>
