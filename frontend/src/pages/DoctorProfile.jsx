@@ -45,7 +45,7 @@ const DoctorProfile = () => {
               </div>
               <div className="experience-badge glassmorphism">
                 <span className="years text-gold" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>20+</span>
-                <span className="label text-white">Years of<br />Excellence</span>
+                <span className="label text-navy font-medium">Years of<br />Excellence</span>
               </div>
             </FadeInWhenVisible>
 

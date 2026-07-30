@@ -332,52 +332,55 @@
    ========================================================================== */
 /* FEATURED SPECIALTIES */
 .hero-featured-specialties {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .specialties-section-title {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: #D4AF37;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: block;
 }
 
 .specialties-cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   max-width: 850px;
 }
 
 .specialty-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
-  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 8px 16px;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: white;
 }
 
 .specialty-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 15px rgba(212, 175, 55, 0.1);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 12px rgba(212, 175, 55, 0.15);
 }
 
 .specialty-card-icon {
   color: #F3E5AB;
-  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.4s ease;
 }
 
@@ -387,33 +390,15 @@
 
 .specialty-card-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
   color: #FFFFFF;
-}
-
-.specialty-card-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 15px;
-  flex-grow: 1;
+  white-space: nowrap;
 }
 
 .specialty-card-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #D4AF37;
-  display: inline-block;
-  margin-top: auto;
-  transition: padding-left 0.3s ease;
-}
-
-.specialty-card:hover .specialty-card-link {
-  padding-left: 5px;
+  display: none;
 }
 
 /* RESPONSIVE */

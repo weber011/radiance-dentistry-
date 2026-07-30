@@ -282,31 +282,34 @@ const CompactHeroSlider = () => {
                   >
                     <p className="specialties-section-title">OUR SPECIALIZED CARE</p>
                     <div className="specialties-cards-container">
-                      <Link to="/treatments/clear-aligners" className="specialty-card glassmorphism">
+                      <Link to="/treatments/clear-aligners" className="specialty-card">
                         <div className="specialty-card-icon">
-                          <Smile size={24} />
+                          <Smile size={20} />
                         </div>
-                        <h4 className="specialty-card-title">Clear Aligners</h4>
-                        <p className="specialty-card-desc">Straighten your teeth comfortably with nearly invisible aligners for a confident smile.</p>
-                        <span className="specialty-card-link">Know More &rarr;</span>
+                        <div>
+                          <h4 className="specialty-card-title">Clear Aligners</h4>
+                          <span className="specialty-card-link">Know More &rarr;</span>
+                        </div>
                       </Link>
 
-                      <Link to="/treatments/pediatric-dentistry" className="specialty-card glassmorphism">
+                      <Link to="/treatments/pediatric-dentistry" className="specialty-card">
                         <div className="specialty-card-icon">
-                          <Heart size={24} />
+                          <Heart size={20} />
                         </div>
-                        <h4 className="specialty-card-title">Pediatric Dentistry</h4>
-                        <p className="specialty-card-desc">Gentle, preventive, and child-friendly dental care designed for healthy growing smiles.</p>
-                        <span className="specialty-card-link">Know More &rarr;</span>
+                        <div>
+                          <h4 className="specialty-card-title">Pediatric Dentistry</h4>
+                          <span className="specialty-card-link">Know More &rarr;</span>
+                        </div>
                       </Link>
 
-                      <Link to="/treatments/full-mouth-rehabilitation" className="specialty-card glassmorphism">
+                      <Link to="/treatments/full-mouth-rehabilitation" className="specialty-card">
                         <div className="specialty-card-icon">
-                          <Sparkles size={24} />
+                          <Sparkles size={20} />
                         </div>
-                        <h4 className="specialty-card-title">Full Mouth Rehabilitation</h4>
-                        <p className="specialty-card-desc">Comprehensive treatment plans to restore function, comfort, and smile aesthetics.</p>
-                        <span className="specialty-card-link">Know More &rarr;</span>
+                        <div>
+                          <h4 className="specialty-card-title">Full Mouth Rehab</h4>
+                          <span className="specialty-card-link">Know More &rarr;</span>
+                        </div>
                       </Link>
                     </div>
                   </motion.div>
