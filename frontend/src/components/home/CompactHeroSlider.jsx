@@ -273,6 +273,44 @@ const CompactHeroSlider = () => {
                     {slides[currentSlide].subheading}
                   </motion.p>
 
+                  {/* FEATURED SPECIALTIES COMPONENT */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.45 }}
+                    className="hero-featured-specialties"
+                  >
+                    <p className="specialties-section-title">OUR SPECIALIZED CARE</p>
+                    <div className="specialties-cards-container">
+                      <Link to="/treatments/clear-aligners" className="specialty-card glassmorphism">
+                        <div className="specialty-card-icon">
+                          <Smile size={24} />
+                        </div>
+                        <h4 className="specialty-card-title">Clear Aligners</h4>
+                        <p className="specialty-card-desc">Straighten your teeth comfortably with nearly invisible aligners for a confident smile.</p>
+                        <span className="specialty-card-link">Know More &rarr;</span>
+                      </Link>
+
+                      <Link to="/treatments/pediatric-dentistry" className="specialty-card glassmorphism">
+                        <div className="specialty-card-icon">
+                          <Heart size={24} />
+                        </div>
+                        <h4 className="specialty-card-title">Pediatric Dentistry</h4>
+                        <p className="specialty-card-desc">Gentle, preventive, and child-friendly dental care designed for healthy growing smiles.</p>
+                        <span className="specialty-card-link">Know More &rarr;</span>
+                      </Link>
+
+                      <Link to="/treatments/full-mouth-rehabilitation" className="specialty-card glassmorphism">
+                        <div className="specialty-card-icon">
+                          <Sparkles size={24} />
+                        </div>
+                        <h4 className="specialty-card-title">Full Mouth Rehabilitation</h4>
+                        <p className="specialty-card-desc">Comprehensive treatment plans to restore function, comfort, and smile aesthetics.</p>
+                        <span className="specialty-card-link">Know More &rarr;</span>
+                      </Link>
+                    </div>
+                  </motion.div>
+
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
