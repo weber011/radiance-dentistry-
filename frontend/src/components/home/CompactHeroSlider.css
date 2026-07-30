@@ -23,7 +23,7 @@
   margin: 0 auto;
 }
 
-.slider-card-frame {
+.slider-card-frame-v2 {
   position: relative;
   width: 100%;
   height: 480px; /* Approximately 420-500px tall on desktop */
@@ -346,7 +346,7 @@
   display: block;
 }
 
-.specialties-cards-container {
+.specialties-cards-container-v2 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -403,6 +403,15 @@
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+  .slider-card-frame-v2 {
+    height: 600px !important; /* Increase height for tablets and large phones */
+  }
+  
+  .slide-item {
+    align-items: flex-start !important;
+    padding-top: 50px !important;
+  }
+  
   .slide-content-box {
     padding-left: 40px;
     max-width: 540px;
@@ -427,9 +436,19 @@
     padding-top: 100px;
   }
   
-  .slider-card-frame {
-    height: 280px; /* 220-280px on mobile */
+  .slider-card-frame-v2 {
+    height: auto !important; /* Use flexible height instead of fixed height */
+    min-height: 600px;
     border-radius: 16px;
+    padding-bottom: 20px;
+  }
+  
+  .slide-item {
+    position: relative !important; /* Allows container height to be flexible */
+    height: auto !important;
+    align-items: flex-start !important;
+    padding-top: 35px !important;
+    padding-bottom: 50px !important; /* Ensure bottom CTA is fully visible above pagination */
   }
   
   .slide-content-box {
@@ -499,8 +518,29 @@
     font-size: 0.8rem;
   }
   
-  .specialties-cards-container {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .specialties-cards-container-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 16-20px vertical spacing */
+    width: 100%;
+  }
+
+  .specialty-card {
+    width: 70% !important; /* Reduce width by approx 30% */
+    max-width: 280px;
+    padding: 6px 20px !important; /* Decrease vertical, increase horizontal padding */
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .specialty-card-title {
+    font-size: 0.75rem !important; /* Reduce font size slightly while keeping readability */
+    white-space: normal !important;
+  }
+  
+  .specialty-card-icon svg {
+    width: 16px !important; /* Reduce icon size */
+    height: 16px !important;
   }
 }

@@ -208,7 +208,7 @@ const CompactHeroSlider = () => {
         onTouchEnd={handleTouchEnd}
       >
         <div className="container compact-slider-container">
-          <div className="slider-card-frame">
+          <div className="slider-card-frame-v2">
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -281,7 +281,7 @@ const CompactHeroSlider = () => {
                     className="hero-featured-specialties"
                   >
                     <p className="specialties-section-title">OUR SPECIALIZED CARE</p>
-                    <div className="specialties-cards-container">
+                    <div className="specialties-cards-container-v2">
                       <Link to="/treatments/clear-aligners" className="specialty-card">
                         <div className="specialty-card-icon">
                           <Smile size={20} />
