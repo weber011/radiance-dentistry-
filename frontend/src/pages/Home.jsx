@@ -140,7 +140,6 @@ const Home = () => {
               <div className="doctor-name-badge glassmorphism">
                 <h3>Dr. Ruchi Jain</h3>
                 <p className="text-gold">Chief Dental Surgeon</p>
-                <p className="badge-degree">BDS (2005) - K.L.E.S institute of dental science Belgaum</p>
               </div>
             </FadeInWhenVisible>
             
