@@ -94,8 +94,8 @@ const Contact = () => {
   return (
     <div className="page-container contact-page">
       <SEO 
-        title="Contact Radiance Dentistry | Top Dentist in Vesu, Surat"
-        description="Book your appointment at Radiance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment."
+        title="Contact Radiaance Dentistry | Top Dentist in Vesu, Surat"
+        description="Book your appointment at Radiaance Dentistry in Vesu, Surat. Contact Dr. Ruchi Jain for world-class dental treatments in a luxury environment."
         canonicalUrl="https://radiaancedentistry.com/contact"
         keywords={["Dentist in Vesu", "Dentist in Surat", "Dentist near Vesu", "Dental Clinic near Vesu", "Dental Clinic near VIP Road", "Dental Clinic near Western Business Park", "Dentist near me", "Dental Hospital Surat", "Emergency Dental Clinic Surat", "Surat", "Vesu", "VIP Road", "Western Business Park", "South Gujarat", "Near VIP Road", "Near Vesu Circle"]}
         schema={schemaData}

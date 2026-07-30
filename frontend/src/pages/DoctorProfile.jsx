@@ -18,7 +18,7 @@ const DoctorProfile = () => {
     },
     "worksFor": {
       "@type": "MedicalOrganization",
-      "name": "Radiance Dentistry"
+      "name": "Radiaance Dentistry"
     },
     "knowsAbout": ["Cosmetic Dentistry", "Smile Designing", "Dental Implants", "Root Canal Treatment", "Laser Dentistry"],
     "sameAs": [
@@ -29,8 +29,8 @@ const DoctorProfile = () => {
   return (
     <main className="doctor-profile-page pt-24">
       <SEO 
-        title="Dr. Ruchi Jain | Best Dental Surgeon at Radiance Dentistry"
-        description="Meet Dr. Ruchi Jain, the best dentist in Surat and visionary behind Radiance Dentistry. Discover her expertise in cosmetic dentistry, smile designing, and comprehensive dental care."
+        title="Dr. Ruchi Jain | Best Dental Surgeon at Radiaance Dentistry"
+        description="Meet Dr. Ruchi Jain, the best dentist in Surat and visionary behind Radiaance Dentistry. Discover her expertise in cosmetic dentistry, smile designing, and comprehensive dental care."
         keywords={["Dr Ruchi Jain", "Dr. Ruchi Jain Dentist", "Dr Ruchi Jain Dental Surgeon", "Best Dentist Dr Ruchi Jain", "Top Dentist in Surat", "Dentist in Vesu", "दांतों का डॉक्टर"]}
         schema={personSchema}
       />
@@ -41,7 +41,7 @@ const DoctorProfile = () => {
           <div className="profile-hero-grid">
             <FadeInWhenVisible className="profile-image-col">
               <div className="profile-image-wrapper luxury-radius">
-                <img src="/assets/doctor pic.jpeg" alt="Dr Ruchi Jain treating a patient at Radiance Dentistry" className="profile-main-img" />
+                <img src="/assets/doctor pic.jpeg" alt="Dr Ruchi Jain treating a patient at Radiaance Dentistry" className="profile-main-img" />
               </div>
               <div className="experience-badge glassmorphism">
                 <span className="years text-gold" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>20+</span>

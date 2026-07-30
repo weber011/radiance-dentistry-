@@ -8,11 +8,11 @@ const SEO = ({
   canonicalUrl,
   schema 
 }) => {
-  const defaultTitle = "Radiance Dentistry | Best Dental Clinic in Surat";
-  const defaultDescription = "Radiance Dentistry is the best dental clinic in Vesu, Surat. Dr. Ruchi Jain offers advanced dental care, implants, root canals, and smile makeovers.";
-  const defaultKeywords = "Radiance Dentistry, Best Dentist in Surat, Top Dental Clinic in Vesu, Dr Ruchi Jain, Dental Clinic Surat";
+  const defaultTitle = "Radiaance Dentistry | Best Dental Clinic in Surat";
+  const defaultDescription = "Radiaance Dentistry is the best dental clinic in Vesu, Surat. Dr. Ruchi Jain offers advanced dental care, implants, root canals, and smile makeovers.";
+  const defaultKeywords = "Radiaance Dentistry, Best Dentist in Surat, Top Dental Clinic in Vesu, Dr Ruchi Jain, Dental Clinic Surat";
 
-  const seoTitle = title ? `${title} | Radiance Dentistry` : defaultTitle;
+  const seoTitle = title ? `${title} | Radiaance Dentistry` : defaultTitle;
   const seoDescription = description || defaultDescription;
   
   // Combine custom keywords with defaults if needed, or just use custom
@@ -28,7 +28,7 @@ const SEO = ({
   const globalSchema = {
     "@context": "https://schema.org",
     "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
-    "name": "Radiance Dentistry",
+    "name": "Radiaance Dentistry",
     "image": "https://radiaancedentistry.com/assets/logo.png",
     "url": "https://radiaancedentistry.com",
     "telephone": "+918696781255",
@@ -66,8 +66,8 @@ const SEO = ({
       }
     ],
     "sameAs": [
-      "https://www.facebook.com/radiance.dentistry",
-      "https://www.instagram.com/radiance.dentistry"
+      "https://www.facebook.com/Radiaance.dentistry",
+      "https://www.instagram.com/Radiaance.dentistry"
     ]
   };
 
@@ -81,7 +81,7 @@ const SEO = ({
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Radiance Dentistry" />
+      <meta property="og:site_name" content="Radiaance Dentistry" />
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}

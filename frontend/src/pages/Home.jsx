@@ -37,9 +37,9 @@ const Home = () => {
     <main className="home-page">
       <SEO 
         title="Best Dentist & Dental Clinic in Surat"
-        description="Radiance Dentistry is the top dental clinic in Vesu, Surat. Expert care by Dr. Ruchi Jain for implants, root canals, smile designing & clear aligners."
+        description="Radiaance Dentistry is the top dental clinic in Vesu, Surat. Expert care by Dr. Ruchi Jain for implants, root canals, smile designing & clear aligners."
         keywords={[
-          "Radiance Dentistry", "Radiance Dental Clinic", "Dr Ruchi Jain", "Best Dentist in Surat", "Best Dental Clinic in Surat", 
+          "Radiaance Dentistry", "Radiaance Dental Clinic", "Dr Ruchi Jain", "Best Dentist in Surat", "Best Dental Clinic in Surat", 
           "सूरत का सबसे अच्छा डेंटिस्ट", "सूरत का सबसे अच्छा डेंटल क्लिनिक", "સુરતનો શ્રેષ્ઠ ડેન્ટિસ્ટ", "વેસુનો શ્રેષ્ઠ ડેન્ટલ ક્લિનિક",
           "Dental Clinic Vesu", "Top Dentist in Surat", "Smile Makeover Surat", "Best Dentist Near Me", "Daant ka doctor Surat"
         ]}
@@ -52,9 +52,9 @@ const Home = () => {
         <div className="container welcome-grid">
           <FadeInWhenVisible className="welcome-images">
              <div className="collage-wrapper">
-                <img src="/assets/reception.jpeg" className="img-large parallax" alt="Reception area of Radiance Dentistry" />
-                <img src="/assets/office.jpeg" className="img-small img-overlap-1 parallax" alt="Comfortable dental chair at Radiance Dentistry" />
-                <img src="/assets/treatment_area.jpeg" className="img-small img-overlap-2 parallax" alt="Radiance Dentistry modern treatment room in Surat" />
+                <img src="/assets/reception.jpeg" className="img-large parallax" alt="Reception area of Radiaance Dentistry" />
+                <img src="/assets/office.jpeg" className="img-small img-overlap-1 parallax" alt="Comfortable dental chair at Radiaance Dentistry" />
+                <img src="/assets/treatment_area.jpeg" className="img-small img-overlap-2 parallax" alt="Radiaance Dentistry modern treatment room in Surat" />
 
                 
                 <div className="accent-card glassmorphism float-anim">

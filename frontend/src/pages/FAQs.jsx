@@ -8,31 +8,31 @@ import './FAQs.css';
 const faqsList = [
   {
     question: "Who is the best dentist in Surat?",
-    answer: "Dr. Ruchi Jain at Radiance Dentistry is widely regarded as one of the best dentists in Surat. With over two decades of experience, she offers pain-free, advanced dental care ranging from root canals to full smile makeovers."
+    answer: "Dr. Ruchi Jain at Radiaance Dentistry is widely regarded as one of the best dentists in Surat. With over two decades of experience, she offers pain-free, advanced dental care ranging from root canals to full smile makeovers."
   },
   {
     question: "Which is the best dental clinic near me in Vesu?",
-    answer: "Radiance Dentistry is a premium, luxury dental clinic located near Vesu, Surat. We provide personalized, evidence-based dentistry with the most modern dental equipment."
+    answer: "Radiaance Dentistry is a premium, luxury dental clinic located near Vesu, Surat. We provide personalized, evidence-based dentistry with the most modern dental equipment."
   },
   {
     question: "Where can I get a painless root canal in Surat?",
-    answer: "Radiance Dentistry specializes in painless root canal treatments. Dr. Ruchi Jain uses advanced digital dentistry and laser technology to ensure comfortable treatment and preserve your natural tooth."
+    answer: "Radiaance Dentistry specializes in painless root canal treatments. Dr. Ruchi Jain uses advanced digital dentistry and laser technology to ensure comfortable treatment and preserve your natural tooth."
   },
   {
     question: "How to choose the best dentist in Surat?",
-    answer: "Look for a clinic with advanced dental technology, strict sterilization protocols, patient-first care, and an experienced dentist. Radiance Dentistry fulfills all these criteria, offering comprehensive family dentistry."
+    answer: "Look for a clinic with advanced dental technology, strict sterilization protocols, patient-first care, and an experienced dentist. Radiaance Dentistry fulfills all these criteria, offering comprehensive family dentistry."
   },
   {
     question: "Who is the best implant dentist in Surat?",
-    answer: "For single tooth implants, multiple dental implants, or full mouth implants, Dr. Ruchi Jain at Radiance Dentistry provides expert implant placement using high-quality materials for lasting missing teeth solutions."
+    answer: "For single tooth implants, multiple dental implants, or full mouth implants, Dr. Ruchi Jain at Radiaance Dentistry provides expert implant placement using high-quality materials for lasting missing teeth solutions."
   },
   {
     question: "How much does a dental implant cost in Surat?",
-    answer: "The cost of a dental implant in Surat varies based on the type of implant and complexity of the case. At Radiance Dentistry, we offer affordable, high-quality dental implants with transparent pricing. Schedule a consultation for a precise quote."
+    answer: "The cost of a dental implant in Surat varies based on the type of implant and complexity of the case. At Radiaance Dentistry, we offer affordable, high-quality dental implants with transparent pricing. Schedule a consultation for a precise quote."
   },
   {
     question: "What are the signs you need a root canal?",
-    answer: "Severe tooth pain, sensitivity to hot and cold, swollen gums, or a darkened tooth are common signs. Visit our emergency dentist at Radiance Dentistry for immediate relief and root canal assessment."
+    answer: "Severe tooth pain, sensitivity to hot and cold, swollen gums, or a darkened tooth are common signs. Visit our emergency dentist at Radiaance Dentistry for immediate relief and root canal assessment."
   },
   {
     question: "How often should you get your teeth cleaned?",
@@ -71,8 +71,8 @@ const FAQs = () => {
   return (
     <main className="faqs-page pt-120 pb-80 bg-light-blue">
       <SEO 
-        title="Frequently Asked Questions | Radiance Dentistry Surat"
-        description="Find answers to common dental queries: Who is the best dentist in Surat? How much do implants cost? Where to get a root canal? Learn more at Radiance Dentistry."
+        title="Frequently Asked Questions | Radiaance Dentistry Surat"
+        description="Find answers to common dental queries: Who is the best dentist in Surat? How much do implants cost? Where to get a root canal? Learn more at Radiaance Dentistry."
         keywords={[
           "Who is the best dentist in Surat", "Best dental clinic near me", "Where can I get root canal in Surat",
           "Best smile makeover clinic in Surat", "Best dentist for teeth whitening", "Best implant dentist in Surat",
@@ -88,7 +88,7 @@ const FAQs = () => {
             <div className="badge-gold mb-15">DENTAL FAQs</div>
             <h2>Common Dental Questions Answered</h2>
             <p className="max-w-700 mx-auto text-secondary mt-15">
-              Have questions about your dental health or our treatments? Here are answers to the most common queries we receive at Radiance Dentistry.
+              Have questions about your dental health or our treatments? Here are answers to the most common queries we receive at Radiaance Dentistry.
             </p>
           </FadeInWhenVisible>
         </div>

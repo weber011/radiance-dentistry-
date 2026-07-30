@@ -92,9 +92,9 @@ const AboutClinic = () => {
   return (
     <div className="page-about page-transition">
       <SEO 
-        title="About Radiance Dentistry | Top Dental Clinic in Surat"
-        description="Learn about Radiance Dentistry in Vesu, Surat. We combine advanced technology with ethical dentistry to provide world-class, personalized dental care."
-        keywords={["Radiance Dental Clinic", "Top Dental Clinic in Surat", "Best Dental Hospital Surat", "Luxury Dental Clinic Surat", "Advanced Dental Care Surat"]}
+        title="About Radiaance Dentistry | Top Dental Clinic in Surat"
+        description="Learn about Radiaance Dentistry in Vesu, Surat. We combine advanced technology with ethical dentistry to provide world-class, personalized dental care."
+        keywords={["Radiaance Dental Clinic", "Top Dental Clinic in Surat", "Best Dental Hospital Surat", "Luxury Dental Clinic Surat", "Advanced Dental Care Surat"]}
         schema={[jsonLd, breadcrumbLd]}
       />
 
@@ -122,7 +122,7 @@ const AboutClinic = () => {
       <section className="section bg-light">
         <div className="container split-layout">
           <FadeInWhenVisible className="split-image-container">
-            <img src="/assets/office.jpeg" alt="Comfortable dental chair at Radiance Dentistry" className="luxury-radius shadow-lg" />
+            <img src="/assets/office.jpeg" alt="Comfortable dental chair at Radiaance Dentistry" className="luxury-radius shadow-lg" />
             <div className="floating-badge glassmorphism">
               <span className="badge-year">20+</span>
               <span className="badge-text">Years of<br/>Excellence</span>
@@ -135,7 +135,7 @@ const AboutClinic = () => {
             <p className="body-text">We focus on personalized care, ensuring every patient is heard and understood. By integrating advanced technology with ethical dentistry, we provide treatments that are not only effective but designed for long-term oral health. Our beautiful clinic environment is carefully crafted to ease anxiety, offering a calming sanctuary for your dental journey.</p>
             
             <div className="key-stats-list mt-20">
-              <h5 className="text-primary mb-10">Radiance Dentistry Key Statistics</h5>
+              <h5 className="text-primary mb-10">Radiaance Dentistry Key Statistics</h5>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>20+ Years</strong> of Clinical Excellence</li>
                 <li style={{ marginBottom: '8px' }}><CheckCircle2 size={16} className="text-gold mr-5" style={{display:'inline', verticalAlign:'middle'}}/> <strong>10,000+</strong> Happy Smiles Restored</li>
@@ -234,7 +234,7 @@ const AboutClinic = () => {
             </ul>
           </FadeInWhenVisible>
           <FadeInWhenVisible className="split-image-container" delay={0.2}>
-            <img src="/assets/treatment_area.jpeg" alt="Radiance Dentistry modern treatment room in Surat" className="luxury-radius shadow-lg" />
+            <img src="/assets/treatment_area.jpeg" alt="Radiaance Dentistry modern treatment room in Surat" className="luxury-radius shadow-lg" />
           </FadeInWhenVisible>
         </div>
       </section>
@@ -249,7 +249,7 @@ const AboutClinic = () => {
           <div className="equipment-grid">
             <FadeInWhenVisible className="equipment-card">
               <div className="equip-img-wrapper">
-                <img src="/assets/equipment.jpeg" alt="Advanced dental equipment at Radiance Dentistry" />
+                <img src="/assets/equipment.jpeg" alt="Advanced dental equipment at Radiaance Dentistry" />
               </div>
               <div className="equip-content glassmorphism">
                 <h4>3D Dental Imaging</h4>
